@@ -1,0 +1,39 @@
+.tag {
+	display: inline-block;
+	padding: $baseline/4 $gutter/2;
+	background: #F7F7F7;
+	font-size: rem(12px);
+	border-radius: $borderRadius;
+	vertical-align: middle;
+	cursor: default;
+}
+
+.tag.tag--yesNo {
+	width: rem(52px);
+}
+
+.tag.tag--primary {
+	background: lighten($color-primary, 40%);
+	color: $color-primary
+}
+
+.tag.tag--small {
+	font-size: rem(10px);
+	padding: 0 $gutter/2;
+}
+
+.tag .fa {
+	color: darken(#F7F7F7, 10%);
+	font-size: rem(10px);
+	margin-right: $gutter/2;
+}
+
+.tag.tag--success {
+    background: #8ddf8d;
+    color: green;
+}
+
+.tag.tag--danger {
+    background: #df8d8d;
+    color: #6c4949;
+}

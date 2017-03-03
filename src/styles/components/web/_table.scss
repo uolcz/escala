@@ -1,0 +1,68 @@
+.table {
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+tbody .table-row {
+	border-top: 1px solid $color-border;
+	border-bottom: 1px solid $color-border;	
+}
+
+tbody .table-row.table-row--clickable {
+	cursor: pointer;
+}
+
+tbody .table-row.table-row--clickable:hover td {
+	border-top: 1px solid lighten($color-primary, 20%);
+	border-bottom: 1px solid lighten($color-primary, 20%);
+	background: lighten($color-primary, 45%);
+} 
+
+.table th {
+	font-weight: 600;
+}
+
+.table th.is-active {
+	color: $color-primary;
+}
+
+.table th,
+.table td {
+	padding: $baseline/1.5 $gutter/2;
+}
+
+.table th:first-of-type,
+.table td:first-of-type {
+	padding-left: $gutter;
+}
+
+.table th:last-of-type,
+.table td:last-of-type {
+	padding-right: $gutter;
+}
+
+.table.table--borderLess th,
+.table.table--borderLess td {
+	padding: $baseline/4 $gutter/2;
+	border: 0;
+}
+
+.table.table--borderLess th:first-of-type,
+.table.table--borderLess td:first-of-type {
+	padding-left: 0;
+}
+
+.table.table--borderLess th:last-of-type,
+.table.table--borderLess td:last-of-type {
+	padding-right: 0;
+}
+
+.table .button {
+	height: auto;
+	line-height: 1;
+}
+
+.responsiveTableWrapper {
+	overflow-y: auto;
+}

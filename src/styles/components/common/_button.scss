@@ -1,0 +1,179 @@
+$button-height: rem(40px) !default;
+
+.button {
+	display: inline-block;
+	font-size: rem(13px);
+	height: $button-height;
+	line-height: $button-height;
+	padding: 0 $gutter*1.5;
+	border: 0;
+	border-radius: $borderRadius-button;
+	cursor: pointer;
+	box-shadow: none;
+	outline: 0;
+	vertical-align: middle;
+	transition: $transition-type $transition-duration background;
+	text-align: center;
+	text-decoration: none;
+}
+
+.button.button--secondary:disabled {
+	color: lighten($color-text, 50%);
+	cursor: not-allowed;
+}
+
+a.button:not(.button--asLink):hover {
+	text-decoration: none;
+}
+
+.button.button--dropdown > .fa:last-of-type,
+.button.button--hasDropdown > .fa:last-of-type {
+	margin-left: $gutter/2;
+}
+
+.button.button--unstyled {
+	height: auto;
+	border: 0;
+	padding: 0;
+	background: transparent;
+}
+
+
+.button.button--primary {
+	color: $color-white;
+	background: $button-primary-background;
+}
+
+.button.button--primary:hover {
+	background: lighten($color-primary, 10%);
+}
+
+.button.button--primary.button--outlined {
+	background: transparent;
+	border: 1px solid $color-primary;
+	color: $color-primary;
+}
+
+.button.button--primary.button--outlined:hover {
+	color: darken($color-primary, 5%);
+	border-color: darken($color-primary, 5%);
+}
+
+.button.button--primary.button--borderLess {
+	color: $color-primary;
+}
+
+
+.button.button--secondary {
+	background: $button-secondary-background;
+	color: lighten($color-text, 25%);
+}
+
+.button.button--secondary:hover {
+	
+}
+
+.button.button--secondary.button--outlined {
+	background: transparent;
+	border: 1px solid $color-border;
+	color: darken($color-border, 20%);
+}
+
+.button.button--secondary.button--outlined:hover {
+	border-color: darken($color-border, 10%);
+	color: darken($color-border, 30%);
+}
+
+.button.button--secondary.button--borderLess {
+	color: lighten($color-text, 25%);
+}
+
+
+.button.button--danger {
+	background: $button-danger-background;
+	color: $color-white;
+}
+
+.button.button--danger.button--outlined {
+	background: transparent;
+	color: $button-danger-background;
+	border: 1px solid $button-danger-background;
+}
+
+.button.button--danger.button--outlined:hover {
+	color: darken($button-danger-background, 5%);
+	border-color: darken($button-danger-background, 5%);
+}
+
+.button.button--danger.button--borderLess {
+	color: $button-danger-background;
+}
+
+
+.button.button--success {
+	background: $button-success-background;
+	color: $color-white;
+}
+
+.button.button--success.button--outlined {
+	background: transparent;
+	color: $button-success-background;
+	border: 1px solid $button-success-background;
+}
+
+.button.button--success.button--outlined:hover {
+	color: darken($button-success-background, 5%);
+	border-color: darken($button-success-background, 5%);
+}
+
+.button.button--success.button--borderLess {
+	color: $button-success-background;
+}
+
+
+
+.button.button--borderLess {
+	background: transparent;
+	border: 0;
+	padding: 0;
+}
+
+.button.button--borderLess:hover {
+	background: transparent;
+} 
+
+.button--lightIcon {
+	@extend .button.button--unstyled;
+	color: $color-lightIcon;
+	font-size: rem(17px);
+}
+
+.button--lightIcon:hover {
+	color: darken($color-lightIcon, 10%);
+}
+
+.button.button--circular {
+	width: rem(40px);
+	height: rem(40px);
+	border: 1px solid $color-border;
+}
+
+
+.button.button--symmetricalIcon {
+	width: rem(40px);
+	height: rem(40px);
+	padding: 0;
+} 
+
+.button.button--bigger {
+	font-size: rem(15px);
+}
+
+
+
+/**
+ * Button group
+ */
+.buttonGroup > .button:not(:last-of-type) {
+	margin-right: $gutter/2;
+}

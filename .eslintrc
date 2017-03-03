@@ -1,0 +1,29 @@
+{
+	"parser": "babel-eslint",
+	"extends": ["airbnb"],
+	"env": {
+		"browser": true,
+	},
+	"rules": {
+		"quotes": ["error", "double"],
+		"indent": ["error", "tab"],
+		"no-tabs": 0,
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-indent-props": ["error", "tab"],
+		"react/jsx-filename-extension": ["error", {
+			"extensions": [".js", ".jsx"]
+		}],
+		"react/jsx-closing-bracket-location": ["warn", {
+			"nonEmpty": "after-props",
+			"selfClosing": "line-aligned"
+		}],
+		eol-last: ["off"],
+		comma-dangle: ["error", {
+			"functions": "never",
+			"arrays": "always-multiline", 
+			"objects": "always-multiline", 
+			"imports": "always-multiline", 
+			"exports": "always-multiline"
+		}]
+	}
+}

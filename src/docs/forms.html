@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../dist/styles/web.css" rel="stylesheet" />
+	<link href="../../dist/styles/docs.css" rel="stylesheet" />
+	
+	<title>Forms | UOL Front-end docs</title>
+</head>
+
+<body class="docsPage">
+
+	<div class="container">
+
+		<aside class="sidebar">
+			<ul class="nav js-nav"></ul>
+		</aside>
+
+		<main class="contentWrapper">
+
+			<h1>Forms</h1>
+			<p>...</p>
+
+
+			<h2>Contents</h2>
+			<ul class="unorderedList">
+				<li><a href="#form-controls">Form controls</a></li>
+				<li><a href="#structure-form-with-grid">Structure form with grid</a></li>
+				<li><a href="#inline-form">Inline form</a></li>
+			</ul>
+
+
+			<h2 id="form-controls">Form controls</h2>
+
+<form class="js-codeExample">
+	<div class="formGroup is-success">
+		<label>Email</label>
+		<input 
+			type="text" 
+			class="formControl" 
+		/>
+
+		<div class="formControlFeedback">Your email looks alright!</div>
+	</div>
+
+	<div class="formGroup is-danger">
+		<label>Password</label>
+		<input 
+			type="password" 
+			class="formControl" 
+		/>
+
+		<div class="formControlFeedback">"1234" is not a cool password</div>
+	</div>
+
+	<div class="formGroup is-warning">
+		<label for="favourite-pet">Pick your favourite pet</label>
+
+		<select
+			id="favourite-pet" 
+			class="formControl">
+			<option>Dog</option>
+			<option>Cat</option>
+			<option>Horse</option>
+		</select>
+
+		<div class="formControlFeedback">Někde nastala chyba.</div>
+	</div>
+
+	<div class="formGroup is-disabled">
+		<label for="favourite-weather">Pick your favourite weather</label>
+
+		<select
+			id="favourite-weather" 
+			class="formControl"
+			disabled>
+			<option>Sunny</option>
+			<option>Rainy</option>
+			<option>Windy</option>
+		</select>
+	</div>
+
+	<div class="formGroup">
+		<label>Something about yourself</label>
+		<textarea class="formControl"></textarea>
+	</div>
+
+	<ul class="formGroup">
+		<li>
+			<label class="formCheck">
+				<input type="checkbox" checked />
+				<span class="formCheck-indicator"><span class="fa fa-check"></span></span>
+				<span class="formCheck-description">I like ice cream</span>
+			</label>
+		</li>
+
+		<li>
+			<label class="formCheck is-disabled">
+				<input type="checkbox" disabled />
+				<span class="formCheck-indicator"><span class="fa fa-check"></span></span>
+				<span class="formCheck-description">I like pizza</span>
+			</label>
+		</li>
+	</ul>
+
+	<ul class="formGroup">
+		<li>
+			<label class="formCheck">
+				<input type="radio" name="radio" checked />
+				<span class="formCheck-indicator"><span class="fa fa-circle"></span></span>
+				<span class="formCheck-description">I like elephants</span>
+			</label>
+		</li>
+
+		<li>
+			<label class="formCheck">
+				<input type="radio" name="radio" />
+				<span class="formCheck-indicator"><span class="fa fa-circle"></span></span>
+				<span class="formCheck-description">I like dogs</span>
+			</label>
+		</li>
+
+		<li>
+			<label class="formCheck is-disabled">
+				<input type="radio" name="radio" disabled />
+				<span class="formCheck-indicator"><span class="fa fa-circle"></span></span>
+				<span class="formCheck-description">I like animals</span>
+			</label>
+		</li>
+	</ul>
+
+	<button type="submit" class="button button--primary">Submit</button>
+</form>
+
+
+			<h2 id="structure-form-with-grid">Structure form with grid</h2>
+
+<form class="js-codeExample">
+				<div class="formGroup grid">
+					<label class="grid-cell grid-cell--xs-12 grid-cell--lg-3">Email</label>
+					<div class="grid-cell grid-cell--xs-12 grid-cell--lg-9">
+						<input 
+							type="text" 
+							class="formControl" 
+						/>
+					</div>
+				</div>
+
+				<div class="formGroup grid">
+					<label class="grid-cell grid-cell--xs-12 grid-cell--lg-3">Password</label>
+					<div class="grid-cell grid-cell--xs-12 grid-cell--lg-9">
+						<input 
+							type="password" 
+							class="formControl" 
+						/>
+					</div>
+				</div>
+
+	<button type="submit" class="button button--primary">Login</button>
+</form>
+
+
+			<h2 id="inline-form">Inline forms</h2>
+
+<form class="js-codeExample">
+	<div class="inlineFormGroup grid grid--gutters1">
+		<div class="formGroup grid-cell grid-cell--xs-12 grid-cell--sm-3">
+			<label>Produkt</label>
+			<select class="formControl">
+				<option value="" disabled selected>Vyberte kód produktu</option>
+				<option value="ostatni_sluzby">Ostatní služby</option>
+			</select>
+		</div>
+
+		<div class="formGroup grid-cell grid-cell--xs-12 grid-cell--sm-3">
+			<label>Množství</label>
+			<div class="inputGroup">
+				<input class="formControl" type="text" />
+				<button class="button button--secondary button--increment" tabindex="-1" disabled>–</button>
+				<button class="button button--secondary button--deduct" tabindex="-1">+</button>
+			</div>
+		</div>
+
+		<div class="formGroup grid-cell grid-cell--xs-6 grid-cell--sm-2">
+			<label>Cena</label>
+			<input class="formControl" type="text" />
+		</div>
+
+		<div class="formGroup grid-cell grid-cell--xs-6 grid-cell--sm-2">
+			<label for="invoice-item-dph-0">DPH</label>
+			<div class="inputGroup inputGroup--invoiceDiscount">
+				<input 
+					id="invoice-item-dph-0" 
+					type="text" 
+					class="formControl formControl--hasFittedAddonFromRight" 
+					value="19" 
+					disabled
+				/>
+				<label class="inputGroup-fittedAddon inputGroup-fittedAddon--right" for="invoice-item-dph-0">%</label>
+			</div>
+		</div>
+
+		<div class="formGroup grid-cell grid-cell--xs-6 grid-cell--sm-2">
+			<label>Celkem</label>
+			<input class="formControl" type="text" />
+		</div>			
+	</div>
+
+	<button class="button button--primary button--outlined">+ Add item</button>
+</form>
+
+		</main>
+
+	</div>
+
+	<script type="text/javascript" src="../js/docs.js"></script>
+
+</body>
+</html>

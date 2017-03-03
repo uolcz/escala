@@ -1,0 +1,197 @@
+$input-height: rem(44px);
+$fittedAddon-width: rem(37px);
+
+.formControl {
+	display: block;
+	width: 100%;
+	height: $input-height;
+	background: $color-white;
+	padding: 0 $gutter;
+	border: 1px solid $color-border;
+	border-radius: $borderRadius;
+	outline: none;
+	box-shadow: none;
+	transition: $transition-type $transition-duration border-color;
+}
+
+
+.formControl[type="text"] {
+	-webkit-appearance: none;
+}
+.formControl:disabled {
+	background: lighten($color-border, 10%);
+}
+
+.formControl:not(:disabled):not(:focus):hover {
+	border-color: darken($color-border, 7%);
+}
+
+.formControl:focus {
+	border-color: $color-primary;
+}
+
+select.formControl {
+	cursor: pointer;
+}
+
+textarea.formControl {
+	max-width: 100%;
+	min-height: $baseline*4;
+	padding: $baseline/2 $gutter;
+}
+
+.inputGroup {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.inputGroup input.formControl {
+	min-width: 1px;
+}
+
+.inputGroup .formControl:not(:last-child) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.inputGroup > .button {
+	@extend .button--outlined;
+	border-radius: 0; 
+}
+
+.inputGroup > .button.button--primray,
+.inputGroup > .button.button--secondary {
+	border-left: 0;
+}
+
+.inputGroup > .button:last-child {
+	border-radius: 0 $borderRadius $borderRadius 0; 
+}
+
+.inputGroup .button.button--increment,
+.inputGroup .button.button--deduct {
+	font-size: rem(18px);
+	flex: 0 0 rem(37px);
+	max-width: rem(37px);
+	padding: 0;
+}
+
+.textInput {
+	@extend .formControl;
+}
+
+.formControl.formControl--hasFittedAddonFromLeft { padding-left: $fittedAddon-width }
+.formControl.formControl--hasFittedAddonFromRight { padding-right: $fittedAddon-width }
+
+.inputGroup-fittedAddon {
+	width: $fittedAddon-width;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	text-align: center;
+	color: $color-lightIcon;
+}
+
+.inputGroup-fittedAddon.inputGroup-fittedAddon--right {
+	left: auto;
+	right: 0;
+}
+
+.formGroup.grid {
+	margin-bottom: $baseline/1.5;
+}
+
+@media (max-width: map-get($screen-breakpoints, sm)) {
+	.formGroup > .grid-cell.grid-cell--xs-12:last-child¨{
+		padding-top: $baseline/4;
+	}
+}
+
+.formGroup > label,
+.formGroup > .formGroup-label {
+	cursor: default;
+}
+
+.formGroup.grid > label.grid-cell,
+.formGroup.grid > .formGroup-label {
+	padding-top: map-get($gridGutters, 2) + ($baseline/2);
+}
+
+.formGroup.formGroup--inline > .formControl {
+	width: auto;
+	display: inline-block;
+}
+
+.formGroup.formGroup--inline > label + .formControl,
+.formGroup.formGroup--inline > .inputGroup .formControl {
+	margin-left: $gutter;
+}
+
+.formGroup.formGroup--inline .inputGroup {
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+.formCheck {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.formGroup.grid .formCheck {
+	display: flex;
+	align-items: center;
+	height: $input-height;
+}
+
+.formCheck input {
+	position: absolute;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	z-index: -1;
+}
+
+.formCheck .formCheck-indicator > .fa {
+	transition: transform .2s ease, opacity .2s ease;
+}
+
+.formCheck input:not(:checked) + .formCheck-indicator > .fa {
+	transform: scale(0);
+	opacity: 0;
+}
+
+.formCheck input:checked + .formCheck-indicator > .fa {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.formCheck .formCheck-indicator {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: rem(18px);
+	height: rem(18px);
+	color: $color-primary;
+	font-size: rem(12px);
+	border: 1px solid $color-border;
+	border-radius: $borderRadius;
+	margin-right: $gutter/2;
+}
+
+.formCheck:hover .formCheck-indicator {
+	border-color: darken($color-border, 7%);
+}
+
+.formCheck .formCheck-description {
+	vertical-align: middle;
+}
+
+.inlineFormGroups > .inlineFormGroup {
+	margin-bottom: $baseline/2;	
+}
+
+.inlineFormGroup > .grid-cell > .button {
+	margin-top: rem(20px);
+} 

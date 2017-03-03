@@ -1,0 +1,7 @@
+$button-height: rem(44px);
+
+@import "../common/button";
+
+.button {
+	-webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,23 @@
+.paginator {
+	text-align: center;
+	padding: $baseline 0;
+}
+
+.paginator-list,
+.paginator-list > li,
+.paginator-item {
+	display: inline-block;
+}
+
+.paginator-list {
+	padding: 0 $gutter;
+}
+
+.paginator-item {
+	color: inherit;
+	padding: 0 $gutter/4;
+}
+
+.paginator-item.is-active {
+	color: $color-primary;
+}

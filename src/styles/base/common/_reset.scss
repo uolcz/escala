@@ -1,0 +1,33 @@
+*,
+*:before,
+*:after { 
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+button, input, optgroup, select, textarea {
+	font-family: inherit;
+}
+
+a {
+	color: $color-primary;
+	text-decoration: none;
+	transition: .1s $transition-type color;
+}
+
+a:hover {
+	text-decoration: underline;
+}

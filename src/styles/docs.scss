@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+$baseline: 32px;
+
+.docsPage {
+	background: #fff;
+	padding: $baseline 0;
+
+	.container { max-width: 960px; }
+	.contentWrapper { margin-left: 150px; }
+	p { margin-bottom: $baseline/2; }
+	h2:not(:first-child) { margin-top: $baseline*3; }
+
+	h3 {
+		margin-top: $baseline/2;
+		margin-bottom: $baseline/2;
+	}
+}

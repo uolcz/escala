@@ -1,0 +1,186 @@
+.header {
+	position: relative;
+	height: 55px;
+	margin-bottom: $baseline*1.5;
+	z-index: $header-zIndex;
+}
+
+@media (min-width: 700px) {
+	.header {
+		height: 70px;
+	}
+}
+
+.header-inner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%; 
+	background: $color-white;
+	border-bottom: 1px solid $color-border;
+    box-shadow: 0 0 30px 1px rgba(0,0,0,0.07);
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 55px;
+}
+
+@media (min-width: 700px) {
+	.header-content {
+		justify-content: inherit;
+		height: 70px;
+	}
+}
+
+.header .logo img {
+	display: block;
+	width: 55px;
+}
+
+@media (min-width: 700px) {
+	.header .logo img {
+		width: 75px;
+	}
+}
+
+.header .inputGroup {
+	display: none;
+	margin-left: rem(85px);
+}
+
+@media (min-width: 800px) {
+	.header .inputGroup {
+		display: inline-flex;
+		margin-left: rem(85px);
+	}
+}
+
+.header .formControl {
+	width: rem(300px);
+}
+
+.header-actions {
+	display: flex;
+	align-items: center;
+}
+
+@media (min-width: 700px) {
+	.header-actions {
+		margin: 0 0 0 auto;
+	}
+
+	.header-actions > .button:not(:last-of-type) {
+		margin-right: $gutter;
+	}
+}
+
+
+.userNav {
+	@extend 
+		.button, 
+		.button.button--unstyled, 
+		.button.button--dropdown;
+	display: none;
+}
+
+button.userNav {
+	text-align: left;
+	line-height: 1.1;
+}
+
+.header-actions .quickAddForDesktop {
+	display: none;
+}
+
+.userNavForMobile .thumbnail {
+	width: rem(23px);
+	height: rem(23px);
+	border-radius: 999rem;
+	padding: 2px;
+	border: 1px solid $color-border;
+	vertical-align: middle;
+}
+
+@media (min-width: 700px) {
+	.header-mobileActions {
+		display: none;
+	}
+
+	.userNav {	
+		display: inline-block;
+	}
+
+	.header-actions .userNavForMobile {
+		display: none;
+	}	
+
+	.header-actions .quickAddForMobile {
+		display: none;	
+	}
+
+	.header-actions .quickAddForDesktop {
+		display: block;
+	}
+}
+
+.userNav .thumbnail {
+	vertical-align: middle;
+}
+
+.userNav-section {
+	vertical-align: middle;
+	margin-left: $gutter;
+}
+
+.userNav .thumbnail,
+.userNav-section {
+	display: none;
+}
+
+@media (min-width: 700px) {
+	.userNav .thumbnail,
+	.userNav-section {
+		display: inline-block;
+	}	
+}
+ 
+.userNav-label {
+	font-size: $fontSize-smaller;
+}
+
+.userNav-name {
+	margin-bottom: $baseline/8;
+}
+
+.userNav-name {
+	font-weight: 600;
+}
+
+.header .button.button--symmetricalIcon {
+	font-size: rem(16px);
+}
+
+.userMenu {
+
+}
+
+.userMenu-item {
+	display: block;
+	color: $color-text;
+}
+
+.userMenu > li:not(:last-of-type) .userMenu-item {
+	margin-bottom: $baseline/2;
+}
+
+.userMenu-item:hover {
+	color: $color-primary;
+}	
+
+.userMenu-separator {
+	border-bottom: 1px solid $color-border;
+	margin: $baseline/2 0;
+}

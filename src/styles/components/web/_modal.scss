@@ -1,0 +1,30 @@
+.modalOverlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.7);
+	z-index: 9;
+}
+
+.modal {
+	position: relative;
+	background: $color-white;
+	border-radius: $borderRadius;
+	padding: $baseline $gutter*2;
+	box-shadow: 0 0 30p 5px rgba(0,0,0,.2);
+	min-height: 200px;
+	min-width: 400px;
+	max-width: 500px;
+	outline: none;
+}
+
+.modal-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}

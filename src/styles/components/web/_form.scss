@@ -1,0 +1,290 @@
+$input-height: rem(40px);
+$fittedAddon-width: rem(37px);
+
+.formControl {
+	display: block;
+	width: 100%;
+	height: $input-height;
+	background: $color-white;
+	padding: 0 $gutter;
+	border: 1px solid $color-border;
+	border-radius: $borderRadius;
+	outline: none;
+	box-shadow: none;
+	transition: $transition-type $transition-duration border-color;
+}
+
+.formControl[type="text"] {
+	-webkit-appearance: none;
+}
+
+.formControl:disabled {
+	background: lighten($color-border, 10%);
+	cursor: not-allowed;
+}
+
+.formControl:not(:disabled):not(:focus):hover {
+	border-color: darken($color-border, 7%);
+}
+
+.formControl:focus {
+	border-color: $color-primary;
+}
+
+select.formControl {
+	cursor: pointer;
+}
+
+textarea.formControl {
+	max-width: 100%;
+	min-height: $baseline*4;
+	padding: $baseline/2 $gutter;
+}
+
+
+
+/**
+ * Form validation
+ */
+
+.is-danger .formControl,
+.is-danger .formControl:not(:focus):hover {
+	border-color: map-get($colors, danger);
+}
+
+.is-danger .formControlFeedback {
+	color: map-get($colors, danger);
+}
+
+.is-success .formControl,
+.is-success .formControl:not(:focus):hover {
+	border-color: map-get($colors, success);
+}
+
+.is-success .formControlFeedback {
+	color: map-get($colors, success);
+}
+
+.is-warning .formControl,
+.is-warning .formControl:not(:focus):hover {
+	border-color: map-get($colors, warning);
+}
+
+.is-warning .formControlFeedback {
+	color: map-get($colors, warning);
+}
+
+
+.formControlFeedback { display: none }
+
+.is-danger .formControlFeedback,
+.is-success .formControlFeedback,
+.is-warning .formControlFeedback { 
+	display: block; 
+	font-size: $fontSize-smaller;
+	margin-top: $baseline/4;
+}
+
+
+
+.inputGroup {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+// FF wierd width fix
+.inputGroup input.formControl {
+	min-width: 1px;
+}
+
+.inputGroup .formControl:not(:first-child):not(.formControl--hasFittedAddonFromLeft):not(.formControl--hasFittedAddonFromRight) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.inputGroup .formControl:not(:last-child):not(.formControl--hasFittedAddonFromLeft):not(.formControl--hasFittedAddonFromRight) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.inputGroup > .button {
+	@extend .button--outlined;
+	flex-shrink: 0;
+	border-radius: 0; 
+}
+
+// Button border from right (cause of negative margin) would overlap input's right border when hover & focus 
+.inputGroup .formControl {
+	z-index: 1;
+}
+
+.inputGroup > .button:not(:last-child),
+.inputGroup > .formControl:not(:last-child) {
+	margin-right: -1px;
+}
+
+.inputGroup > .button:first-child {
+	border-radius: $borderRadius 0 0 $borderRadius; 
+}
+
+.inputGroup > .button:last-child {
+	border-radius: 0 $borderRadius $borderRadius 0; 
+}
+
+.inputGroup .button.button--increment,
+.inputGroup .button.button--deduct {
+	flex: 0 0 rem(37px);
+	max-width: rem(37px);
+	font-size: rem(18px);
+	padding: 0;
+}
+
+.invoiceSummary .inputGroup.inputGroup--invoiceDiscount {
+	max-width: rem(80px);
+}
+
+
+.formControl.formControl--hasFittedAddonFromLeft { padding-left: $fittedAddon-width }
+.formControl.formControl--hasFittedAddonFromRight { padding-right: $fittedAddon-width }
+
+.inputGroup-fittedAddon {
+	width: $fittedAddon-width;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: $color-lightIcon;
+	z-index: 2;
+}
+
+.inputGroup-fittedAddon.inputGroup-fittedAddon--right {
+	left: auto;
+	right: 0;
+}
+
+
+
+/**
+ * Form Group
+ */
+
+.formGroup:not(:last-child) {
+	margin-bottom: $baseline;
+}
+
+.formGroup.is-disabled {
+	opacity: .5;
+}
+
+.formGroup.grid {
+	margin-top: -($baseline/4);
+	margin-bottom: $baseline;
+}
+
+.formGroup.grid > .grid-cell {
+	padding-top: $baseline/4;
+}
+
+.formGroup > label:not(.formCheck),
+.formGroup > .formGroup-label {
+	cursor: default;
+}
+
+.formGroup.grid > label.grid-cell,
+.formGroup.grid > .formGroup-label {
+	padding-top: ($baseline/4) + ($baseline/2); // Fake "center" for label
+}
+
+.formGroup.formGroup--inline > .formControl {
+	width: auto;
+	display: inline-block;
+}
+
+.formGroup.formGroup--inline > label + .formControl,
+.formGroup.formGroup--inline > .inputGroup .formControl {
+	margin-left: $gutter;
+}
+
+.formGroup.formGroup--inline .inputGroup {
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+
+
+/**
+ * Inline form group
+ */
+
+.inlineFormGroups > .inlineFormGroup { margin-bottom: $baseline/2 }
+
+.inlineFormGroup > .grid-cell > .button { margin-top: rem(20px) } // Fake center in a row
+
+
+
+/**
+ * Custom checkbox
+ */
+
+.formCheck {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.formCheck.is-disabled {
+	opacity: .5;
+	cursor: not-allowed;
+}
+
+.formGroup.grid .formCheck {
+	display: flex;
+	align-items: center;
+	height: $input-height;
+}
+
+.formCheck input {
+	position: absolute;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	z-index: -1;
+}
+
+.formCheck .formCheck-indicator > .fa { transition: transform .2s ease, opacity .2s ease }
+
+.formCheck input:not(:checked) + .formCheck-indicator > .fa {
+	transform: scale(0);
+	opacity: 0;
+}
+
+.formCheck input:checked + .formCheck-indicator > .fa {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.formCheck .formCheck-indicator {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: rem(18px);
+	height: rem(18px);
+	color: $color-primary;
+	font-size: rem(12px);
+	border: 1px solid $color-border;
+	border-radius: $borderRadius;
+	margin-right: $gutter/2;
+}
+
+.formCheck:hover .formCheck-indicator { border-color: darken($color-border, 7%) }
+
+.formCheck .formCheck-description { vertical-align: middle }
+
+/**
+ * Custom radio
+ */
+
+.formCheck input[type="radio"] + .formCheck-indicator {
+	border-radius: 999rem;
+}

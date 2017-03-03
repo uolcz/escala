@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../dist/styles/web.css" rel="stylesheet" />
+	<link href="../../dist/styles/docs.css" rel="stylesheet" />
+	
+	<title>Convention | UOL Front-end docs</title>
+</head>
+
+<body class="docsPage">
+
+	<div class="container">
+
+		<aside class="sidebar">
+			<ul class="nav js-nav"></ul>
+		</aside>
+
+		<main class="contentWrapper">
+
+			<h1>Convention</h1>
+			<p>...</p>
+
+			<h2>Contents</h2>
+			<ul class="unorderedList">
+				<li><a href="#components-explained">Components explained</a></li>
+				<li><a href="#component-modifiers-explained">Component modifiers explained</a></li>
+				<li><a href="#component-descendants-explained">Component descendants explained</a></li>
+				<li><a href="#component-states">Component states</a></li>
+				<li><a href="#javascript-classes">JavaScript classes</a></li>
+				<li><a href="#utilities">Utilities (helpers)</a></li>
+			</ul>
+
+			<h2 id="">Quick tips</h2>
+
+			<ul class="unorderedList">
+				<li>HTML classes are always written in <strong>camelCase</strong>, not in PascalCase nor with underscores.</li>
+				<li>Dashes <code class="t-code">-</code> have specific meaning, <strong>do not use them for words separation</strong>. Use camelCase instead.</li>
+			</ul>
+
+			<h2 id="components-explained">Components explained</h2>
+
+			<p>Imagine we want a button. This button should be very clickable and pretty. However, we don't want to overwrite every <code class="t-code">&lt;button&gt;</code> in our application. So instead of styling <code class="t-code">&lt;button&gt;</code> directly like so <code class="t-code">button { color: #888 }</code>, we create a separete <code class="t-code">.button</code> class which will represent our new pretty button component.</p>
+
+			<button class="js-codeExample button">Our new clickable button!</button>
+
+			<p class="u-mt2">
+				Huray! We have our own clickable button and we didn't overwrite default styles of <code class="t-code">&lt;button&gt;</code>. 
+			</p>
+
+			<p class="u-mt2">Component driven development offers several benefits when reading and writing HTML and CSS:</p>
+
+			<ul class="unorderedList">
+				<li>It helps to distinguish between the classes for the root of the component, descendant elements, and modifications.</li>
+				<li>It keeps the specificity of selectors low.</li>
+				<li>It helps to decouple presentation semantics from document semantics.</li>
+			</ul>
+
+			<div class="u-mt2">Syntax: <code class="t-code">.componentName</code></div>
+
+
+			<h2 id="component-modifiers-explained">Component modifiers explained</h2>
+
+			<p>
+				Just realized we need outlined buttons too. Ok, you might be thinking: Yeah, I'll just create <code class="t-code">.buttonOutlined</code> class and it's done. But is <code class="t-code">.buttonOutlined</code> really a new component worth having separate class or just modified <code class="t-code">.button</code>?
+			</p>
+
+			<p> 
+				Yes, it's just modified <code class="t-code">.button</code>. Here's how we deal with modifying.
+			</p>
+
+			<button class="js-codeExample button button--primary button--outlined">Modified button!</button>
+
+			<p class="u-mt2">
+				To break it down we added <code class="t-code">.button--outlined</code> to the main <code class="t-code">.button</code>. Modifiers always start with name of the main component and two dashed, like so <code class="t-code">.button--</code> and follow with modifier name. From modifier's name should be clear what modifier do.
+			</p>
+
+			<div class="u-mt2 u-mb2">Syntax: <code class="t-code">.componentName--modifierName</code></div>
+
+			<h3>Recap:</h3>
+			<ul class="unorderedList u-mb3">
+				<li><code class="t-code">.button</code> is main component</li>
+				<li><code class="t-code">.button--primary</code> is modifier for main <code class="t-code">.button</code> component</li>
+				<li><code class="t-code">.button--outline</code> is another modifier for main <code class="t-code">.button</code> component</li>
+			</ul>
+
+			<h2 id="component-descendants-explained">Component descendants explained</h2>
+
+			<p>
+				A component descendant is a child node dependent on a component. It's responsible for styling on behalf of a parent component.
+			</p>
+
+			<h3>Let code speak for itself:</h3>
+
+<pre class="t-pre"><code>// Worst
+&lt;div id="nav"&gt;
+  &lt;div&gt;
+    &lt;div&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;a href="#"&gt;Invoices&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="t-pre"><code>// Bad
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Invoices&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<pre class="t-pre"><code>// Good
+&lt;div class="nav"&gt;
+  &lt;div class="nav-list"&gt;
+    &lt;div class="nav-listItem"&gt;&lt;a href="#" class="nav-link"&gt;Home&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="nav-listItem"&gt;&lt;a href="#" class="nav-link"&gt;Invoices&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="t-pre"><code>// Best
+&lt;nav class="nav"&gt;
+  &lt;ul class="nav-list"&gt;
+    &lt;li class="nav-listItem"&gt;&lt;a href="#" class="nav-link"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="nav-listItem"&gt;&lt;a href="#" class="nav-link"&gt;Invoices&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+			<div class="u-mt2 u-mb2">Syntax: <code class="t-code">.componentName-descendantName</code></div>
+
+
+			<h2 id="component-states">Component states</h2>
+
+			<p>
+				Use <code class="t-code">is-stateName</code> for state-based modifications of components. The state name must be camelCase. Never style these classes directly. They should always be used as an adjoining class.
+			</p>
+
+			<p>
+				JS can add/remove these classes. This means that the same state names can be used in multiple contexts, but every component must define its own styles for the state (as they are scoped to the component).
+			</p>
+
+			<p>Checkout <a href="./buttons.html">buttons docs</a> for a lot of real world examples.</p>
+
+			<div class="u-mt2 u-mb2">Syntax: <code class="t-code">.componentName.is-stateName</code></div>
+
+			
+			<h2 id="utilities">Utilities (helpers)</h2>
+			<p>
+				Utilities can be applied directly to any element, multiple utilities can be used together and utilities can be used alongside component classes.
+			</p>
+
+			<p>
+				Utilities exist because certain CSS properties and patterns are used frequently. For example: vertical and horizontal spacing, vertical alignment, text styling. Relying on utilities can help to reduce repetition and provide consistent implementations.
+			</p>
+
+			<pre class="t-pre"><code>&lt;div class="u-mb1"&gt;&lt;/div&gt;</code></pre>
+
+			<div class="u-mt2 u-mb2">Syntax: <code class="t-code">.u-utilityName</code></div>
+
+
+			<h2 id="javascript-classes">JavaScript classes</h2>
+
+			<p><i>React makes this section redundent, but I'll leave it here anyway.</i></p>
+
+			<p>Usage of JavaScript specific classes reduces the risk that changing the structure or theme of components will effect any required JavaScript functionality. <strong>These classes should never be user for styling.</strong></p>
+
+			<p>In practice this looks like this:</p>
+
+			<pre class="t-pre"><code>&lt;a href="/login" class="button button--primary js-login"&gt;Login&lt;/a&gt;</code></pre>
+
+			<div class="u-mt2 u-mb2">Syntax: <code class="t-code">.js-targetName</code></div>
+
+
+		</main>
+
+	</div>
+
+	<script type="text/javascript" src="../js/docs.js"></script>
+
+</body>
+</html>

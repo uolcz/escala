@@ -1,0 +1,14 @@
+.dropdown {
+	background: $color-white;
+	padding: $baseline $gutter*2;
+	border-radius: 2px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.07);
+}
+
+.dropdown.dropdown--withDatePicker {
+	width: 350px;
+}
+
+.dropdown.dropdown--withUserMenu {
+	width: 250px;
+}

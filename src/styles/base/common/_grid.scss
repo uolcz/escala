@@ -1,0 +1,66 @@
+.container {
+	margin: 0 auto;
+	padding: 0 $gutter;
+	width: 100%;
+	max-width: $container-width;
+}
+
+@media (min-width: 700px) {
+	.container {
+		padding: 0 $gutter*2;
+	}
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	@extend .grid--gutters;
+}
+
+.grid-cell {
+	flex: 1;
+}
+
+@mixin makeGridGutters($gutter, $index) {
+	@if $index == 2 {
+		@include makeGridGutters($gutter, "");
+	}
+
+	.grid.grid--gutters#{$index} { margin: (-$gutter) 0 0 (-$gutter) }
+	.grid.grid--gutters#{$index} > .grid-cell { padding: $gutter 0 0 $gutter; }
+}
+
+@each $index, $gridGutter in $gridGutters {
+	@include makeGridGutters($gridGutter, $index);
+} 
+
+@mixin makeGridCell($width: 100%) {
+	flex: 0 0 $width;
+	max-width: $width;
+}
+
+@mixin makeGridCells($sreenSize: "xs") {
+	@for $i from 1 through $grid-columns-count {
+
+		$gridCellClassName: ".grid-cell--#{$sreenSize}-#{$i}";
+		$gridCellWidth: 100% / $grid-columns-count * $i;
+
+		#{$gridCellClassName} {
+			 @include makeGridCell($gridCellWidth);
+		}
+	}
+}
+
+@each $screenSize, $breakpoint in $screen-breakpoints { 
+	@if $breakpoint == 0 {
+		@include makeGridCells($screenSize);
+	} 
+
+	@else {
+		@media (min-width: $breakpoint) {
+			@include makeGridCells($screenSize);
+		}
+	}
+}

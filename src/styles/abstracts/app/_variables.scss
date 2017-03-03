@@ -1,0 +1,120 @@
+@import "../common/variables";
+
+/**
+ * Container
+ */
+$container-width: 1220px;
+
+/**
+ * Grid specific setup
+ */
+$grid-columns-count: 12;
+$grid-cell-gutter  : 1.5rem;
+
+
+/**
+ * Responsive screen sizes 
+ */
+$screen-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+);
+
+$screen-sm-min: map-get($screen-breakpoints, sm);
+$screen-md-min: map-get($screen-breakpoints, md);
+$screen-lg-min: map-get($screen-breakpoints, lg);
+$screen-xl-min: map-get($screen-breakpoints, xl);
+
+/**
+ * Typo
+ */
+$fontSize-title      : rem(22px);
+$fontSize-headline   : rem(18px);
+$fontSize-subHeadline: rem(16px);
+$fontSize            : rem(14px);
+$fontSize-smaller    : rem(11px);
+
+$baseline : rem(23px);
+$line-height: $baseline / $fontSize;
+
+$fontFamily: 'Open Sans', sans-serif;
+
+/**
+ * Vertical spacing
+ */
+$vertitalSpace: $baseline;
+$verticalSpace-bigger: $baseline *2;
+
+$input-height: $baseline *2;
+
+/**
+ * Horizontal spacing
+ */
+$gutter: rem(12px);
+
+$gridGutters: (
+	0: 0,
+	1: $grid-cell-gutter/2,
+	2: $grid-cell-gutter,
+	3: $grid-cell-gutter*2
+);
+
+/**
+ * Colors
+ */
+$color-primary  : #ff8800;
+$color-border   : #e0e0e0;
+$color-lightIcon: #cccccc;
+$color-warning  : #d33226;
+$color-text     : #3e3e3e;
+$color-white    : #FFFFFF;
+$color-bg       : #f7f7f7;
+$colors: (
+	success: green, 
+	warning: #f0ad4e,
+	danger : #d33226,
+);
+
+$borderRadius: 2px;
+$borderRadius-button: 999px;
+
+
+/**
+ * Sidebar nav
+ */
+$sidebar-width: 150px;
+
+$transition-type: ease;
+$transition-duration: .2s;
+
+// Z Indexes
+$zIndex-1: 1;
+$zIndex-2: 2;
+$zIndex-3: 3;
+$zIndex-4: 4;
+$zIndex-5: 5;
+$zIndex-6: 6;
+$zIndex-7: 7;
+$zIndex-8: 8;
+$zIndex-9: 9;
+
+$topBar-zIndex: $zIndex-5;
+$bottomBar-zIndex: $zIndex-5;
+$nav-zIndex: $zIndex-6;
+
+/**
+ * Buttons
+ */
+
+$button-primary-background: $color-primary;
+
+$button-secondary-background: #ccc;
+
+$button-success-background: map-get($colors, success);
+
+$button-warning-background: map-get($colors, warning);
+
+$button-danger-background: map-get($colors, danger);

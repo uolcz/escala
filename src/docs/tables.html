@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../dist/styles/web.css" rel="stylesheet" />
+	<link href="../../dist/styles/docs.css" rel="stylesheet" />
+	
+	<title>Tables | UOL Front-end docs</title>
+</head>
+
+<body class="docsPage">
+
+	<div class="container">
+
+		<aside class="sidebar">
+			<ul class="nav js-nav"></ul>
+		</aside>
+
+		<main class="contentWrapper">
+
+			<h1>Tables</h1>
+			<p>...</p>
+
+			<h2>Contents</h2>
+			<ul class="unorderedList">
+				<li><a href="#basic-table">Basic table</a></li>
+				<li><a href="#responsive-table">Responsive table</a></li>
+			</ul>
+
+			<h2 id="basic-table">Basic table</h2>
+			<p>
+				First row has clickable efect unlike second row. This is accomplished just by adding modifier class <code class="t-code">.table-row--clickable</code> to <code class="t-code">.table-row</code> Besides that, it's pretty much standart table with extra <code class="t-code">.table</code> class and <code class="t-code">.table-row</code> classes.
+			</p>
+
+<table class="js-codeExample table">
+	<thead>
+		<tr class="table-row">
+			<th>Čísto účtu</th>
+			<th class="is-active">Stát <span class="fa fa-caret-down"></span></th>
+			<th>IBAN</th>
+			<th>Výchozí</th>
+			<th>Zveřejněný</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="table-row table-row--clickable">
+			<td>43-426345678924</td>
+			<td>Česká Republika (CZ)</td>
+			<td>CZ423756524637568756346</td>
+			<td>Ano</td>
+			<td>Ne</td>
+			<td class="buttonGroup">
+				<button class="button button--lightIcon"><span class="fa fa-print"></span></button>
+				<button class="button button--lightIcon"><span class="fa fa-files-o"></span></button>
+			</td>
+		</tr>
+		<tr class="table-row">
+			<td>43-426345678924</td>
+			<td>Česká Republika (CZ)</td>
+			<td>CZ423756524637568756346</td>
+			<td>Ano</td>
+			<td>Ne</td>
+			<td class="buttonGroup">
+				<button class="button button--lightIcon"><span class="fa fa-print"></span></button>
+				<button class="button button--lightIcon"><span class="fa fa-files-o"></span></button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+			<h2 id="responsive-table">Responsive table</h2>
+			<p>
+				Identical with <a href="#basic-table">basic table</a> just wrapped in <code class="t-code">.responsiveTableWrapper</code>.
+			</p>
+
+<div class="js-codeExample responsiveTableWrapper">
+	<table class="table">
+	<thead>
+		<tr class="table-row">
+			<th>Čísto účtu</th>
+			<th class="is-active">Stát <span class="fa fa-caret-down"></span></th>
+			<th>IBAN</th>
+			<th>Výchozí</th>
+			<th>Zveřejněný</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="table-row table-row--clickable">
+			<td>43-426345678924</td>
+			<td>Česká Republika (CZ)</td>
+			<td>CZ423756524637568756346</td>
+			<td>Ano</td>
+			<td>Ne</td>
+			<td class="buttonGroup">
+				<button class="button button--lightIcon"><span class="fa fa-print"></span></button>
+				<button class="button button--lightIcon"><span class="fa fa-files-o"></span></button>
+			</td>
+		</tr>
+		<tr class="table-row">
+			<td>43-426345678924</td>
+			<td>Česká Republika (CZ)</td>
+			<td>CZ423756524637568756346</td>
+			<td>Ano</td>
+			<td>Ne</td>
+			<td class="buttonGroup">
+				<button class="button button--lightIcon"><span class="fa fa-print"></span></button>
+				<button class="button button--lightIcon"><span class="fa fa-files-o"></span></button>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+
+		</main>
+
+	</div>
+
+	<script type="text/javascript" src="../js/docs.js"></script>
+
+</body>
+</html>

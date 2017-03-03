@@ -1,0 +1,36 @@
+$t-color: $color-primary;
+
+.elementsPage {
+	padding: 50px 25px;
+}
+
+.t-box {
+	display: block;
+	background: $t-color;
+	min-height: 60px;
+	padding: 20px 15px;
+	border-radius: $borderRadius;
+	.t-box { background: darken($t-color, 5%) }
+}
+
+.t-pre {
+    max-height: 600px;
+	color: #7f7f7f;
+    overflow-x: auto;
+    padding: 1.25em;
+    border: 1px solid #e6e6e6;
+    border-left-width: 5px;
+    margin: $baseline 0;
+    font-size: rem(14px);
+    background: #fcfcfc;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.t-code {
+	padding: .2rem .4rem;
+    font-size: 90%;
+    color: #0e579d;
+    background-color: #a6eeff;
+    border-radius: $borderRadius;
+}
