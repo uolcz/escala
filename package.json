@@ -30,7 +30,7 @@
     "url": "git+https://github.com/ucetnictvi-on-line/uol-frontend-framework.git"
   },
   "author": "Patrik Krupar",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ucetnictvi-on-line/uol-frontend-framework/issues"
   },
