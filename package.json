@@ -8,10 +8,12 @@
     "server": "live-server --open=src --host=0.0.0.0",
     "watch:sass": "nodemon -e scss -x \"npm run build:sass\"",
     "build:sass": "concurrently \"node-sass src/styles/app.scss dist/styles/app.css\" \"node-sass src/styles/web.scss dist/styles/web.css\" \"node-sass src/styles/docs.scss dist/styles/docs.css\"",
+    "build:docs": "copyfiles dist/**/* docs/",
     "test": "stylelint \"src/styles/**/*.scss\" --syntax scss"
   },
   "devDependencies": {
     "concurrently": "^3.3.0",
+    "copyfiles": "^1.2.0",
     "eslint": "^3.16.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
@@ -19,6 +21,7 @@
     "eslint-plugin-react": "^6.10.0",
     "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
+    "shx": "^0.2.2",
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0"
   },

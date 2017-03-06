@@ -1,0 +1,14 @@
+.docsPage {
+  background: #fff;
+  padding: 32px 0; }
+  .docsPage .container {
+    max-width: 960px; }
+  .docsPage .contentWrapper {
+    margin-left: 150px; }
+  .docsPage p {
+    margin-bottom: 16px; }
+  .docsPage h2:not(:first-child) {
+    margin-top: 96px; }
+  .docsPage h3 {
+    margin-top: 16px;
+    margin-bottom: 16px; }
