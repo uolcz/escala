@@ -21,10 +21,10 @@
 
 		<main class="contentWrapper">
 
-			<h1>Grid</h1>
+			<h1 class="title">Grid</h1>
 			<p>Standart 12 column <b>responsive</b> grid (very similar to Bootstrap grid). The biggest difference is that there're no columns <code class="t-code">.col</code> and rows <code class="t-code">.row</code> instead there're grid cells <code class="t-code">.grid-cell</code> and grids <code class="t-code">.grid</code>. Any row could be multiline, for that reason grid is more appropriate name.</p>
 
-			<h2>Contents</h2>
+			<h2 class="headline u-mt4">Contents</h2>
 			<ul class="unorderedList">
 				<li><a href="#fixed-width">Fixed width</a></li>
 				<li><a href="#fluid-width">Fluid width</a></li>
@@ -34,7 +34,7 @@
 				<li><a href="#grid-cell-spacing">Grid cell spacing</a></li>
 			</ul>
 
-			<h2 id="fixed-width">Fixed width</h2>
+			<h2 id="fixed-width" class="headline u-mt4">Fixed width</h2>
 
 <div class="grid js-codeExample">
 	<div class="grid-cell grid-cell--xs-1">
@@ -58,7 +58,7 @@
 	</div>
 </div>	
 
-		<h2 id="fluid-width">Fluid width</h2>	
+		<h2 id="fluid-width" class="headline u-mt4">Fluid width</h2>	
 
 <div class="grid js-codeExample">
 	<div class="grid-cell">
@@ -70,7 +70,7 @@
 	</div>
 </div>
 
-		<h2 id="responsivness">Responsivness</h2>
+		<h2 id="responsivness" class="headline u-mt4">Responsivness</h2>
 
 		<ul class="unorderedList">
 			<li><code class="t-code">grid-cell--xs-{1-12}</code></li>
@@ -82,21 +82,21 @@
 
 		<p>Important: when you use e.g: <code class="t-code">grid-cell--md-6</code>, <code class="t-code">grid-cell--xs-12</code> should be also used to create full width layout on tiny viewports because fluid width is default behaviour for grid cells.</p>
 
-		<h3>Example of <b>fluid</b> width on xs screens (resize window)</h3>
+		<h3 class="subHeadline u-mt2">Example of <b>fluid</b> width on xs screens (resize window)</h3>
 
 <div class="grid js-codeExample">
 	<div class="grid-cell grid-cell--lg-6"><div class="t-box">6/12</div></div>
 	<div class="grid-cell grid-cell--lg-6"><div class="t-box">6/12</div></div>
 </div>
 
-		<h3>Example of <b>full</b> width on xs screens (resize window)</h3>
+		<h3 class="subHeadline u-mt2">Example of <b>full</b> width on xs screens (resize window)</h3>
 
 <div class="grid js-codeExample">
 	<div class="grid-cell grid-cell--xs-12 grid-cell--lg-6"><div class="t-box">6/12</div></div>
 	<div class="grid-cell grid-cell--xs-12 grid-cell--lg-6"><div class="t-box">6/12</div></div>
 </div>
 
-		<h2 id="multiline">Multiline</h2>
+		<h2 id="multiline" class="headline u-mt4">Multiline</h2>
 		
 <div class="grid js-codeExample">
 	<div class="grid-cell grid-cell--xs-12 grid-cell--md-4">
@@ -124,7 +124,7 @@
 	</div>
 </div>	
 
-		<h2 id="nested-grid">Nested grid</h2>
+		<h2 id="nested-grid" class="headline u-mt4">Nested grid</h2>
 		<p><code class="t-code">.t-box</code> is just for visual purposes</p>
 
 <div class="grid js-codeExample">
@@ -147,7 +147,7 @@
 	</div>
 </div>
 
-		<h2 id="grid-cell-spacing">Grid cell spacing</h2>
+		<h2 id="grid-cell-spacing" class="headline u-mt4">Grid cell spacing</h2>
 		<p>Modify grid cells spacing by adding:</p>
 		<ul class="unorderedList">
 			<li><code class="t-code">.grid--gutters0</code></li>

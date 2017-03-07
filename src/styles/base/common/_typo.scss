@@ -5,28 +5,26 @@ body {
 	line-height: $line-height;
 }
 
-h1, h2, h3, h4 {
-	color: #484848;
+.title,
+.headline,
+.subHeadline {
+	color: $headlines-color;
 	font-weight: 400;
 	margin: 0;
 }
 
-h1 {
+.title {
 	font-size: $fontSize-title;
 	margin-bottom: $baseline;
 }
 
-h2 {
+.headline {
 	font-size: $fontSize-headline;
 	margin-bottom: $baseline;
 }
 
-h3 {
+.subHeadline {
 	font-size: $fontSize-subHeadline;
-}
-
-h3 {
-	font-size: $fontSize;
 }
 
 .textHighlight {

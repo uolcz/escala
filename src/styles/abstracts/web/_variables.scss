@@ -68,14 +68,13 @@ $color-text     : #3e3e3e;
 $color-white    : #FFFFFF;
 $color-bg       : #f7f7f7;
 $colors: (
-	success: green, 
+	success: green,
 	warning: #f0ad4e,
 	danger : #d33226,
 );
 
 $borderRadius: 2px;
 $borderRadius-button: 999px;
-
 
 /**
  * Sidebar nav
@@ -111,3 +110,9 @@ $button-success-background: map-get($colors, success);
 $button-warning-background: map-get($colors, warning);
 
 $button-danger-background: map-get($colors, danger);
+
+/**
+ * Headlines
+ */
+
+$headlines-color: #484848;

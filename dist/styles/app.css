@@ -59,24 +59,23 @@ body {
   font-size: 0.875rem;
   line-height: 1.64286; }
 
-h1, h2, h3, h4 {
+.title,
+.headline,
+.subHeadline {
   color: #484848;
   font-weight: 400;
   margin: 0; }
 
-h1 {
+.title {
   font-size: 1.375rem;
   margin-bottom: 1.4375rem; }
 
-h2 {
+.headline {
   font-size: 1.125rem;
   margin-bottom: 1.4375rem; }
 
-h3 {
+.subHeadline {
   font-size: 1rem; }
-
-h3 {
-  font-size: 0.875rem; }
 
 .textHighlight {
   background: #ffe7cc;
