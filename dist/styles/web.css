@@ -1,11 +1,14 @@
 /**
+ * Colors
+ */
+/**
+ * Body
+ */
+/**
  * Container
  */
 /**
- * Grid specific setup
- */
-/**
- * Responsive screen sizes 
+ * Responsive screen sizes
  */
 /**
  * Typo
@@ -17,16 +20,28 @@
  * Horizontal spacing
  */
 /**
- * Colors
+ * Grid
  */
 /**
  * Sidebar nav
+ */
+/**
+ * Z indexes
  */
 /**
  * Buttons
  */
 /**
  * Headlines
+ */
+/**
+ * Header
+ */
+/**
+ * Cards
+ */
+/**
+ * Inputs
  */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -2818,7 +2833,7 @@ button, input, optgroup, select, textarea {
   font-family: inherit; }
 
 a {
-  color: #ff8800;
+  color: #f80;
   text-decoration: none;
   transition: 0.1s ease color; }
 
@@ -2827,7 +2842,7 @@ a:hover {
 
 body {
   color: #3e3e3e;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.64286; }
 
@@ -2885,9 +2900,15 @@ body {
   padding: 0 0 0 0; }
 
 .grid.grid--gutters1 {
-  margin: -0.75rem 0 0 -0.75rem; }
+  margin: -0.375rem 0 0 -0.375rem; }
 
 .grid.grid--gutters1 > .grid-cell {
+  padding: 0.375rem 0 0 0.375rem; }
+
+.grid.grid--gutters2 {
+  margin: -0.75rem 0 0 -0.75rem; }
+
+.grid.grid--gutters2 > .grid-cell {
   padding: 0.75rem 0 0 0.75rem; }
 
 .grid.grid--gutters, .grid {
@@ -2896,17 +2917,23 @@ body {
 .grid.grid--gutters > .grid-cell, .grid > .grid-cell {
   padding: 1.5rem 0 0 1.5rem; }
 
-.grid.grid--gutters2 {
+.grid.grid--gutters3 {
   margin: -1.5rem 0 0 -1.5rem; }
 
-.grid.grid--gutters2 > .grid-cell {
+.grid.grid--gutters3 > .grid-cell {
   padding: 1.5rem 0 0 1.5rem; }
 
-.grid.grid--gutters3 {
-  margin: -3rem 0 0 -3rem; }
+.grid.grid--gutters4 {
+  margin: -2.25rem 0 0 -2.25rem; }
 
-.grid.grid--gutters3 > .grid-cell {
-  padding: 3rem 0 0 3rem; }
+.grid.grid--gutters4 > .grid-cell {
+  padding: 2.25rem 0 0 2.25rem; }
+
+.grid.grid--gutters5 {
+  margin: -4.5rem 0 0 -4.5rem; }
+
+.grid.grid--gutters5 > .grid-cell {
+  padding: 4.5rem 0 0 4.5rem; }
 
 .grid-cell--xs-1 {
   flex: 0 0 8.33333%;
@@ -3157,7 +3184,7 @@ a.u-textMuted,
 
 .t-box {
   display: block;
-  background: #ff8800;
+  background: #f80;
   min-height: 60px;
   padding: 20px 15px;
   border-radius: 2px; }
@@ -3199,7 +3226,7 @@ a.u-textMuted,
   top: 0;
   left: 0;
   width: 100%;
-  background: #FFFFFF;
+  background: #fff;
   border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.07); }
 
@@ -3310,7 +3337,7 @@ button.userNav {
   margin-bottom: 0.71875rem; }
 
 .userMenu-item:hover {
-  color: #ff8800; }
+  color: #f80; }
 
 .userMenu-separator {
   border-bottom: 1px solid #e0e0e0;
@@ -3333,8 +3360,8 @@ button.userNav {
   text-decoration: none; }
 
 .nav-item.is-active {
-  background: #ff8800;
-  color: #FFFFFF; }
+  background: #f80;
+  color: #fff; }
 
 .nav-item .fa {
   width: 2.1875rem;
@@ -3394,23 +3421,23 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   background: transparent; }
 
 .button.button--primary, .button--primary.userNav {
-  color: #FFFFFF;
-  background: #ff8800; }
+  color: #fff;
+  background: #f80; }
 
 .button.button--primary:hover, .button--primary.userNav:hover {
   background: #ffa033; }
 
 .button.button--primary.button--outlined, .button--primary.button--outlined.userNav, .inputGroup > .button.button--primary, .inputGroup > .button--primary.userNav {
   background: transparent;
-  border: 1px solid #ff8800;
-  color: #ff8800; }
+  border: 1px solid #f80;
+  color: #f80; }
 
 .button.button--primary.button--outlined:hover, .button--primary.button--outlined.userNav:hover, .inputGroup > .button.button--primary:hover, .inputGroup > .button--primary.userNav:hover {
   color: #e67a00;
   border-color: #e67a00; }
 
 .button.button--primary.button--borderLess, .button--primary.button--borderLess.userNav {
-  color: #ff8800; }
+  color: #f80; }
 
 .button.button--secondary, .button--secondary.userNav {
   background: #ccc;
@@ -3430,7 +3457,7 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 
 .button.button--danger, .button--danger.userNav {
   background: #d33226;
-  color: #FFFFFF; }
+  color: #fff; }
 
 .button.button--danger.button--outlined, .button--danger.button--outlined.userNav, .inputGroup > .button.button--danger, .inputGroup > .button--danger.userNav {
   background: transparent;
@@ -3446,7 +3473,7 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 
 .button.button--success, .button--success.userNav {
   background: green;
-  color: #FFFFFF; }
+  color: #fff; }
 
 .button.button--success.button--outlined, .button--success.button--outlined.userNav, .inputGroup > .button.button--success, .inputGroup > .button--success.userNav {
   background: transparent;
@@ -3469,7 +3496,7 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   background: transparent; }
 
 .button--lightIcon {
-  color: #cccccc;
+  color: #ccc;
   font-size: 1.0625rem; }
 
 .button--lightIcon:hover {
@@ -3525,7 +3552,7 @@ tbody .table-row.table-row--clickable:hover td {
   font-weight: 600; }
 
 .table th.is-active {
-  color: #ff8800; }
+  color: #f80; }
 
 .table th,
 .table td {
@@ -3576,13 +3603,13 @@ tbody .table-row.table-row--clickable:hover td {
   padding: 0 0.1875rem; }
 
 .paginator-item.is-active {
-  color: #ff8800; }
+  color: #f80; }
 
 .formControl, .SingleDatePickerInput {
   display: block;
   width: 100%;
   height: 2.5rem;
-  background: #FFFFFF;
+  background: #fff;
   padding: 0 0.75rem;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
@@ -3601,7 +3628,7 @@ tbody .table-row.table-row--clickable:hover td {
   border-color: #cecece; }
 
 .formControl:focus, .SingleDatePickerInput:focus {
-  border-color: #ff8800; }
+  border-color: #f80; }
 
 select.formControl, select.SingleDatePickerInput {
   cursor: pointer; }
@@ -3706,7 +3733,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
-  color: #cccccc;
+  color: #ccc;
   z-index: 2; }
 
 .inputGroup-fittedAddon.inputGroup-fittedAddon--right {
@@ -3799,7 +3826,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   justify-content: center;
   width: 1.125rem;
   height: 1.125rem;
-  color: #ff8800;
+  color: #f80;
   font-size: 0.75rem;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
@@ -3832,7 +3859,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
 
 .tag.tag--primary {
   background: #ffe7cc;
-  color: #ff8800; }
+  color: #f80; }
 
 .tag.tag--small {
   font-size: 0.625rem;
@@ -3862,7 +3889,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   font-weight: 600; }
 
 .addressBox {
-  background: #FFFFFF;
+  background: #fff;
   border: 1px solid #e0e0e0;
   padding: 1.4375rem 0.75rem; }
 
@@ -3883,7 +3910,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   display: flex;
   align-items: center;
   color: inherit;
-  background: #FFFFFF;
+  background: #fff;
   padding: 1.4375rem 1.5rem;
   border: 1px solid transparent;
   border-radius: 2px;
@@ -3913,7 +3940,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
 
 .card {
   display: block;
-  background: #FFFFFF;
+  background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 2px; }
 
@@ -3969,7 +3996,7 @@ a.card:active {
   min-width: 6.25rem; }
 
 .dropdown {
-  background: #FFFFFF;
+  background: #fff;
   padding: 1.4375rem 1.5rem;
   border-radius: 2px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.07); }
@@ -4006,7 +4033,7 @@ a.card:active {
   align-items: center;
   width: 100%;
   height: 2.5rem;
-  background-color: #FFFFFF;
+  background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   cursor: pointer;
@@ -4034,7 +4061,7 @@ a.card:active {
   cursor: text; }
 
 .is-focused:not(.is-open) > .Select-control {
-  border-color: #ff8800; }
+  border-color: #f80; }
 
 .Select-placeholder,
 .Select--single > .Select-control .Select-value {
@@ -4227,8 +4254,8 @@ a.card:active {
   border-bottom-left-radius: 4px; }
 
 .Select-option.is-selected {
-  background-color: #ff8800;
-  color: #FFFFFF; }
+  background-color: #f80;
+  color: #fff; }
 
 .Select-option.is-focused {
   background-color: #f7f7f7; }
@@ -4344,7 +4371,7 @@ a.card:active {
 
 .modal {
   position: relative;
-  background: #FFFFFF;
+  background: #fff;
   border-radius: 2px;
   padding: 1.4375rem 1.5rem;
   box-shadow: 0 0 30p 5px rgba(0, 0, 0, 0.2);

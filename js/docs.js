@@ -31,6 +31,10 @@ Uol.docs = {
             name: "Tags",
             url: "./tags.html"
         },
+        {
+            name: "Select",
+            url: "./select.html"
+        },
     ],
 
     init() {
