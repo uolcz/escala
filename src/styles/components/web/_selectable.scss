@@ -26,7 +26,7 @@
   align-items: center;
 	width: 100%;
   height: rem(40px);
-  background-color: $color-white;
+  background-color: $white;
   border: 1px solid $color-border;
   border-radius: $borderRadius;
   cursor: pointer;
@@ -255,10 +255,10 @@
 }
 .Select-option.is-selected {
   background-color: $color-primary;
-  color: $color-white;
+  color: $white;
 }
 .Select-option.is-focused {
-  background-color: $color-bg;
+  background-color: $body-bg;
 }
 .Select-option.is-disabled {
   color: #cccccc;

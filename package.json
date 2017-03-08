@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run watch:sass\"",
     "server": "live-server --open=docs --host=0.0.0.0",
-    "watch:sass": "nodemon -e scss -x \"npm run build:sass:web\"",
+    "watch:sass": "nodemon -e scss -x \"npm run build:sass:web\" \"npm run build:docs\"",
     "build:sass": "concurrently \"npm run build:sass:app\" \"npm run build:sass:web\" \"npm run build:sass:docs\"",
     "build:sass:app": "node-sass src/styles/app.scss dist/styles/app.css",
     "build:sass:web": "node-sass src/styles/web.scss dist/styles/web.css",

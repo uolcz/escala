@@ -16,6 +16,7 @@
 	flex-wrap: wrap;
 	list-style: none;
 	padding: 0;
+
 	@extend .grid--gutters;
 }
 
@@ -24,17 +25,17 @@
 }
 
 @mixin makeGridGutters($gutter, $index) {
-	@if $index == 2 {
+	@if $index == 3 {
 		@include makeGridGutters($gutter, "");
 	}
 
-	.grid.grid--gutters#{$index} { margin: (-$gutter) 0 0 (-$gutter) }
+	.grid.grid--gutters#{$index} { margin: (-$gutter) 0 0 (-$gutter); }
 	.grid.grid--gutters#{$index} > .grid-cell { padding: $gutter 0 0 $gutter; }
 }
 
-@each $index, $gridGutter in $gridGutters {
-	@include makeGridGutters($gridGutter, $index);
-} 
+@each $index, $grid-cell-gutter in $grid-cell-gutters {
+	@include makeGridGutters($grid-cell-gutter, $index);
+}
 
 @mixin makeGridCell($width: 100%) {
 	flex: 0 0 $width;
@@ -48,15 +49,15 @@
 		$gridCellWidth: 100% / $grid-columns-count * $i;
 
 		#{$gridCellClassName} {
-			 @include makeGridCell($gridCellWidth);
+			@include makeGridCell($gridCellWidth);
 		}
 	}
 }
 
-@each $screenSize, $breakpoint in $screen-breakpoints { 
+@each $screenSize, $breakpoint in $screen-breakpoints {
 	@if $breakpoint == 0 {
 		@include makeGridCells($screenSize);
-	} 
+	}
 
 	@else {
 		@media (min-width: $breakpoint) {

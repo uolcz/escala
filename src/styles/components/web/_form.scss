@@ -5,7 +5,7 @@ $fittedAddon-width: rem(37px);
 	display: block;
 	width: 100%;
 	height: $input-height;
-	background: $color-white;
+	background: $white;
 	padding: 0 $gutter;
 	border: 1px solid $color-border;
 	border-radius: $borderRadius;
@@ -41,37 +41,35 @@ textarea.formControl {
 	padding: $baseline/2 $gutter;
 }
 
-
-
 /**
  * Form validation
  */
 
 .is-danger .formControl,
 .is-danger .formControl:not(:focus):hover {
-	border-color: map-get($colors, danger);
+	border-color: $color-danger;
 }
 
 .is-danger .formControlFeedback {
-	color: map-get($colors, danger);
+	color: $color-danger;
 }
 
 .is-success .formControl,
 .is-success .formControl:not(:focus):hover {
-	border-color: map-get($colors, success);
+	border-color: $color-success;
 }
 
 .is-success .formControlFeedback {
-	color: map-get($colors, success);
+	color: $color-success;
 }
 
 .is-warning .formControl,
 .is-warning .formControl:not(:focus):hover {
-	border-color: map-get($colors, warning);
+	border-color: $color-warning;
 }
 
 .is-warning .formControlFeedback {
-	color: map-get($colors, warning);
+	color: $color-warning;
 }
 
 

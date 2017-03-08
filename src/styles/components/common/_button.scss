@@ -40,7 +40,7 @@ a.button:not(.button--asLink):hover {
 
 
 .button.button--primary {
-	color: $color-white;
+	color: $white;
 	background: $button-primary-background;
 }
 
@@ -91,7 +91,7 @@ a.button:not(.button--asLink):hover {
 
 .button.button--danger {
 	background: $button-danger-background;
-	color: $color-white;
+	color: $white;
 }
 
 .button.button--danger.button--outlined {
@@ -112,7 +112,7 @@ a.button:not(.button--asLink):hover {
 
 .button.button--success {
 	background: $button-success-background;
-	color: $color-white;
+	color: $white;
 }
 
 .button.button--success.button--outlined {

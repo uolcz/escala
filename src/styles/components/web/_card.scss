@@ -1,6 +1,6 @@
 .card {
 	display: block;
-	background: $color-white;
+	background: $white;
 	border: 1px solid $color-border;
 	border-radius: $borderRadius;
 }
@@ -25,7 +25,7 @@ a.card:active {
 }
 
 .card-header {
-	background: $color-bg;
+	background: $card-header-bg;
 	padding: $baseline/2 $gutter;
 }
 

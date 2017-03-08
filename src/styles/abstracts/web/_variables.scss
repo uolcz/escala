@@ -1,20 +1,21 @@
 @import "../common/variables";
 
 /**
+ * Body
+ */
+
+$body-bg: #f7f7f7 !default;
+
+/**
  * Container
  */
-$container-width: 1220px;
+
+$container-width: 1220px !default;
 
 /**
- * Grid specific setup
+ * Responsive screen sizes
  */
-$grid-columns-count: 12;
-$grid-cell-gutter  : 1.5rem;
 
-
-/**
- * Responsive screen sizes 
- */
 $screen-breakpoints: (
 	xs: 0,
 	sm: 576px,
@@ -26,65 +27,68 @@ $screen-breakpoints: (
 /**
  * Typo
  */
-$fontSize-title      : rem(22px);
-$fontSize-headline   : rem(18px);
-$fontSize-subHeadline: rem(16px);
-$fontSize            : rem(14px);
-$fontSize-smaller    : rem(11px);
 
-$baseline : rem(23px);
-$line-height: $baseline / $fontSize;
+$fontFamily-sansSerif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$fontFamily: "Open Sans", $fontFamily-sansSerif !default;
 
-$fontFamily: 'Open Sans', sans-serif;
+$fontSize-title      : rem(22px) !default;
+$fontSize-headline   : rem(18px) !default;
+$fontSize-subHeadline: rem(16px) !default;
+$fontSize            : rem(14px) !default;
+$fontSize-smaller    : rem(11px) !default;
 
 /**
  * Vertical spacing
  */
-$vertitalSpace: $baseline;
-$verticalSpace-bigger: $baseline *2;
 
-$input-height: $baseline *2;
+$baseline : rem(23px) !default;
+
+$spacers-y: (
+	0: 0,
+	1: ($baseline * 0.25),
+	2: ($baseline * 0.5),
+	3: $baseline,
+	4: ($baseline * 1.5),
+	5: ($baseline * 3),
+) !default;
+
+$line-height: $baseline / $fontSize;
 
 /**
  * Horizontal spacing
  */
+
 $gutter: rem(12px);
 
-$gridGutters: (
-	0: 0,
-	1: $grid-cell-gutter/2,
-	2: $grid-cell-gutter,
-	3: $grid-cell-gutter*2
-);
+$borderRadius: 2px !default;
+$borderRadius-button: 999px !default;
 
 /**
- * Colors
+ * Grid
  */
-$color-primary  : #ff8800;
-$color-border   : #e0e0e0;
-$color-lightIcon: #cccccc;
-$color-warning  : #d33226;
-$color-text     : #3e3e3e;
-$color-white    : #FFFFFF;
-$color-bg       : #f7f7f7;
-$colors: (
-	success: green,
-	warning: #f0ad4e,
-	danger : #d33226,
-);
 
-$borderRadius: 2px;
-$borderRadius-button: 999px;
+$grid-columns-count: 12 !default;
+$grid-cell-gutter: ($gutter * 2) !default;
+
+$grid-cell-gutters: (
+	0: 0,
+	1: ($grid-cell-gutter * 0.25),
+	2: ($grid-cell-gutter * 0.5),
+	3: $grid-cell-gutter,
+	4: ($grid-cell-gutter * 1.5),
+	5: ($grid-cell-gutter * 3),
+) !default;
 
 /**
  * Sidebar nav
  */
-$sidebar-width: 150px;
 
-$transition-type: ease;
-$transition-duration: .2s;
+$sidebar-width: 150px !default;
 
-// Z Indexes
+/**
+ * Z indexes
+ */
+
 $zIndex-1: 1;
 $zIndex-2: 2;
 $zIndex-3: 3;
@@ -95,24 +99,48 @@ $zIndex-7: 7;
 $zIndex-8: 8;
 $zIndex-9: 9;
 
-$header-zIndex: $zIndex-5;
-
 /**
  * Buttons
  */
 
-$button-primary-background: $color-primary;
+$button-primary-background: $color-primary !default;
 
-$button-secondary-background: #ccc;
+$button-secondary-background: #ccc !default;
 
-$button-success-background: map-get($colors, success);
+$button-success-background: $color-success !default;
 
-$button-warning-background: map-get($colors, warning);
+$button-warning-background: $color-warning !default;
 
-$button-danger-background: map-get($colors, danger);
+$button-danger-background: $color-danger !default;
 
 /**
  * Headlines
  */
 
-$headlines-color: #484848;
+$headlines-color: #484848 !default;
+
+/**
+ * Header
+ */
+
+$header-bg: $white !default;
+$header-zIndex: $zIndex-5 !default;
+
+/**
+ * Cards
+ */
+
+$card-header-bg: $body-bg !default;
+
+/**
+ * Inputs
+ */
+
+$input-height: $baseline * 2;
+
+/**
+ * Transitions
+ */
+
+$transition-type: ease !default;
+$transition-duration: 0.2s !default;
