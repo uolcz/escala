@@ -1,9 +1,10 @@
 {
   "name": "uol-frontend-framework",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "dist/js/bundle.js",
   "scripts": {
+    "prepublish": "npm run webpack:build",
     "dev": "concurrently \"npm run server\" \"npm run watch:sass\"",
     "server": "live-server --open=docs --host=0.0.0.0",
     "watch:sass": "nodemon -e scss -x \"npm run build:sass:web\" \"npm run build:docs\"",
@@ -12,9 +13,17 @@
     "build:sass:web": "node-sass src/styles/web.scss dist/styles/web.css",
     "build:sass:docs": "node-sass src/styles/docs.scss dist/styles/docs.css",
     "build:docs": "copyfiles dist/**/* docs/",
-    "test": "stylelint \"src/styles/**/*.scss\" --syntax scss"
+    "test": "stylelint \"src/styles/**/*.scss\" --syntax scss",
+    "webpack:build": "webpack"
   },
   "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
     "concurrently": "^3.3.0",
     "copyfiles": "^1.2.0",
     "eslint": "^3.16.1",
@@ -26,7 +35,8 @@
     "nodemon": "^1.11.0",
     "shx": "^0.2.2",
     "stylelint": "^7.9.0",
-    "stylelint-config-standard": "^16.0.0"
+    "stylelint-config-standard": "^16.0.0",
+    "webpack": "^2.2.1"
   },
   "repository": {
     "type": "git",
@@ -37,5 +47,10 @@
   "bugs": {
     "url": "https://github.com/ucetnictvi-on-line/uol-frontend-framework/issues"
   },
-  "homepage": "https://github.com/ucetnictvi-on-line/uol-frontend-framework#readme"
+  "homepage": "https://github.com/ucetnictvi-on-line/uol-frontend-framework#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-autosuggest": "^9.0.0",
+    "react-dom": "^15.4.2"
+  }
 }
