@@ -15,7 +15,8 @@
     "build:docs": "copyfiles dist/**/* docs/",
     "test": "stylelint \"src/styles/**/*.scss\" --syntax scss",
     "webpack:build": "webpack",
-    "webpack:watch": "webpack-dev-server --inline --hot"
+    "webpack:watch": "webpack-dev-server --inline --hot",
+    "deploy": "./deploy.sh"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
