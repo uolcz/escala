@@ -1,0 +1,48 @@
+.selectable {
+	position: relative;
+}
+
+.selectable.is-open .formControl {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.selectable-menu {
+	max-height: 250px;
+	background: $white;
+	padding: $baseline/2 $gutter;
+	border: 1px solid $color-border;
+	border-top: 0;
+	border-radius: 0 0 $borderRadius $borderRadius;
+	overflow-y: scroll;
+	display: none;
+}
+
+.selectable-menu.is-open {
+	display: block;
+}
+
+.selectable-item {
+	padding: $baseline/4 $gutter/2;
+	margin-bottom: $baseline/4;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.selectable-item:hover {
+	background: $body-bg;
+}
+
+.selectable-item.is-highlighted {
+	color: $white;
+	background: $color-primary;
+}
+
+.selectable-item.is-highlighted .selectable-tag {
+	color: lighten($color-primary, 25%);
+}
+
+.selectable-tag {
+	color: lighten($color-text, 50%);
+	font-size: rem(12px);
+}

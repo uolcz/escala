@@ -14,7 +14,8 @@
     "build:sass:docs": "node-sass src/styles/docs.scss dist/styles/docs.css",
     "build:docs": "copyfiles dist/**/* docs/",
     "test": "stylelint \"src/styles/**/*.scss\" --syntax scss",
-    "webpack:build": "webpack"
+    "webpack:build": "webpack",
+    "webpack:watch": "webpack-dev-server --inline --hot"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -36,7 +37,8 @@
     "shx": "^0.2.2",
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "repository": {
     "type": "git",

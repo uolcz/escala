@@ -4387,3 +4387,43 @@ a.card:active {
   position: absolute;
   top: 20px;
   right: 20px; }
+
+.selectable {
+  position: relative; }
+
+.selectable.is-open .formControl, .selectable.is-open .SingleDatePickerInput {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.selectable-menu {
+  max-height: 250px;
+  background: #fff;
+  padding: 0.71875rem 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-top: 0;
+  border-radius: 0 0 2px 2px;
+  overflow-y: scroll;
+  display: none; }
+
+.selectable-menu.is-open {
+  display: block; }
+
+.selectable-item {
+  padding: 0.35938rem 0.375rem;
+  margin-bottom: 0.35938rem;
+  border-radius: 2px;
+  cursor: pointer; }
+
+.selectable-item:hover {
+  background: #f7f7f7; }
+
+.selectable-item.is-highlighted {
+  color: #fff;
+  background: #f80; }
+
+.selectable-item.is-highlighted .selectable-tag {
+  color: #ffc480; }
+
+.selectable-tag {
+  color: #bebebe;
+  font-size: 0.75rem; }

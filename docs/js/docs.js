@@ -32,8 +32,8 @@ Uol.docs = {
 			url: "./tags.html",
 		},
 		{
-			name: "Select",
-			url: "./select.html",
+			name: "Typeahead",
+			url: "./typeahead.html",
 		},
 	],
 
