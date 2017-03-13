@@ -22,17 +22,32 @@
 		<main class="contentWrapper">
 
 			<h1 class="title">Typeahead</h1>
-<!-- 			<p>...</p>
+			<p>Typeahead is pure react component based on <a href="https://github.com/moroshko/react-autosuggest">React autosuggest</a>.</p>
 
 			<h2 class="headline u-mt4">Contents</h2>
 			<ul class="unorderedList">
-				<li><a href="#basic-table">Basic table</a></li>
+				<li><a href="#basic-typeahead">Basic typeahead</a></li>
 			</ul>
 
-			<h2 id="basic-table" class="headline u-mt4">Basic table</h2>
-			<p>
-				First row has clickable efect unlike second row. This is accomplished just by adding modifier class <code class="t-code">.table-row--clickable</code> to <code class="t-code">.table-row</code> Besides that, it's pretty much standart table with extra <code class="t-code">.table</code> class and <code class="t-code">.table-row</code> classes.
-			</p> -->
+			<h2 id="basic-typeahead" class="headline u-mt4">Basic typeahead</h2>
+
+<pre class="t-pre"><code>
+import Typeahead from "uol-frontend-framewrok";
+
+&lt;Typeahead
+	placeholder="US states"
+	data={[
+		{
+	        "name": "Alabama",
+	        "abbreviation": "AL",
+	    },
+	    {
+	        "name": "Alaska",
+	        "abbreviation": "AK",
+	    },
+	]}
+/&gt;
+</code></pre>
 
 			<div id="react-typeahead"></div>
 
