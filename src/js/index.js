@@ -10,6 +10,7 @@ export default {
 if (process.env.NODE_ENV !== "production") {
 	ReactDOM.render(
 		<Typeahead
+			placeholder="US states"
 			data={[
 				{
 			        "name": "Alabama",

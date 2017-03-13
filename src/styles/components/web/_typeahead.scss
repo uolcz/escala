@@ -24,9 +24,12 @@
 
 .selectable-item {
 	padding: $baseline/4 $gutter/2;
-	margin-bottom: $baseline/4;
 	border-radius: 2px;
 	cursor: pointer;
+}
+
+.selectable-item:not(:last-of-type) {
+	margin-bottom: $baseline/4;
 }
 
 .selectable-item:hover {
