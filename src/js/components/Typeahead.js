@@ -26,88 +26,33 @@ const getSuggestionValue = suggestion => suggestion.name;
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => <div>{suggestion.name}</div>;
 
-class Typeahead extends React.Component {
-
-	constructor(props) {
-		super(props);
-
-		// Autosuggest is a controlled component.
-		// This means that you need to provide an input value
-		// and an onChange handler that updates this value (see below).
-		// Suggestions also need to be provided to the Autosuggest,
-		// and they are initially empty because the Autosuggest is closed.
-		this.state = {
-			value: "",
-			suggestions: [],
-		};
-	}
-
-	onChange = (event, { newValue }) => {
-		this.setState({ value: newValue });
+const Typeahead = (props) => {
+	// Autosuggest will pass through all these props to the input element.
+	const inputProps = {
+		placeholder: props.placeholder,
+		value: props.value,
+		onChange: props.onChange,
 	};
 
-	// Autosuggest will call this function every time you need to update suggestions.
-	onSuggestionsFetchRequested = ({ value }) => {
-		this.setState({
-			suggestions: this.getSuggestions(value),
-		});
-	};
-
-	// Autosuggest will call this function every time you need to clear suggestions.
-	onSuggestionsClearRequested = () => {
-		this.setState({
-			suggestions: [],
-		});
-	};
-
-	// Teach Autosuggest how to calculate suggestions for any given input value.
-	getSuggestions = (value) => {
-		const inputValue = value.trim().toLowerCase();
-		const inputLength = inputValue.length;
-
-		return inputLength === 0 ? [] : this.props.data.filter(item =>
-			item.name.toLowerCase().slice(0, inputLength) === inputValue
-		);
-	};
-
-	render() {
-		const suggestions = this.props.suggestions || this.state.suggestions;
-		const value = this.props.value || this.state.value;
-		const onChange = this.props.onChange || this.onChange;
-		const onSuggestionsFetchRequested = this.props.onSuggestionsFetchRequested || this.onSuggestionsFetchRequested;
-		const onSuggestionsClearRequested = this.props.onSuggestionsClearRequested || this.onSuggestionsClearRequested;
-
-		// Autosuggest will pass through all these props to the input element.
-		const inputProps = {
-			placeholder: this.props.placeholder,
-			value,
-			onChange,
-		};
-
-		return (
-			<Autosuggest
-				suggestions={suggestions}
-				onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-				onSuggestionsClearRequested={onSuggestionsClearRequested}
-				getSuggestionValue={this.props.getSuggestionValue}
-				renderSuggestion={this.props.renderSuggestion}
-				inputProps={inputProps}
-				theme={theme}
-			/>
-		);
-	}
-}
+	return (
+		<Autosuggest
+			{...props}
+			inputProps={inputProps}
+			theme={theme}
+		/>
+	);
+};
 
 Typeahead.propTypes = {
-	data: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-	suggestions: React.PropTypes.arrayOf(React.PropTypes.object),
-	value: React.PropTypes.string,
+	suggestions: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+	value: React.PropTypes.string.isRequired,
 	placeholder: React.PropTypes.string,
 	getSuggestionValue: React.PropTypes.func,
 	renderSuggestion: React.PropTypes.func,
-	onChange: React.PropTypes.func,
-	onSuggestionsFetchRequested: React.PropTypes.func,
-	onSuggestionsClearRequested: React.PropTypes.func,
+	onChange: React.PropTypes.func.isRequired,
+	onSuggestionsFetchRequested: React.PropTypes.func.isRequired,
+	onSuggestionsClearRequested: React.PropTypes.func.isRequired,
+	getSuggestions: React.PropTypes.func,
 };
 
 Typeahead.defaultProps = {
