@@ -35,6 +35,10 @@ Uol.docs = {
 			name: "Typeahead",
 			url: "./typeahead.html",
 		},
+		{
+			name: "Charts",
+			url: "./charts.html",
+		},
 	],
 
 	init() {
