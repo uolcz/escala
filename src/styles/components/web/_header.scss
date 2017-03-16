@@ -81,8 +81,8 @@
 .userNav {
 	@extend 
 		.button, 
-		.button.button--unstyled, 
-		.button.button--dropdown;
+		%button--unstyled, 
+		%button--dropdown;
 	display: none;
 }
 
