@@ -82,7 +82,7 @@
 	@extend 
 		.button, 
 		%button--unstyled, 
-		%button--dropdown;
+		%button--hasDropdown;
 	display: none;
 }
 
