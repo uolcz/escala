@@ -79,10 +79,9 @@
 
 
 .userNav {
-	@extend 
-		.button, 
-		%button--unstyled, 
-		%button--hasDropdown;
+	@extend .button;
+	@extend	%button--unstyled; 
+	@extend	%button--hasDropdown;
 	display: none;
 }
 
