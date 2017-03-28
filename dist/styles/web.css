@@ -838,8 +838,8 @@ template {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg); }
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -864,8 +864,8 @@ template {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg); }
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -3413,11 +3413,11 @@ button.userNav {
 a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   text-decoration: none; }
 
-.button.button--dropdown > .fa:last-of-type, .userNav > .fa:last-of-type,
-.button.button--hasDropdown > .fa:last-of-type, .button--hasDropdown.userNav > .fa:last-of-type {
+.userNav > .fa:last-of-type, .button.button--dropdown > .fa:last-of-type,
+.button.button--hasDropdown > .fa:last-of-type {
   margin-left: 0.375rem; }
 
-.button.button--unstyled, .userNav, .button--lightIcon {
+.userNav, .button.button--unstyled, .button--unstyled.userNav, .button--lightIcon {
   height: auto;
   border: 0;
   padding: 0;
@@ -3430,12 +3430,12 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 .button.button--primary:hover, .button--primary.userNav:hover {
   background: #ffa033; }
 
-.button.button--primary.button--outlined, .button--primary.button--outlined.userNav, .inputGroup > .button.button--primary, .inputGroup > .button--primary.userNav {
+.button.button--primary.button--outlined, .button--primary.button--outlined.userNav {
   background: transparent;
   border: 1px solid #f80;
   color: #f80; }
 
-.button.button--primary.button--outlined:hover, .button--primary.button--outlined.userNav:hover, .inputGroup > .button.button--primary:hover, .inputGroup > .button--primary.userNav:hover {
+.button.button--primary.button--outlined:hover, .button--primary.button--outlined.userNav:hover {
   color: #e67a00;
   border-color: #e67a00; }
 
@@ -3446,12 +3446,12 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   background: #ccc;
   color: #7e7e7e; }
 
-.button.button--secondary.button--outlined, .button--secondary.button--outlined.userNav, .inputGroup > .button.button--secondary, .inputGroup > .button--secondary.userNav {
+.button.button--secondary.button--outlined, .button--secondary.button--outlined.userNav {
   background: transparent;
   border: 1px solid #e0e0e0;
   color: #adadad; }
 
-.button.button--secondary.button--outlined:hover, .button--secondary.button--outlined.userNav:hover, .inputGroup > .button.button--secondary:hover, .inputGroup > .button--secondary.userNav:hover {
+.button.button--secondary.button--outlined:hover, .button--secondary.button--outlined.userNav:hover {
   border-color: #c7c7c7;
   color: #949494; }
 
@@ -3462,12 +3462,12 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   background: #d33226;
   color: #fff; }
 
-.button.button--danger.button--outlined, .button--danger.button--outlined.userNav, .inputGroup > .button.button--danger, .inputGroup > .button--danger.userNav {
+.button.button--danger.button--outlined, .button--danger.button--outlined.userNav {
   background: transparent;
   color: #d33226;
   border: 1px solid #d33226; }
 
-.button.button--danger.button--outlined:hover, .button--danger.button--outlined.userNav:hover, .inputGroup > .button.button--danger:hover, .inputGroup > .button--danger.userNav:hover {
+.button.button--danger.button--outlined:hover, .button--danger.button--outlined.userNav:hover {
   color: #bd2d22;
   border-color: #bd2d22; }
 
@@ -3478,12 +3478,12 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   background: green;
   color: #fff; }
 
-.button.button--success.button--outlined, .button--success.button--outlined.userNav, .inputGroup > .button.button--success, .inputGroup > .button--success.userNav {
+.button.button--success.button--outlined, .button--success.button--outlined.userNav {
   background: transparent;
   color: green;
   border: 1px solid green; }
 
-.button.button--success.button--outlined:hover, .button--success.button--outlined.userNav:hover, .inputGroup > .button.button--success:hover, .inputGroup > .button--success.userNav:hover {
+.button.button--success.button--outlined:hover, .button--success.button--outlined.userNav:hover {
   color: #006700;
   border-color: #006700; }
 
@@ -3765,7 +3765,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
 
 .formGroup.grid > label.grid-cell,
 .formGroup.grid > .formGroup-label {
-  padding-top: 1.07813rem; }
+  padding-top: 1.07812rem; }
 
 .formGroup.formGroup--inline > .formControl, .formGroup.formGroup--inline > .SingleDatePickerInput {
   width: auto;

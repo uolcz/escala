@@ -107,7 +107,7 @@ textarea.formControl {
 }
 
 .inputGroup > .button {
-	@extend .button--outlined;
+	// @extend .button--outlined;
 	flex-shrink: 0;
 	border-radius: 0; 
 }

@@ -26,16 +26,24 @@ a.button:not(.button--asLink):hover {
 	text-decoration: none;
 }
 
-.button.button--dropdown > .fa:last-of-type,
-.button.button--hasDropdown > .fa:last-of-type {
-	margin-left: $gutter/2;
+%button--hasDropdown {
+	> .fa:last-of-type { margin-left: $gutter/2; }
 }
 
-.button.button--unstyled {
+.button.button--dropdown,
+.button.button--hasDropdown {
+	@extend %button--hasDropdown;
+}
+
+%button--unstyled {
 	height: auto;
 	border: 0;
 	padding: 0;
 	background: transparent;
+}
+
+.button.button--unstyled {
+	@extend %button--unstyled;
 }
 
 
@@ -143,7 +151,7 @@ a.button:not(.button--asLink):hover {
 } 
 
 .button--lightIcon {
-	@extend .button.button--unstyled;
+	@extend %button--unstyled;
 	color: $color-lightIcon;
 	font-size: rem(17px);
 }
