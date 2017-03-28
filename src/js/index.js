@@ -10,6 +10,7 @@ import TypeaheadExample from "./examples/TypeaheadExample";
 
 export default {
 	Typeahead,
+	LineChart,
 };
 
 if (process.env.NODE_ENV !== "production") {
