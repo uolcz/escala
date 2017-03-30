@@ -13,18 +13,18 @@ export default {
 	LineChart,
 };
 
-if (process.env.NODE_ENV !== "production") {
-	if (document.getElementById("react-typeahead")) {
-		ReactDOM.render(
-			<TypeaheadExample />,
-			document.getElementById("react-typeahead")
-		);
-	}
+// if (process.env.NODE_ENV !== "production") {
+// 	if (document.getElementById("react-typeahead")) {
+// 		ReactDOM.render(
+// 			<TypeaheadExample />,
+// 			document.getElementById("react-typeahead")
+// 		);
+// 	}
 
-	if (document.getElementById("react-lineChart")) {
-		ReactDOM.render(
-			<LineChart />,
-			document.getElementById("react-lineChart")
-		);
-	}
-}
+// 	if (document.getElementById("react-lineChart")) {
+// 		ReactDOM.render(
+// 			<LineChart />,
+// 			document.getElementById("react-lineChart")
+// 		);
+// 	}
+// }
