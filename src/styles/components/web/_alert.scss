@@ -1,0 +1,29 @@
+.alert {
+	padding: $baseline/2 $gutter;
+	border: 1px solid transparent;
+	border-radius: $borderRadius;
+}
+
+.alert.alert--info {
+	background: #d9edf7;
+	color: #31708f;
+	border-color: #bcdff1;
+}
+
+.alert.alert--success {
+	background: #dff0d8;
+	color: $color-success;
+	border-color: #d0e9c6;
+}
+
+.alert.alert--danger {
+	background: #f2dede;
+	color: $color-danger;
+	border-color: #ebcccc;
+}
+
+.alert.alert--warning {
+	background: #fcf8e3;
+	color: $color-warning;
+	border-color: #faf2cc;
+}

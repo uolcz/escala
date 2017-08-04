@@ -1,0 +1,17 @@
+.flashMessageContainer {
+	position: fixed;
+	height: 100%;
+	width: 300px;
+	right: $gutter*2;
+	top: 104px;
+	bottom: $baseline;
+}
+
+.flashMessage {
+	@extend .card;
+	margin-bottom: $baseline/2;
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+
+    cursor: default;
+}

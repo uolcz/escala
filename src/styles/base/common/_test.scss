@@ -25,6 +25,11 @@ $t-color: $color-primary;
     background: #fcfcfc;
     white-space: pre;
     word-wrap: normal;
+    width: 100%;
+}
+
+.t-pre.t-pre--marginLess {
+    margin: 0;
 }
 
 .t-code {

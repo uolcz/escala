@@ -1,5 +1,4 @@
 .nav {
-	font-size: rem(15px);
 	position: fixed;
 }
 
@@ -9,7 +8,6 @@
 	text-decoration: none;
 	color: $color-text;
 	border-radius: $borderRadius;
-	transition: background $transition-duration $transition-type; 
 }
 
 .nav-item:hover {
@@ -44,7 +42,7 @@
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: rem(12px);
+	font-size: $fontSize-smaller;
 	color: #6e6e6e;
 	margin-bottom: $baseline/2;
 	cursor: default;

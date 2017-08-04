@@ -1,26 +1,37 @@
 .modalOverlay {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	background: rgba(0,0,0,.7);
+	padding: $baseline $gutter;
+	text-align: center;
+	overflow-y: auto;
 	z-index: 9;
 }
 
+.modalOverlay:after {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
 .modal {
+	display: inline-block;
 	position: relative;
 	background: $white;
-	border-radius: $borderRadius;
+	text-align: left;
+	vertical-align: middle;
 	padding: $baseline $gutter*2;
-	box-shadow: 0 0 30p 5px rgba(0,0,0,.2);
 	min-height: 200px;
 	min-width: 400px;
-	max-width: 500px;
-	outline: none;
+	max-width: 100%;
+	border-radius: $borderRadius;
+    transform: translate3d(0, 0, 0);
+	box-shadow: 0 0 30px 5px rgba(0,0,0,.2);
+    outline: none;
 }
 
 .modal-close {

@@ -31,11 +31,12 @@ $screen-breakpoints: (
 $fontFamily-sansSerif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $fontFamily: "Open Sans", $fontFamily-sansSerif !default;
 
-$fontSize-title      : rem(22px) !default;
-$fontSize-headline   : rem(18px) !default;
+$fontSize-title: rem(22px) !default;
+$fontSize-headline: rem(18px) !default;
 $fontSize-subHeadline: rem(16px) !default;
-$fontSize            : rem(14px) !default;
-$fontSize-smaller    : rem(11px) !default;
+$fontSize: rem(13px) !default;
+$fontSize-small: rem(12px) !default;
+$fontSize-smaller: rem(10px) !default;
 
 /**
  * Vertical spacing
@@ -68,7 +69,7 @@ $borderRadius-button: 999px !default;
  */
 
 $grid-columns-count: 12 !default;
-$grid-cell-gutter: ($gutter * 2) !default;
+$grid-cell-gutter: $gutter !default;
 
 $grid-cell-gutters: (
 	0: 0,
@@ -125,6 +126,7 @@ $headlines-color: #484848 !default;
 
 $header-bg: $white !default;
 $header-zIndex: $zIndex-5 !default;
+$header-logo-width: 75px !default;
 
 /**
  * Cards
@@ -144,3 +146,6 @@ $input-height: $baseline * 2;
 
 $transition-type: ease !default;
 $transition-duration: 0.2s !default;
+
+
+$dropdown-triangleSize: 8px !default;

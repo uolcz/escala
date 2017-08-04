@@ -37,25 +37,12 @@
 
 .header .logo img {
 	display: block;
-	width: 55px;
-}
-
-@media (min-width: 700px) {
-	.header .logo img {
-		width: 75px;
-	}
+	width: $header-logo-width;
 }
 
 .header .inputGroup {
-	display: none;
-	margin-left: rem(85px);
-}
-
-@media (min-width: 800px) {
-	.header .inputGroup {
-		display: inline-flex;
-		margin-left: rem(85px);
-	}
+	display: inline-flex;
+	margin-left: ($sidebar-width - $header-logo-width);
 }
 
 .header .formControl {
@@ -65,16 +52,11 @@
 .header-actions {
 	display: flex;
 	align-items: center;
+	margin: 0 0 0 auto;
 }
 
-@media (min-width: 700px) {
-	.header-actions {
-		margin: 0 0 0 auto;
-	}
-
-	.header-actions > .button:not(:last-of-type) {
-		margin-right: $gutter;
-	}
+.header-actions > .button:not(:last-of-type) {
+	margin-right: $gutter;
 }
 
 
@@ -90,41 +72,6 @@ button.userNav {
 	line-height: 1.1;
 }
 
-.header-actions .quickAddForDesktop {
-	display: none;
-}
-
-.userNavForMobile .thumbnail {
-	width: rem(23px);
-	height: rem(23px);
-	border-radius: 999rem;
-	padding: 2px;
-	border: 1px solid $color-border;
-	vertical-align: middle;
-}
-
-@media (min-width: 700px) {
-	.header-mobileActions {
-		display: none;
-	}
-
-	.userNav {	
-		display: inline-block;
-	}
-
-	.header-actions .userNavForMobile {
-		display: none;
-	}	
-
-	.header-actions .quickAddForMobile {
-		display: none;	
-	}
-
-	.header-actions .quickAddForDesktop {
-		display: block;
-	}
-}
-
 .userNav .thumbnail {
 	vertical-align: middle;
 }
@@ -136,18 +83,19 @@ button.userNav {
 
 .userNav .thumbnail,
 .userNav-section {
-	display: none;
+	display: inline-block;
 }
 
-@media (min-width: 700px) {
-	.userNav .thumbnail,
-	.userNav-section {
-		display: inline-block;
-	}	
-}
- 
 .userNav-label {
 	font-size: $fontSize-smaller;
+}
+
+.userNav-name {
+	font-size: $fontSize-small;
+}
+
+.userNav:hover .userNav-name {
+	text-decoration: underline;
 }
 
 .userNav-name {

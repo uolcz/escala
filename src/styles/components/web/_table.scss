@@ -43,17 +43,39 @@ tbody .table-row.table-row--clickable:hover td {
 }
 
 /**
+ * Condensed modifier
+ */
+
+.table.table--condensed td,
+.table.table--condensed td {
+	padding: $baseline/4 $gutter/2;
+}
+
+/**
  * Border less table
  */
+
+.table.table--borderLess {
+	font-size: rem(12px);
+}
 
 .table.table--borderLess thead td {
 	padding-bottom: $baseline/2;
 }
 
-.table.table--borderLess th,
-.table.table--borderLess td {
-	padding: $baseline/4 $gutter/2;
+.table.table--borderLess thead td {
+	padding-top: 0;
+}	
+
+.table.table--borderLess tbody td {
+	padding-top: 0;
+	padding-bottom: 0;
 }
+
+.table.table--borderLess tfoot td {
+	padding-top: $baseline/4;
+	padding-bottom: 0;
+}	
 
 .table.table--borderLess th:first-of-type,
 .table.table--borderLess td:first-of-type {
@@ -78,3 +100,9 @@ tbody .table-row.table-row--clickable:hover td {
 .responsiveTableWrapper {
 	overflow-y: auto;
 }
+
+.table-data.table-data--max100 { max-width: 100px; }
+.table-data.table-data--max150 { max-width: 150px; }
+.table-data.table-data--max200 { max-width: 200px; }
+.table-data.table-data--max250 { max-width: 250px; }
+.table-data.table-data--max300 { max-width: 300px; }

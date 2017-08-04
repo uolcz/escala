@@ -1,5 +1,6 @@
 .selectable {
 	position: relative;
+	width: 100%;
 }
 
 .selectable.is-open .formControl {
@@ -8,6 +9,9 @@
 }
 
 .selectable-menu {
+	position: absolute;
+	top: 100%;
+	width: 100%;
 	max-height: 250px;
 	background: $white;
 	padding: $baseline/2 $gutter;
@@ -15,11 +19,16 @@
 	border-top: 0;
 	border-radius: 0 0 $borderRadius $borderRadius;
 	overflow-y: scroll;
+	z-index: 3;
 	display: none;
 }
 
 .selectable-menu.is-open {
 	display: block;
+}
+
+.select-menu.select-menu--static {
+	position: static;
 }
 
 .selectable-item {
@@ -32,13 +41,13 @@
 	margin-bottom: $baseline/4;
 }
 
-.selectable-item:hover {
-	background: $body-bg;
-}
-
 .selectable-item.is-highlighted {
 	color: $white;
 	background: $color-primary;
+}
+
+.selectable-item.is-highlighted .u-textMuted {
+	color: $white;
 }
 
 .selectable-item.is-highlighted .selectable-tag {

@@ -1,0 +1,30 @@
+.tooltip {
+	@extend .dropdown;
+	@extend .dropdown--alignTop;
+	top: auto;
+	bottom: 100%;
+	margin: 0 0 $baseline/2 0; 
+	font-size: $fontSize;
+	white-space: nowrap;
+}
+
+.tooltip.tooltip--alignLeft {
+	left: 0;
+	right: auto;
+} 
+
+.tooltip.tooltip--alignRight {
+	left: auto;
+	right: 0;
+} 
+
+.tooltip.tooltip--alignMiddle {
+	@extend .dropdown--alignMiddle;
+	left: 50%;
+	right: auto;
+	transform: translateX(-50%);
+}
+
+.tooltip-body {
+	padding: $baseline/2 $gutter;
+}

@@ -8,6 +8,14 @@
 	cursor: default;
 }
 
+.tag.tag--clickable {
+	cursor: pointer;
+}
+
+.tag.tag--removable:hover .fa {
+	color: $color-danger;
+}
+
 .tag.tag--yesNo {
 	width: rem(52px);
 	text-align: center;
@@ -15,7 +23,8 @@
 
 .tag.tag--primary {
 	background: lighten($color-primary, 40%);
-	color: $color-primary
+	color: $color-primary;
+	.fa { color: $color-primary; }
 }
 
 .tag.tag--small {
@@ -27,6 +36,10 @@
 	color: darken(#F7F7F7, 10%);
 	font-size: rem(10px);
 	margin-right: $gutter/2;
+}
+
+.tag.tag--onlyIcon {
+	.fa { margin: 0; }
 }
 
 .tag.tag--success {
@@ -42,4 +55,13 @@
 .tag-remove {
 	margin-left: $gutter/2;
 	cursor: pointer;
+}
+
+.tag.tag--circular {
+	width: rem(22px);
+    height: rem(22px);
+    line-height: rem(22px);
+    text-align: center;
+    padding: 0;
+    border-radius: 999px;
 }

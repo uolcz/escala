@@ -5,18 +5,17 @@ $react-dates-color-placeholder-text: $color-text;
 $react-dates-color-text-focus: $color-text;
 $react-dates-color-focus: $body-bg;
 
-// @import '~react-dates/css/variables.scss';
-// @import '~react-dates/css/styles.scss';
+.SingleDatePicker {
+	display: block;
+}
 
 .SingleDatePickerInput {
 	@extend .formControl;
 	padding: 0;
-	cursor: pointer;
 }
 
 .DateInput {
 	font-size: $fontSize;
 	padding: $baseline/8 $gutter/2;
-	width: auto;
-	min-width: rem(100px);
+	width: 100%;
 }

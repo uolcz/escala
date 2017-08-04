@@ -3,6 +3,7 @@
 	background: $white;
 	border: 1px solid $color-border;
 	border-radius: $borderRadius;
+	padding: $baseline $gutter*2;
 }
 
 a.card {
@@ -20,30 +21,11 @@ a.card:active {
 	transform: scale(0.98);
 }
 
-.card:not(:last-of-type) {
-	margin-bottom: $baseline/2;
-}
-
-.card-header {
-	background: $card-header-bg;
-	padding: $baseline/2 $gutter;
-}
-
 .card-title {
 	font-weight: 600;
 }
 
-.card-header.card-header--split {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.card-content {
-	padding: $baseline/2 $gutter;
-}
-
-.card-content dd {
+.card dd {
 	text-align: right;
 }
 

@@ -40,19 +40,22 @@ a.button:not(.button--asLink):hover {
 	border: 0;
 	padding: 0;
 	background: transparent;
+	line-height: inherit;
+	color: $color-text;
+	font-size: $fontSize;
 }
-
-.button.button--unstyled {
-	@extend %button--unstyled;
-}
-
 
 .button.button--primary {
 	color: $white;
 	background: $button-primary-background;
 }
 
-.button.button--primary:hover {
+.button.button--primary:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.button.button--primary:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
 	background: lighten($color-primary, 10%);
 }
 
@@ -62,7 +65,7 @@ a.button:not(.button--asLink):hover {
 	color: $color-primary;
 }
 
-.button.button--primary.button--outlined:hover {
+.button.button--primary.button--outlined:not(:disabled):hover {
 	color: darken($color-primary, 5%);
 	border-color: darken($color-primary, 5%);
 }
@@ -94,6 +97,10 @@ a.button:not(.button--asLink):hover {
 
 .button.button--secondary.button--borderLess {
 	color: lighten($color-text, 25%);
+}
+
+.button.button--secondary.button--borderLess:hover {
+	color: lighten($color-text, 15%);
 }
 
 
@@ -177,11 +184,35 @@ a.button:not(.button--asLink):hover {
 	font-size: rem(15px);
 }
 
+.button.button--fullWidth {
+	display: block;
+	width: 100%;
+}
 
+
+.button.button--asLink {
+	height: auto;
+	line-height: inherit;
+	background: transparent;
+	padding: 0;
+}
+
+
+.button.button--asLink.button--smaller {
+	font-size: rem(11px);
+}
+
+.button.button--unstyled {
+	@extend %button--unstyled;
+}
 
 /**
  * Button group
  */
 .buttonGroup > .button:not(:last-of-type) {
 	margin-right: $gutter/2;
+}
+
+.buttonGroup > form { // tmp
+	display: inline-block;
 }

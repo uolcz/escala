@@ -1,0 +1,12 @@
+.link {
+	display: inline-block;
+	background: transparent;
+	border: 0;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
