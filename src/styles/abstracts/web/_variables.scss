@@ -16,8 +16,6 @@ $spacers-y: (
 	5: ($baseline * 3),
 ) !default;
 
-$line-height: $baseline / $fontSize-default;
-
 /**
  * General style directors
  */
@@ -55,6 +53,8 @@ $fontSize-subHeadline: rem(16px) !default;
 $fontSize-default: rem(13px) !default;
 $fontSize-small: rem(12px) !default;
 $fontSize-smaller: rem(10px) !default;
+
+$line-height: $baseline / $fontSize-default;
 
 /**
  * Container
