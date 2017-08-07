@@ -57,4 +57,5 @@
 .selectable-tag {
 	color: lighten($color-text, 50%);
 	font-size: rem(12px);
+	margin-left: $gutter/2;
 }

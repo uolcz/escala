@@ -15,10 +15,10 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%; 
+	width: 100%;
 	background: $white;
 	border-bottom: 1px solid $color-border;
-    box-shadow: 0 0 30px 1px rgba(0,0,0,0.07);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.07);
 }
 
 .header-content {
@@ -62,8 +62,9 @@
 
 .userNav {
 	@extend .button;
-	@extend	%button--unstyled; 
+	@extend	%button--unstyled;
 	@extend	%button--hasDropdown;
+
 	display: none;
 }
 
@@ -125,7 +126,7 @@ button.userNav {
 
 .userMenu-item:hover {
 	color: $color-primary;
-}	
+}
 
 .userMenu-separator {
 	border-bottom: 1px solid $color-border;

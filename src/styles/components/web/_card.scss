@@ -1,40 +1,42 @@
-.card {
-	display: block;
-	background: $white;
-	border: 1px solid $color-border;
-	border-radius: $borderRadius;
-	padding: $baseline $gutter*2;
+@mixin createCard () {
+	.card {
+		display: block;
+		background: $card-background;
+		border: $card-border-width solid $card-border-color;
+		border-radius: $card-border-radius;
+		padding: $card-padding;
+	}
+
+	a.card {
+		color: inherit;
+		transition: 0.2s ease box-shadow,
+					0.2s ease border-color,
+					0.1s ease transform;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	a.card:hover {
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+		text-decoration: none;
+	}
+
+	a.card:active {
+		transform: scale(0.98);
+	}
+
+	.card dd {
+		text-align: right;
+	}
 }
 
-a.card {
-	color: inherit;
-	transition: 0.2s ease box-shadow, 0.2s ease border-color, 0.1s ease transform;
-	-webkit-tap-highlight-color: transparent;
-}
-
-a.card:hover {
-	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
-	text-decoration: none;
-}
-
-a.card:active {
-	transform: scale(0.98);
-}
-
-.card-title {
-	font-weight: 600;
-}
-
-.card dd {
-	text-align: right;
-}
+@include createCard();
 
 .card.card--invoice .grid-cell:last-child,
-.card.card--bankAccounts .grid-cell:last-child {
+.card.card--bankAccounts .grid-cell:last-child { // remove, use utils instead
 	text-align: right;
 }
 
 .card.card--invoice .grid,
-.card.card--bankAccounts .grid {
+.card.card--bankAccounts .grid { // remove, use grid mofier instead
 	align-items: center;
 }

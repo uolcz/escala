@@ -23,8 +23,7 @@
 
 .tag.tag--primary {
 	background: lighten($color-primary, 40%);
-	color: $color-primary;
-	.fa { color: $color-primary; }
+	color: $color-primary
 }
 
 .tag.tag--small {
@@ -36,10 +35,6 @@
 	color: darken(#F7F7F7, 10%);
 	font-size: rem(10px);
 	margin-right: $gutter/2;
-}
-
-.tag.tag--onlyIcon {
-	.fa { margin: 0; }
 }
 
 .tag.tag--success {

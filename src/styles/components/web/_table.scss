@@ -19,14 +19,6 @@ tbody .table-row.table-row--clickable:hover td {
 	background: lighten($color-primary, 45%);
 }
 
-.table th {
-	font-weight: 600;
-}
-
-.table th.is-active {
-	color: $color-primary;
-}
-
 .table th,
 .table td {
 	padding: $baseline/1.5 $gutter/2;
@@ -42,18 +34,22 @@ tbody .table-row.table-row--clickable:hover td {
 	padding-right: $gutter;
 }
 
+.table th {
+	font-weight: 600;
+}
+
+.table th.is-active {
+	color: $color-primary;
+}
+
 /**
- * Condensed modifier
+ * Modifiers
  */
 
 .table.table--condensed td,
 .table.table--condensed td {
 	padding: $baseline/4 $gutter/2;
 }
-
-/**
- * Border less table
- */
 
 .table.table--borderLess {
 	font-size: rem(12px);
@@ -94,7 +90,7 @@ tbody .table-row.table-row--clickable:hover td {
 
 .table .button {
 	height: auto;
-	line-height: 1;
+	line-height: inherit;
 }
 
 .responsiveTableWrapper {

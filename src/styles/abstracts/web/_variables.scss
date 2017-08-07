@@ -1,16 +1,34 @@
 @import "../common/variables";
 
 /**
+ * Spacing
+ */
+
+$gutter: rem(12px);
+$baseline : rem(23px) !default;
+
+$spacers-y: (
+	0: 0,
+	1: ($baseline * 0.25),
+	2: ($baseline * 0.5),
+	3: $baseline,
+	4: ($baseline * 1.5),
+	5: ($baseline * 3),
+) !default;
+
+$line-height: $baseline / $fontSize-default;
+
+/**
+ * General style directors
+ */
+
+$borderRadius: 2px !default;
+
+/**
  * Body
  */
 
-$body-bg: #f7f7f7 !default;
-
-/**
- * Container
- */
-
-$container-width: 1220px !default;
+$body-background: #f7f7f7 !default;
 
 /**
  * Responsive screen sizes
@@ -39,30 +57,11 @@ $fontSize-small: rem(12px) !default;
 $fontSize-smaller: rem(10px) !default;
 
 /**
- * Vertical spacing
+ * Container
  */
 
-$baseline : rem(23px) !default;
-
-$spacers-y: (
-	0: 0,
-	1: ($baseline * 0.25),
-	2: ($baseline * 0.5),
-	3: $baseline,
-	4: ($baseline * 1.5),
-	5: ($baseline * 3),
-) !default;
-
-$line-height: $baseline / $fontSize-default;
-
-/**
- * Horizontal spacing
- */
-
-$gutter: rem(12px);
-
-$borderRadius: 2px !default;
-$borderRadius-button: 999px !default;
+$container-width: 1220px !default;
+$container-padding: 0 $gutter !default;
 
 /**
  * Grid
@@ -81,12 +80,6 @@ $grid-cell-gutters: (
 ) !default;
 
 /**
- * Sidebar nav
- */
-
-$sidebar-width: 150px !default;
-
-/**
  * Z indexes
  */
 
@@ -99,20 +92,6 @@ $zIndex-6: 6;
 $zIndex-7: 7;
 $zIndex-8: 8;
 $zIndex-9: 9;
-
-/**
- * Buttons
- */
-
-$button-primary-background: $color-primary !default;
-
-$button-secondary-background: #ccc !default;
-
-$button-success-background: $color-success !default;
-
-$button-warning-background: $color-warning !default;
-
-$button-danger-background: $color-danger !default;
 
 /**
  * Headlines
@@ -132,7 +111,7 @@ $header-logo-width: 75px !default;
  * Cards
  */
 
-$card-header-bg: $body-bg !default;
+$card-header-bg: $body-background !default;
 
 /**
  * Inputs
@@ -144,8 +123,88 @@ $input-height: $baseline * 2;
  * Transitions
  */
 
-$transition-type: ease !default;
-$transition-duration: 0.2s !default;
+$global-transition-type: ease !default;
+$global-transition-duration: 0.2s !default;
 
 
 $dropdown-triangleSize: 8px !default;
+
+$utilities-maxWidth: (
+	100, 150, 200,
+	250, 300, 350,
+	400, 450, 500,
+);
+
+/**
+ * Card configuration
+ */
+
+$card-background: $white !default;
+$card-padding: $baseline $gutter*2 !default;
+$card-border-radius: $borderRadius !default;
+$card-border-color: $color-border !default;
+$card-border-width: 1px !default;
+
+/**
+ * Modal configuration
+ */
+
+$modal-overlay-background: rgba(0,0,0,.7) !default;
+$modal-overlay-padding: $baseline $gutter !default;
+$modal-overlay-zIndex: 9 !default;
+
+$modal-background: $white !default;
+$modal-padding: $baseline $gutter*2 !default;
+$modal-border-radius: $borderRadius !default;
+$modal-shadow: 0 0 30px 5px rgba(0,0,0,.2) !default;
+$modal-minHeight: 200px !default;
+$modal-minWidth: 400px !default;
+$modal-maxWidth: 100% !default;
+
+/**
+ * Loader configuration
+ */
+
+$loader-ballCount: 3 !default;
+$loader-ball-size: rem(6px) !default;
+$loader-ball-background: $white !default;
+$loader-border-radius: 100% !default;
+$loader-ball-margin: rem(2px) !default;
+
+
+/**
+ * Separator
+ */
+
+$separator-margin-y: $baseline !default;
+$separator-margin-x: 0 !default;
+$separator-border-type: solid !default;
+$separator-border-width: 1px !default;
+$separator-border-color: #e0e0e0 !default;
+
+/**
+ * Buttons
+ */
+
+$button-global-font-size: rem(13px);
+$button-global-height: rem(40px) !default;
+$button-global-padding: 0 ($gutter * 1.5) !default;
+$button-global-border-radius: 999px !default;
+$button-global-transition: $global-transition-type $global-transition-duration background !default;
+
+$button-primary-color: $white !default;
+$button-primary-background: $color-primary !default;
+
+$button-secondary-background: #ccc !default;
+
+$button-success-background: $color-success !default;
+
+$button-warning-background: $color-warning !default;
+
+$button-danger-background: $color-danger !default;
+
+/**
+ * Sidebar nav
+ */
+
+$sidebar-width: 150px !default;

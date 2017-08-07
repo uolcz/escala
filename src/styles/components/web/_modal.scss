@@ -4,11 +4,11 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(0,0,0,.7);
-	padding: $baseline $gutter;
+	background: $modal-overlay-background;
+	padding: $modal-overlay-padding;
 	text-align: center;
 	overflow-y: auto;
-	z-index: 9;
+	z-index: $modal-overlay-zIndex;
 }
 
 .modalOverlay:after {
@@ -21,16 +21,16 @@
 .modal {
 	display: inline-block;
 	position: relative;
-	background: $white;
+	background: $modal-background;
 	text-align: left;
 	vertical-align: middle;
-	padding: $baseline $gutter*2;
-	min-height: 200px;
-	min-width: 400px;
-	max-width: 100%;
-	border-radius: $borderRadius;
+	padding: $modal-padding;
+	min-height: $modal-minHeight;
+	min-width: $modal-minWidth;
+	max-width: $modal-maxWidth;
+	border-radius: $modal-border-radius;
     transform: translate3d(0, 0, 0);
-	box-shadow: 0 0 30px 5px rgba(0,0,0,.2);
+	box-shadow: $modal-shadow;
     outline: none;
 }
 

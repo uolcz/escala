@@ -11,7 +11,7 @@ $fittedAddon-width: rem(37px);
 	border-radius: $borderRadius;
 	outline: none;
 	box-shadow: none;
-	transition: $transition-type $transition-duration border-color;
+	transition: $global-transition-type $global-transition-duration border-color;
 }
 
 

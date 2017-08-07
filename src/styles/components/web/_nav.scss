@@ -26,12 +26,12 @@
 }
 
 .nav-item .fa:before {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 999rem;
+	width: 1.5rem;
+	border-radius: 999rem;
 }
 
 .nav-itemSeparator {
@@ -42,7 +42,7 @@
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: $fontSize-smaller;
+	font-size: $fontSize$fontSize-defaultsmaller;
 	color: #6e6e6e;
 	margin-bottom: $baseline/2;
 	cursor: default;

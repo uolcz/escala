@@ -1,35 +1,14 @@
-.container {
-	margin: 0 auto;
-	width: 100%;
-  @media screen {
-    max-width: $container-width;
-    padding: 0 $gutter;
-  }
-
-  @media print {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 700px) {
-	.container {
-		padding: 0 $gutter*2;
-	}
-}
-
 .grid {
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
 	padding: 0;
+	min-height: 1px; // Prevent collapsing
 
 	@extend .grid--gutters;
 }
 
-.grid.grid--alignCenter {
-	align-items: center;
-}
+.grid.grid--alignCenter { align-items: center; }
 
 .grid-cell {
 	flex: 1;
@@ -49,10 +28,7 @@
 }
 
 @mixin makeGridCell($width: 100%) {
-	// flex: 0 0 $width;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: $width;
+	flex: 0 0 $width;
 	max-width: $width;
 }
 

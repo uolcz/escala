@@ -1,0 +1,12 @@
+/**
+ * Unordered list
+ */
+
+.unorderedList {
+	list-style: disc;
+	padding-left: $gutter*2;
+}
+
+.unorderedList li {
+	margin-bottom: $baseline/4;
+}

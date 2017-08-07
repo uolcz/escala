@@ -1,0 +1,11 @@
+// Main component
+.separator {
+	margin: $separator-margin-y $separator-margin-x;
+	border: 0;
+	border-bottom: $separator-border-type $separator-border-width $separator-border-color;
+}
+
+// Modifiers
+.separator.separator--tighter {
+	margin: ($separator-margin-y / 2) $separator-margin-x;
+}

@@ -1,0 +1,76 @@
+/**
+ * Margins
+ */
+
+.u-m0 { margin: 0 !important; }
+
+.u-mr1 { margin-right: $gutter/2; }
+.u-mr2 { margin-right: $gutter; }
+
+.u-mb1 { margin-bottom: $baseline/2; }
+.u-mb2 { margin-bottom: $baseline; }
+.u-mb3 { margin-bottom: $baseline*1.5; }
+.u-mb4 { margin-bottom: $baseline*2; }
+
+.u-mt1 { margin-top: $baseline/2; }
+.u-mt2 { margin-top: $baseline; }
+.u-mt3 { margin-top: $baseline*1.5; }
+.u-mt4 { margin-top: $baseline*2; }
+
+.u-ml1 { margin-left: $gutter/2; }
+.u-ml2 { margin-left: $gutter; }
+
+/**
+ * Text aligns
+ */
+
+.u-textLeft { text-align: left !important; }
+.u-textRight { text-align: right !important; }
+.u-textCenter { text-align: center !important; }
+
+/**
+ * Text decorations
+ */
+
+.u-textSmaller { font-size: 80%; }
+.u-textBold { font-weight: 600; }
+.u-textLineThrough { text-decoration: line-through; }
+
+.u-textMuted { color: #b8b8b8; }
+a.u-textMuted,
+.u-textMuted a { text-decoration: underline; }
+
+.u-textEllipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/**
+ * Text colors
+ */
+
+.u-colorDanger { color: $color-danger; }
+.u-colorPrimary { color: $color-primary; }
+.u-colorSuccess { color: $color-success; }
+.u-colorWarning { color: $color-warning; }
+
+/**
+ * Print
+ */
+
+@media print {
+	.u-hideForPrint { display: none !important; }
+}
+
+/**
+ * Size setters
+ */
+
+// Create .u-max{number} helpers.
+// Configurable with $utilities-maxWidth.
+@each $width in $utilities-maxWidth {
+	.u-max#{$width} { max-width: #{$width}px }
+}
+
+.u-positionRelativeContainer { position: relative; }

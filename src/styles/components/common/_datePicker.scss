@@ -1,9 +1,9 @@
 $react-dates-color-primary: $color-primary;
-$react-dates-color-primary-dark: $body-bg;
+$react-dates-color-primary-dark: $body-background;
 $react-dates-color-border: $color-border;
 $react-dates-color-placeholder-text: $color-text;
 $react-dates-color-text-focus: $color-text;
-$react-dates-color-focus: $body-bg;
+$react-dates-color-focus: $body-background;
 
 .SingleDatePicker {
 	display: block;
@@ -11,7 +11,6 @@ $react-dates-color-focus: $body-bg;
 
 .SingleDatePickerInput {
 	@extend .formControl;
-
 	padding: 0;
 }
 

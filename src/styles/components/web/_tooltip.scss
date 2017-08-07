@@ -1,32 +1,120 @@
 .tooltip {
 	@extend .dropdown;
-	@extend .dropdown--alignTop;
-
+	@extend .tooltip--fromTop;
+	@extend .tooltip--alignMiddle;
 	top: auto;
 	bottom: 100%;
-	margin: 0 0 $baseline/2 0;
+	margin: 0 0 $baseline/2 0; 
 	font-size: $fontSize-default;
 	white-space: nowrap;
 }
 
 .tooltip.tooltip--alignLeft {
-	left: 0;
-	right: auto;
-}
-
-.tooltip.tooltip--alignRight {
 	left: auto;
-	right: 0;
+	right: -$gutter;
+	&:after, &:before {
+		left: auto;
+		right: $gutter;
+	}
 }
 
-.tooltip.tooltip--alignMiddle {
-	@extend .dropdown--alignMiddle;
-
+.tooltip.tooltip--alignMiddle,
+.tooltip.tooltip--alignMiddle:after,
+.tooltip.tooltip--alignMiddle:before {
 	left: 50%;
 	right: auto;
 	transform: translateX(-50%);
 }
 
-.tooltip-body {
+.tooltip.tooltip--alignRight {
+	left: -$gutter;
+	right: auto;
+	&:after, &:before {
+		left: $gutter;
+		right: auto;
+	}
+}
+
+.tooltip.tooltip--fromTop {
+	top: auto;
+	bottom: 100%;
+	margin: 0 0 $baseline/2 0;
+	&:after {
+		top: auto;
+		bottom: -(($dropdown-triangleSize * 2) - 1);
+		border-color: $white transparent transparent transparent;
+	}
+	&:before {
+		top: auto;
+		bottom: -($dropdown-triangleSize * 2);
+		border-color: $color-border transparent transparent transparent;
+	}
+} 
+
+.tooltip.tooltip--fromBottom {
+	top: 100%;
+	bottom: auto;
+	margin: $baseline/2 0 0 0;
+	&:after {
+		top: -(($dropdown-triangleSize * 2) - 1);
+		bottom: auto;
+		border-color: transparent transparent $white transparent;
+	}
+	&:before {
+		top: -($dropdown-triangleSize * 2);
+		bottom: auto;
+		border-color: transparent transparent $color-border transparent;
+	}
+}
+
+.tooltip.tooltip--fromLeft,
+.tooltip.tooltip--fromRight,
+.tooltip.tooltip--fromLeft:before,
+.tooltip.tooltip--fromLeft:after,
+.tooltip.tooltip--fromRight:before,
+.tooltip.tooltip--fromRight:after {
+	top: 50%;
+	bottom: auto;
+	transform: translateY(-50%);
+}
+
+.tooltip.tooltip--fromLeft {
+	left: auto;
+	right: 100%;
+	margin: 0 $gutter 0 0;
+	&:before {
+		left: auto;
+		right: -($dropdown-triangleSize * 2);
+		border-color: transparent transparent transparent $color-border;
+	}
+	&:after {
+		left: auto;
+		right: -(($dropdown-triangleSize * 2) - 1);
+		border-color: transparent transparent transparent $white;
+	}
+}
+
+.tooltip.tooltip--fromRight {
+	left: 100%;
+	right: auto;
+	margin: 0 0 0 $gutter;
+	&:before {
+		left: -($dropdown-triangleSize * 2);
+		right: auto;
+		border-color: transparent $color-border transparent transparent;
+	}
+	&:after {
+		left: -(($dropdown-triangleSize * 2) - 1);
+		right: auto;
+		border-color: transparent $white transparent transparent;
+	}
+}
+
+.tooptip--wrap {
+	white-space: normal;
+}
+
+.tooltip-body,
+.tooltip-padding {
 	padding: $baseline/2 $gutter;
 }

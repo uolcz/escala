@@ -1,25 +1,18 @@
-$button-height: rem(40px) !default;
-
 .button {
 	display: inline-block;
-	font-size: rem(13px);
-	height: $button-height;
-	line-height: $button-height;
-	padding: 0 $gutter*1.5;
+	font-size: $button-global-font-size;
+	height: $button-global-height;
+	line-height: $button-global-height;
+	padding: $button-global-padding;
 	border: 0;
-	border-radius: $borderRadius-button;
+	border-radius: $button-global-border-radius;
 	cursor: pointer;
 	box-shadow: none;
 	outline: 0;
 	vertical-align: middle;
-	transition: $transition-type $transition-duration background;
+	transition: $button-global-transition;
 	text-align: center;
 	text-decoration: none;
-}
-
-.button.button--secondary:disabled {
-	color: lighten($color-text, 50%);
-	cursor: not-allowed;
 }
 
 a.button:not(.button--asLink):hover {
@@ -46,7 +39,7 @@ a.button:not(.button--asLink):hover {
 }
 
 .button.button--primary {
-	color: $white;
+	color: $button-primary-color;
 	background: $button-primary-background;
 }
 
@@ -76,13 +69,16 @@ a.button:not(.button--asLink):hover {
 
 
 .button.button--secondary {
-	background: $button-secondary-background;
-	color: lighten($color-text, 25%);
+	background: $color-border;
+	color: lighten($color-text, 10%);
 }
 
-.button.button--secondary:hover {
-	
+.button.button--secondary:disabled {
+	color: lighten($color-text, 50%);
+	cursor: not-allowed;
 }
+
+.button.button--secondary:hover {}
 
 .button.button--secondary.button--outlined {
 	background: transparent;
@@ -170,7 +166,7 @@ a.button:not(.button--asLink):hover {
 .button.button--circular {
 	width: rem(40px);
 	height: rem(40px);
-	border: 1px solid $color-border;
+	border: 1px solid $color-border; // remove
 }
 
 
@@ -208,6 +204,7 @@ a.button:not(.button--asLink):hover {
 
 /**
  * Button group
+ * Deprecate this => figure out how to use something more general
  */
 .buttonGroup > .button:not(:last-of-type) {
 	margin-right: $gutter/2;

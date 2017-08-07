@@ -30,12 +30,12 @@
 .loader {}
 
 .loader-ball {
-	@include ball-pulse();
+	@include ball-pulse($loader-ballCount);
     display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: $white;
-    margin: rem(2px);
-    border-radius: 100%;
+    width: $loader-ball-size;
+    height: $loader-ball-size;
+    background-color: $loader-ball-background;
+    margin: $loader-ball-margin;
+    border-radius: $loader-border-radius;
     animation-fill-mode: both;
 }
