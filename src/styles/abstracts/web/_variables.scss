@@ -34,7 +34,7 @@ $fontFamily: "Open Sans", $fontFamily-sansSerif !default;
 $fontSize-title: rem(22px) !default;
 $fontSize-headline: rem(18px) !default;
 $fontSize-subHeadline: rem(16px) !default;
-$fontSize: rem(13px) !default;
+$fontSize-default: rem(13px) !default;
 $fontSize-small: rem(12px) !default;
 $fontSize-smaller: rem(10px) !default;
 
@@ -53,7 +53,7 @@ $spacers-y: (
 	5: ($baseline * 3),
 ) !default;
 
-$line-height: $baseline / $fontSize;
+$line-height: $baseline / $fontSize-default;
 
 /**
  * Horizontal spacing

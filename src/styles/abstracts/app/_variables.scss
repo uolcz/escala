@@ -34,11 +34,11 @@ $screen-xl-min: map-get($screen-breakpoints, xl);
 $fontSize-title      : rem(22px);
 $fontSize-headline   : rem(18px);
 $fontSize-subHeadline: rem(16px);
-$fontSize            : rem(14px);
+$fontSize-default    : rem(14px);
 $fontSize-smaller    : rem(11px);
 
 $baseline : rem(23px);
-$line-height: $baseline / $fontSize;
+$line-height: $baseline / $fontSize-default;
 
 $fontFamily: 'Open Sans', sans-serif;
 

@@ -11,11 +11,12 @@ $react-dates-color-focus: $body-bg;
 
 .SingleDatePickerInput {
 	@extend .formControl;
+
 	padding: 0;
 }
 
 .DateInput {
-	font-size: $fontSize;
+	font-size: $fontSize-default;
 	padding: $baseline/8 $gutter/2;
 	width: 100%;
 }

@@ -42,7 +42,7 @@ a.button:not(.button--asLink):hover {
 	background: transparent;
 	line-height: inherit;
 	color: $color-text;
-	font-size: $fontSize;
+	font-size: $fontSize-default;
 }
 
 .button.button--primary {

@@ -1,7 +1,7 @@
 body {
 	color: $color-text;
 	font-family: $fontFamily;
-	font-size: $fontSize;
+	font-size: $fontSize-default;
 	line-height: $line-height;
 }
 
@@ -39,7 +39,7 @@ body {
 	letter-spacing: 1px;
 }
 
-.fancyCurrency 	{
+.fancyCurrency {
 	color: #909090;
 	font-size: $fontSize-smaller;
 	text-transform: uppercase;
