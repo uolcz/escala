@@ -167,8 +167,12 @@ a.button:not(.button--asLink):hover {
 	width: rem(40px);
 	height: rem(40px);
 	border: 1px solid $color-border; // remove
+	padding: 0;
 }
 
+.button.button--primary:not(.button--outlined).button--circular {
+	border: 0;
+}
 
 .button.button--symmetricalIcon {
 	width: rem(40px);
