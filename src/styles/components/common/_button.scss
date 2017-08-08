@@ -1,4 +1,6 @@
 .button {
+	@extend .button--secondary;
+
 	display: inline-block;
 	font-size: $button-global-font-size;
 	height: $button-global-height;
@@ -19,10 +21,12 @@ a.button:not(.button--asLink):hover {
 	text-decoration: none;
 }
 
+// remove
 %button--hasDropdown {
 	> .fa:last-of-type { margin-left: $gutter/2; }
 }
 
+// remove
 .button.button--dropdown,
 .button.button--hasDropdown {
 	@extend %button--hasDropdown;
@@ -67,6 +71,9 @@ a.button:not(.button--asLink):hover {
 	color: $color-primary;
 }
 
+/**
+ * Modifier: secondary
+ */
 
 .button.button--secondary {
 	background: $color-border;
@@ -78,7 +85,9 @@ a.button:not(.button--asLink):hover {
 	cursor: not-allowed;
 }
 
-.button.button--secondary:hover {}
+.button.button--secondary:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
+	background: lighten($color-border, 2%);
+}
 
 .button.button--secondary.button--outlined {
 	background: transparent;
