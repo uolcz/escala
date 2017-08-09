@@ -1,0 +1,11 @@
+// Project specific varibles
+$container-width: 980px;
+$color-primary: #1dd633;
+
+body {
+	background: #f7f7f7;
+	min-height: 3000px;
+}
+
+// Import Escala
+@import "../../src/styles/web.scss";

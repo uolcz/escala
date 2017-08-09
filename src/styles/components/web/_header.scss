@@ -1,14 +1,8 @@
 .header {
 	position: relative;
-	height: 55px;
+	height: 70px;
 	margin-bottom: $baseline*1.5;
 	z-index: $header-zIndex;
-}
-
-@media (min-width: 700px) {
-	.header {
-		height: 70px;
-	}
 }
 
 .header-inner {
@@ -18,7 +12,11 @@
 	width: 100%;
 	background: $white;
 	border-bottom: 1px solid $color-border;
-    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.07);
+	box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.07);
+}
+
+.header.header--stationary .header-inner {
+	position: static;
 }
 
 .header-content {

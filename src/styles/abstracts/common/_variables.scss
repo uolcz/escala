@@ -1,13 +1,13 @@
 /**
  * Colors
  */
-$white: #fff;
+$white: #fff !default;
 
-$color-primary  : #f80;
-$color-border   : #e0e0e0;
-$color-lightIcon: #ccc;
-$color-text     : #3e3e3e;
+$color-primary  : #f80 !default;
+$color-border   : #e0e0e0 !default;
+$color-lightIcon: #ccc !default;
+$color-text     : #3e3e3e !default;
 
-$color-success: green;
-$color-warning: #f0ad4e;
-$color-danger:  #d33226;
+$color-success: green !default;
+$color-warning: #f0ad4e !default;
+$color-danger:  #d33226 !default;

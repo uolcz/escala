@@ -14,6 +14,10 @@
 	flex: 1;
 }
 
+.grid-cell.grid-cell--notFluid {
+	flex: 0 0 auto;
+}
+
 @mixin makeGridGutters($gutter, $index) {
 	@if $index == 3 {
 		@include makeGridGutters($gutter, "");

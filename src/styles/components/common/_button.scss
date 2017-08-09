@@ -1,6 +1,4 @@
 .button {
-	@extend .button--secondary;
-
 	display: inline-block;
 	font-size: $button-global-font-size;
 	height: $button-global-height;
@@ -95,7 +93,7 @@ a.button:not(.button--asLink):hover {
 	color: darken($color-border, 20%);
 }
 
-.button.button--secondary.button--outlined:hover {
+.button.button--secondary.button--outlined:not(:disabled):hover {
 	border-color: darken($color-border, 10%);
 	color: darken($color-border, 30%);
 }
@@ -104,7 +102,7 @@ a.button:not(.button--asLink):hover {
 	color: lighten($color-text, 25%);
 }
 
-.button.button--secondary.button--borderLess:hover {
+.button.button--secondary.button--borderLess:not(:disabled):hover {
 	color: lighten($color-text, 15%);
 }
 
@@ -151,7 +149,6 @@ a.button:not(.button--asLink):hover {
 }
 
 
-
 .button.button--borderLess {
 	background: transparent;
 	border: 0;
@@ -160,7 +157,7 @@ a.button:not(.button--asLink):hover {
 
 .button.button--borderLess:hover {
 	background: transparent;
-} 
+}
 
 .button--lightIcon {
 	@extend %button--unstyled;
