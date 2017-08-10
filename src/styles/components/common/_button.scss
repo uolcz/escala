@@ -79,7 +79,7 @@ a.button:not(.button--asLink):hover {
 }
 
 .button.button--secondary:disabled {
-	color: lighten($color-text, 50%);
+	opacity: 0.4;
 	cursor: not-allowed;
 }
 

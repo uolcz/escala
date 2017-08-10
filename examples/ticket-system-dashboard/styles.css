@@ -1,7 +1,3 @@
-body {
-  background: #f7f7f7;
-  min-height: 3000px; }
-
 /**
  * Colors
  */
@@ -3463,11 +3459,11 @@ a.u-textMuted,
 
 .header .logo img {
   display: block;
-  width: 75px; }
+  width: 95px; }
 
 .header .inputGroup {
   display: inline-flex;
-  margin-left: 75px; }
+  margin-left: 55px; }
 
 .header .formControl, .header .SingleDatePickerInput {
   width: 18.75rem; }
@@ -3635,7 +3631,7 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   color: #585858; }
 
 .button.button--secondary:disabled, .button--secondary.userNav:disabled {
-  color: #bebebe;
+  opacity: 0.4;
   cursor: not-allowed; }
 
 .button.button--secondary:not(:disabled):not(.button--outlined):not(.button--borderLess):hover, .button--secondary.userNav:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
@@ -4605,6 +4601,9 @@ a.card:active, a.flashMessage:active, a.loginCard:active {
 
 .unorderedList li {
   margin-bottom: 0.35938rem; }
+
+body {
+  background: #f7f7f7; }
 
 .container.container--login {
   text-align: center;
