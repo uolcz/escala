@@ -3788,20 +3788,20 @@ tbody .table-row.table-row--clickable:hover td {
 /**
  * Modifiers
  */
-.table.table--condensed td,
-.table.table--condensed td {
+.table.table--borderLess .table-row {
+  border: 0; }
+
+.table.table--borderLess th,
+.table.table--borderLess td {
   padding: 0.35938rem 0.375rem; }
 
-.table.table--borderLess {
-  font-size: 0.75rem; }
-
-.table.table--borderLess thead td {
+.table.table--borderLess thead th {
   padding-bottom: 0.71875rem; }
 
-.table.table--borderLess thead td {
+.table.table--borderLess thead th {
   padding-top: 0; }
 
-.table.table--borderLess tbody td {
+.table.table--borderLess tbody th {
   padding-top: 0;
   padding-bottom: 0; }
 
@@ -3817,8 +3817,36 @@ tbody .table-row.table-row--clickable:hover td {
 .table.table--borderLess td:last-of-type {
   padding-right: 0; }
 
-.table.table--borderLess .table-row {
-  border: 0; }
+.table.table--condensed th,
+.table.table--condensed td {
+  font-size: 0.75rem;
+  padding: 0.35938rem 0.375rem; }
+
+.table.table--borderLess.table--condensed th,
+.table.table--borderLess.table--condensed td {
+  padding: 0; }
+
+.table.table--borderLess.table--condensed thead th {
+  padding-bottom: 0.71875rem; }
+
+.table.table--borderLess.table--condensed thead th {
+  padding-top: 0; }
+
+.table.table--borderLess.table--condensed tbody th {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.table.table--borderLess.table--condensed tfoot td {
+  padding-top: 0.35938rem;
+  padding-bottom: 0; }
+
+.table.table--borderLess.table--condensed th:first-of-type,
+.table.table--borderLess.table--condensed td:first-of-type {
+  padding-left: 0; }
+
+.table.table--borderLess.table--condensed th:last-of-type,
+.table.table--borderLess.table--condensed td:last-of-type {
+  padding-right: 0; }
 
 .table .button, .table .userNav {
   height: auto;

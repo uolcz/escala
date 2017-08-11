@@ -46,24 +46,24 @@ tbody .table-row.table-row--clickable:hover td {
  * Modifiers
  */
 
-.table.table--condensed td,
-.table.table--condensed td {
+.table.table--borderLess .table-row {
+	border: 0;
+}
+
+.table.table--borderLess th,
+.table.table--borderLess td {
 	padding: $baseline/4 $gutter/2;
 }
 
-.table.table--borderLess {
-	font-size: rem(12px);
-}
-
-.table.table--borderLess thead td {
+.table.table--borderLess thead th {
 	padding-bottom: $baseline/2;
 }
 
-.table.table--borderLess thead td {
+.table.table--borderLess thead th {
 	padding-top: 0;
-}	
+}
 
-.table.table--borderLess tbody td {
+.table.table--borderLess tbody th {
 	padding-top: 0;
 	padding-bottom: 0;
 }
@@ -71,7 +71,7 @@ tbody .table-row.table-row--clickable:hover td {
 .table.table--borderLess tfoot td {
 	padding-top: $baseline/4;
 	padding-bottom: 0;
-}	
+}
 
 .table.table--borderLess th:first-of-type,
 .table.table--borderLess td:first-of-type {
@@ -83,8 +83,43 @@ tbody .table-row.table-row--clickable:hover td {
 	padding-right: 0;
 }
 
-.table.table--borderLess .table-row {
-	border: 0;
+.table.table--condensed th,
+.table.table--condensed td {
+	font-size: rem(12px);
+	padding: $baseline/4 $gutter/2;
+}
+
+.table.table--borderLess.table--condensed th,
+.table.table--borderLess.table--condensed td {
+	padding: 0;
+}
+
+.table.table--borderLess.table--condensed thead th {
+	padding-bottom: $baseline/2;
+}
+
+.table.table--borderLess.table--condensed thead th {
+	padding-top: 0;
+}
+
+.table.table--borderLess.table--condensed tbody th {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.table.table--borderLess.table--condensed tfoot td {
+	padding-top: $baseline/4;
+	padding-bottom: 0;
+}
+
+.table.table--borderLess.table--condensed th:first-of-type,
+.table.table--borderLess.table--condensed td:first-of-type {
+	padding-left: 0;
+}
+
+.table.table--borderLess.table--condensed th:last-of-type,
+.table.table--borderLess.table--condensed td:last-of-type {
+	padding-right: 0;
 }
 
 
@@ -97,8 +132,10 @@ tbody .table-row.table-row--clickable:hover td {
 	overflow-y: auto;
 }
 
+// -- Remove
 .table-data.table-data--max100 { max-width: 100px; }
 .table-data.table-data--max150 { max-width: 150px; }
 .table-data.table-data--max200 { max-width: 200px; }
 .table-data.table-data--max250 { max-width: 250px; }
 .table-data.table-data--max300 { max-width: 300px; }
+// -- Remove
