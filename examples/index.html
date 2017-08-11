@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body">
-	<div class="container" style="width: 900px">
+	<div class="container" style="max-width: 900px">
 		<h2 class="headline u-mt4">Buttons</h2>
 		<div class="card u-mb4">
 			<div>
@@ -305,6 +305,59 @@
 			</div>
 		</div>
 
+		<h2 class="headline">Grid</h2>
+		<div class="card u-mb4">
+			<div class="u-mb1">
+				<div class="grid grid--gutters1">
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+				</div>
+			</div>
+
+			<div class="u-mb1">
+				<div class="grid">
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+					<div class="grid-cell grid-cell--xs-6"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="grid-cell grid-cell--xs-12 grid-cell--lg-4"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+				<div class="grid-cell grid-cell--xs-12 grid-cell--lg-4"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+				<div class="grid-cell grid-cell--xs-12 grid-cell--lg-4"><div class="js-generateRandomColor" style="height: 40px;"></div></div>
+			</div>
+		</div>
 	</div>
+
+	<script type="text/javascript">
+		function getRandomColor() {
+			const letters = "0123456789ABCDEF";
+			let color = "#";
+
+			for (let i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+			return color;
+		}
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const nodes = Array.from(document.querySelectorAll(".js-generateRandomColor"));
+			nodes.forEach((node) => {
+				const style = node.getAttribute("style") + "background:" + getRandomColor();
+				node.setAttribute("style", style);
+			});
+		});
+	</script>
 </body>
 </html>

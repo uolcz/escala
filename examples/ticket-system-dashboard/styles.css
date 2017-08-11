@@ -3388,6 +3388,18 @@ a.u-textMuted,
 .u-colorWarning {
   color: #f0ad4e; }
 
+.u-bgColorDanger {
+  background: #d33226; }
+
+.u-bgColorPrimary {
+  background: #1dd633; }
+
+.u-bgColorSuccess {
+  background: green; }
+
+.u-bgColorWarning {
+  background: #f0ad4e; }
+
 /**
  * Print
  */
