@@ -2963,6 +2963,22 @@ body {
 .grid.grid--gutters5 > .grid-cell {
   padding: 0 2.25rem; }
 
+.grid.grid--xs-wrapDefault {
+  flex-wrap: wrap; }
+
+.grid.grid--xs-wrapReverse {
+  flex-wrap: wrap-reverse; }
+
+.grid.grid--xs-alignItemsCenter {
+  align-items: center; }
+
+.grid-cell.grid-cell--xs-fluid {
+  flex: 1; }
+
+.grid-cell.grid-cell--xs-notFluid {
+  flex: 0 0 auto;
+  max-width: inherit; }
+
 .grid-cell--xs-1 {
   flex: 0 0 8.33333%;
   max-width: 8.33333%; }
@@ -3048,6 +3064,17 @@ body {
   margin-left: 100%; }
 
 @media (min-width: 576px) {
+  .grid.grid--sm-wrapDefault {
+    flex-wrap: wrap; }
+  .grid.grid--sm-wrapReverse {
+    flex-wrap: wrap-reverse; }
+  .grid.grid--sm-alignItemsCenter {
+    align-items: center; }
+  .grid-cell.grid-cell--sm-fluid {
+    flex: 1; }
+  .grid-cell.grid-cell--sm-notFluid {
+    flex: 0 0 auto;
+    max-width: inherit; }
   .grid-cell--sm-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
@@ -3110,6 +3137,17 @@ body {
     margin-left: 100%; } }
 
 @media (min-width: 768px) {
+  .grid.grid--md-wrapDefault {
+    flex-wrap: wrap; }
+  .grid.grid--md-wrapReverse {
+    flex-wrap: wrap-reverse; }
+  .grid.grid--md-alignItemsCenter {
+    align-items: center; }
+  .grid-cell.grid-cell--md-fluid {
+    flex: 1; }
+  .grid-cell.grid-cell--md-notFluid {
+    flex: 0 0 auto;
+    max-width: inherit; }
   .grid-cell--md-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
@@ -3172,6 +3210,17 @@ body {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
+  .grid.grid--lg-wrapDefault {
+    flex-wrap: wrap; }
+  .grid.grid--lg-wrapReverse {
+    flex-wrap: wrap-reverse; }
+  .grid.grid--lg-alignItemsCenter {
+    align-items: center; }
+  .grid-cell.grid-cell--lg-fluid {
+    flex: 1; }
+  .grid-cell.grid-cell--lg-notFluid {
+    flex: 0 0 auto;
+    max-width: inherit; }
   .grid-cell--lg-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
@@ -3234,6 +3283,17 @@ body {
     margin-left: 100%; } }
 
 @media (min-width: 1200px) {
+  .grid.grid--xl-wrapDefault {
+    flex-wrap: wrap; }
+  .grid.grid--xl-wrapReverse {
+    flex-wrap: wrap-reverse; }
+  .grid.grid--xl-alignItemsCenter {
+    align-items: center; }
+  .grid-cell.grid-cell--xl-fluid {
+    flex: 1; }
+  .grid-cell.grid-cell--xl-notFluid {
+    flex: 0 0 auto;
+    max-width: inherit; }
   .grid-cell--xl-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }

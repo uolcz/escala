@@ -14,6 +14,7 @@
 	flex: 1;
 }
 
+// TODO: remove this rule
 .grid-cell.grid-cell--notFluid {
 	flex: 0 0 auto;
 }
@@ -34,9 +35,31 @@
 @mixin makeGridCell($width: 100%) {
 	flex: 0 0 $width;
 	max-width: $width;
+
+	// wkhtmltopdf 0.12.3.2 seems NOT to support "flexbox-basis"
+	// As as result grid width is same as its children.
+	// Explicitly setting "width" fixes it.  
+	@if ($wkhtmltopdf-grid-fix == true) {
+		@media print { width: $width; }
+	}
 }
 
 @mixin makeGridCells($sreenSize: "xs") {
+	// Define screen sized dependent modifiers
+	.grid.grid--#{$sreenSize}-wrapDefault { flex-wrap: wrap; }
+	.grid.grid--#{$sreenSize}-wrapReverse { flex-wrap: wrap-reverse; }
+	.grid.grid--#{$sreenSize}-alignItemsCenter { align-items: center; }
+	.grid-cell.grid-cell--#{$sreenSize}-fluid { flex: 1; }
+
+	.grid-cell.grid-cell--#{$sreenSize}-notFluid {
+		flex: 0 0 auto;
+		max-width: inherit;
+
+		@if ($wkhtmltopdf-grid-fix == true) {
+			@media print { width: auto; }
+		}
+	}
+
 	@for $i from 1 through $grid-columns-count {
 
 		$gridCellClassName: ".grid-cell--#{$sreenSize}-#{$i}";
