@@ -4159,7 +4159,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   margin-bottom: 1.4375rem; }
 
 .formGroup.is-disabled {
-  opacity: .5; }
+  opacity: 0.5; }
 
 .formGroup.grid {
   margin-top: -0.35938rem;
@@ -4206,7 +4206,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   cursor: pointer; }
 
 .formCheck.is-disabled {
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed; }
 
 .formGroup.grid .formCheck {
@@ -4222,7 +4222,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   z-index: -1; }
 
 .formCheck .formCheck-indicator > .fa {
-  transition: transform .2s ease, opacity .2s ease; }
+  transition: transform 0.2s ease, opacity 0.2s ease; }
 
 .formCheck input:not(:checked) + .formCheck-indicator > .fa {
   transform: scale(0);

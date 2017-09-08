@@ -38,6 +38,117 @@
 			</div>
 		</div>
 
+		<h2 class="headline">Forms</h2>
+		<div class="card u-mb4">
+			<form>
+			  <div class="formGroup is-success">
+				<label>Email</label>
+				<input type="text" class="formControl">
+
+				<div class="formControlFeedback">Your email looks alright!</div>
+			  </div>
+
+			  <div class="formGroup is-warning">
+				<label>Password</label>
+				<input type="password" class="formControl">
+
+				<div class="formControlFeedback">Password must containt at least 1 number and 1 uppercase letter.</div>
+			  </div>
+
+			  <div class="formGroup is-danger">
+				<label for="favourite-pet">Pick your favourite pet</label>
+
+				<select id="favourite-pet" class="formControl">
+				  <option>Dog</option>
+				  <option>Cat</option>
+				  <option>Horse</option>
+				</select>
+
+				<div class="formControlFeedback">Oops! Something went wrong.</div>
+			  </div>
+
+			  <div class="formGroup is-disabled">
+				<label for="favourite-weather">Pick your favourite weather</label>
+
+				<select id="favourite-weather" class="formControl" disabled="">
+				  <option>Sunny</option>
+				  <option>Rainy</option>
+				  <option>Windy</option>
+				</select>
+			  </div>
+
+			  <div class="formGroup">
+				<label>Something about yourself</label>
+				<textarea class="formControl"></textarea>
+			  </div>
+
+			  <ul class="formGroup">
+				  <label class="formCheck">
+					<input type="checkbox" name="features" value="1">
+					<span class="formCheck-indicator">
+					  <span class="fa fa-check"></span>
+					</span>
+					<span class="formCheck-description">Option 1</span>
+				  </label>
+				</li>
+
+				<li>
+				  <label class="formCheck is-disabled">
+					<input type="checkbox" name="features" value="2" disabled>
+					<span class="formCheck-indicator">
+					  <span class="fa fa-check"></span>
+					</span>
+					<span class="formCheck-description">Option 2 (disabled)</span>
+				  </label>
+				</li>
+			  </ul>
+
+			  <div class="formGroup">
+				<div class="formGroup-label u-mb1">Nofiticatios</div>
+				<ul>
+				  <li>
+					<label class="formCheck">
+					  <input type="radio" name="radio" value="1">
+					  <span class="formCheck-indicator"><span class="fa fa-circle"></span></span>
+					  <span class="formCheck-description">Turn on</span>
+					</label>
+				  </li>
+
+				  <li>
+					<label class="formCheck">
+					  <input type="radio" name="radio" value="0">
+					 <span class="formCheck-indicator"><span class="fa fa-circle"></span></span>
+					  <span class="formCheck-description">turn off</span>
+					</label>
+				  </li>
+				</ul>
+			  </div>
+
+			  <button type="submit" class="button button--primary">Save changes</button>
+			</form>
+		</div>
+
+		<h2 class="headline">Forms</h2>
+		<div class="card u-mb4">
+			<form>
+			  <div class="formGroup grid">
+				<label class="grid-cell grid-cell--xs-12 grid-cell--md-3">Email</label>
+				  <div class="grid-cell grid-cell--xs-12 grid-cell--md-9">
+					<input type="text" class="formControl">
+				  </div>
+			   </div>
+
+			   <div class="formGroup grid">
+				 <label class="grid-cell grid-cell--xs-12 grid-cell--md-3">Password</label>
+				 <div class="grid-cell grid-cell--xs-12 grid-cell--md-9">
+				   <input type="password" class="formControl">
+				 </div>
+			   </div>
+
+			  <button type="submit" class="button button--primary">Login</button>
+			</form>
+		</div>
+
 		<h2 class="headline">Tables</h2>
 		<div class="card u-mb4">
 			<div>
