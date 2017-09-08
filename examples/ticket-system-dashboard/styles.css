@@ -3678,6 +3678,9 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   color: #3e3e3e;
   font-size: 0.8125rem; }
 
+/**
+ * Button modifier: primary
+ */
 .button.button--primary, .button--primary.userNav {
   color: #fff;
   background: #1dd633; }
@@ -3701,8 +3704,11 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 .button.button--primary.button--borderLess, .button--primary.button--borderLess.userNav {
   color: #1dd633; }
 
+.button.button--primary:not(.button--outlined).button--circular, .button--primary.userNav:not(.button--outlined).button--circular {
+  border: 0; }
+
 /**
- * Modifier: secondary
+ * Button modifier: secondary
  */
 .button.button--secondary, .button--secondary.userNav {
   background: #e0e0e0;
@@ -3730,6 +3736,9 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 .button.button--secondary.button--borderLess:not(:disabled):hover, .button--secondary.button--borderLess.userNav:not(:disabled):hover {
   color: #646464; }
 
+/**
+ * Button modifier: danger
+ */
 .button.button--danger, .button--danger.userNav {
   background: #d33226;
   color: #fff; }
@@ -3746,6 +3755,9 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 .button.button--danger.button--borderLess, .button--danger.button--borderLess.userNav {
   color: #d33226; }
 
+/**
+ * Button modifier: success
+ */
 .button.button--success, .button--success.userNav {
   background: green;
   color: #fff; }
@@ -3762,6 +3774,47 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 .button.button--success.button--borderLess, .button--success.button--borderLess.userNav {
   color: green; }
 
+/**
+ * Button modifier: warning
+ */
+.button.button--warning, .button--warning.userNav {
+  background: #f0ad4e;
+  color: #fff; }
+
+.button.button--warning.button--outlined, .button--warning.button--outlined.userNav {
+  background: transparent;
+  color: #f0ad4e;
+  border: 1px solid #f0ad4e; }
+
+.button.button--warning.button--outlined:hover, .button--warning.button--outlined.userNav:hover {
+  color: #eea236;
+  border-color: #eea236; }
+
+.button.button--warning.button--borderLess, .button--warning.button--borderLess.userNav {
+  color: #f0ad4e; }
+
+/**
+ * Button modifier: info
+ */
+.button.button--info, .button--info.userNav {
+  background: #31708f;
+  color: #fff; }
+
+.button.button--info.button--outlined, .button--info.button--outlined.userNav {
+  background: transparent;
+  color: #31708f;
+  border: 1px solid #31708f; }
+
+.button.button--info.button--outlined:hover, .button--info.button--outlined.userNav:hover {
+  color: #2a617c;
+  border-color: #2a617c; }
+
+.button.button--info.button--borderLess, .button--info.button--borderLess.userNav {
+  color: #31708f; }
+
+/**
+ * Button modifier: borderLess
+ */
 .button.button--borderLess, .button--borderLess.userNav {
   background: transparent;
   border: 0;
@@ -3770,6 +3823,9 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 .button.button--borderLess:hover, .button--borderLess.userNav:hover {
   background: transparent; }
 
+/**
+ * Misc button modifiers
+ */
 .button--lightIcon {
   color: #ccc;
   font-size: 1.0625rem; }
@@ -3782,9 +3838,6 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   height: 2.5rem;
   border: 1px solid #e0e0e0;
   padding: 0; }
-
-.button.button--primary:not(.button--outlined).button--circular, .button--primary.userNav:not(.button--outlined).button--circular {
-  border: 0; }
 
 .button.button--symmetricalIcon, .button--symmetricalIcon.userNav {
   width: 2.5rem;
@@ -3808,14 +3861,11 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   font-size: 0.6875rem; }
 
 /**
- * Button group
- * Deprecate this => figure out how to use something more general
+ * TODO: deprecate
+ *  - figure out how to use something more general
  */
 .buttonGroup > .button:not(:last-of-type), .buttonGroup > .userNav:not(:last-of-type) {
   margin-right: 0.375rem; }
-
-.buttonGroup > form {
-  display: inline-block; }
 
 .thumbnail {
   width: 2.5rem;
@@ -4209,7 +4259,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
 .tag {
   display: inline-block;
   padding: 0.35938rem 0.375rem;
-  background: #F7F7F7;
+  background: #f7f7f7;
   font-size: 0.75rem;
   border-radius: 2px;
   vertical-align: middle;
@@ -4564,6 +4614,11 @@ a.card:active, a.flashMessage:active, a.loginCard:active {
   background: #fcf8e3;
   color: #f0ad4e;
   border-color: #faf2cc; }
+
+.alert-closeContainer {
+  position: absolute;
+  top: 0.71875rem;
+  right: 0.75rem; }
 
 .tooltip {
   top: auto;

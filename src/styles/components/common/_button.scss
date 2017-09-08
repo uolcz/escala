@@ -40,6 +40,10 @@ a.button:not(.button--asLink):hover {
 	font-size: $fontSize-default;
 }
 
+/**
+ * Button modifier: primary
+ */
+
 .button.button--primary {
 	color: $button-primary-color;
 	background: $button-primary-background;
@@ -69,8 +73,12 @@ a.button:not(.button--asLink):hover {
 	color: $color-primary;
 }
 
+.button.button--primary:not(.button--outlined).button--circular {
+	border: 0;
+}
+
 /**
- * Modifier: secondary
+ * Button modifier: secondary
  */
 
 .button.button--secondary {
@@ -106,6 +114,9 @@ a.button:not(.button--asLink):hover {
 	color: lighten($color-text, 15%);
 }
 
+/**
+ * Button modifier: danger
+ */
 
 .button.button--danger {
 	background: $button-danger-background;
@@ -127,6 +138,9 @@ a.button:not(.button--asLink):hover {
 	color: $button-danger-background;
 }
 
+/**
+ * Button modifier: success
+ */
 
 .button.button--success {
 	background: $button-success-background;
@@ -148,6 +162,58 @@ a.button:not(.button--asLink):hover {
 	color: $button-success-background;
 }
 
+/**
+ * Button modifier: warning
+ */
+
+.button.button--warning {
+	background: $button-warning-background;
+	color: $white;
+}
+
+.button.button--warning.button--outlined {
+	background: transparent;
+	color: $button-warning-background;
+	border: 1px solid $button-warning-background;
+}
+
+.button.button--warning.button--outlined:hover {
+	color: darken($button-warning-background, 5%);
+	border-color: darken($button-warning-background, 5%);
+}
+
+.button.button--warning.button--borderLess {
+	color: $button-warning-background;
+}
+
+/**
+ * Button modifier: info
+ */
+
+.button.button--info {
+	background: $button-info-background;
+	color: $white;
+}
+
+.button.button--info.button--outlined {
+	background: transparent;
+	color: $button-info-background;
+	border: 1px solid $button-info-background;
+}
+
+.button.button--info.button--outlined:hover {
+	color: darken($button-info-background, 5%);
+	border-color: darken($button-info-background, 5%);
+}
+
+.button.button--info.button--borderLess {
+	color: $button-info-background;
+}
+
+
+/**
+ * Button modifier: borderLess
+ */
 
 .button.button--borderLess {
 	background: transparent;
@@ -158,6 +224,10 @@ a.button:not(.button--asLink):hover {
 .button.button--borderLess:hover {
 	background: transparent;
 }
+
+/**
+ * Misc button modifiers
+ */
 
 .button--lightIcon {
 	@extend %button--unstyled;
@@ -176,15 +246,11 @@ a.button:not(.button--asLink):hover {
 	padding: 0;
 }
 
-.button.button--primary:not(.button--outlined).button--circular {
-	border: 0;
-}
-
 .button.button--symmetricalIcon {
 	width: rem(40px);
 	height: rem(40px);
 	padding: 0;
-} 
+}
 
 .button.button--bigger {
 	font-size: rem(15px);
@@ -195,14 +261,12 @@ a.button:not(.button--asLink):hover {
 	width: 100%;
 }
 
-
 .button.button--asLink {
 	height: auto;
 	line-height: inherit;
 	background: transparent;
 	padding: 0;
 }
-
 
 .button.button--asLink.button--smaller {
 	font-size: rem(11px);
@@ -213,13 +277,9 @@ a.button:not(.button--asLink):hover {
 }
 
 /**
- * Button group
- * Deprecate this => figure out how to use something more general
+ * TODO: deprecate
+ *  - figure out how to use something more general
  */
 .buttonGroup > .button:not(:last-of-type) {
 	margin-right: $gutter/2;
-}
-
-.buttonGroup > form { // tmp
-	display: inline-block;
 }

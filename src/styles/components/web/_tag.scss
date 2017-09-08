@@ -1,7 +1,7 @@
 .tag {
 	display: inline-block;
 	padding: $baseline/4 $gutter/2;
-	background: #F7F7F7;
+	background: #f7f7f7;
 	font-size: rem(12px);
 	border-radius: $borderRadius;
 	vertical-align: middle;
@@ -12,6 +12,7 @@
 	cursor: pointer;
 }
 
+// TODO: remove
 .tag.tag--removable:hover .fa {
 	color: $color-danger;
 }
@@ -23,7 +24,7 @@
 
 .tag.tag--primary {
 	background: lighten($color-primary, 40%);
-	color: $color-primary
+	color: $color-primary;
 }
 
 .tag.tag--small {
@@ -31,20 +32,21 @@
 	padding: 0 $gutter/2;
 }
 
+// TODO: remove
 .tag .fa {
-	color: darken(#F7F7F7, 10%);
+	color: darken(#f7f7f7, 10%);
 	font-size: rem(10px);
 	margin-right: $gutter/2;
 }
 
 .tag.tag--success {
-    background: #8ddf8d;
-    color: green;
+	background: #8ddf8d;
+	color: green;
 }
 
 .tag.tag--danger {
-    background: #df8d8d;
-    color: #6c4949;
+	background: #df8d8d;
+	color: #6c4949;
 }
 
 .tag-remove {
@@ -54,9 +56,9 @@
 
 .tag.tag--circular {
 	width: rem(22px);
-    height: rem(22px);
-    line-height: rem(22px);
-    text-align: center;
-    padding: 0;
-    border-radius: 999px;
+	height: rem(22px);
+	line-height: rem(22px);
+	text-align: center;
+	padding: 0;
+	border-radius: 999px;
 }

@@ -27,3 +27,9 @@
 	color: $color-warning;
 	border-color: #faf2cc;
 }
+
+.alert-closeContainer {
+	position: absolute;
+	top: $baseline/2;
+	right: $gutter;
+}
