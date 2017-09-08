@@ -37,8 +37,11 @@
 .u-textLineThrough { text-decoration: line-through; }
 
 .u-textMuted { color: #b8b8b8; }
+
 a.u-textMuted,
 .u-textMuted a { text-decoration: underline; }
+
+.u-textUnderline { text-decoration: underline; }
 
 .u-textEllipsis {
 	overflow: hidden;
@@ -50,6 +53,7 @@ a.u-textMuted,
  * Text colors
  */
 
+.u-colorInfo { color: $color-info; }
 .u-colorDanger { color: $color-danger; }
 .u-colorPrimary { color: $color-primary; }
 .u-colorSuccess { color: $color-success; }

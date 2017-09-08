@@ -3428,6 +3428,9 @@ a.u-textMuted,
 .u-textMuted a {
   text-decoration: underline; }
 
+.u-textUnderline {
+  text-decoration: underline; }
+
 .u-textEllipsis {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3436,6 +3439,9 @@ a.u-textMuted,
 /**
  * Text colors
  */
+.u-colorInfo {
+  color: #31708f; }
+
 .u-colorDanger {
   color: #d33226; }
 
