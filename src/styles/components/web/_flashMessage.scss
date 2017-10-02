@@ -10,8 +10,12 @@
 .toast {
 	@extend .card;
 
-	margin-bottom: $baseline/2;
 	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
 	z-index: 4;
 	cursor: default;
+}
+
+.flashMessage:not(:last-child),
+.toast:not(:last-child) {
+	margin-bottom: $baseline/2;
 }

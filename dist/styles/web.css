@@ -4347,34 +4347,43 @@ textarea.formControl, textarea.SingleDatePickerInput {
   .clickBox {
     border-color: #e0e0e0; } }
 
-.card, .flashMessage, .loginCard {
+.card, .flashMessage,
+.toast, .loginCard {
   display: block;
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   padding: 1.4375rem 1.5rem; }
 
-a.card, a.flashMessage, a.loginCard {
+a.card, a.flashMessage,
+a.toast, a.loginCard {
   color: inherit;
   transition: 0.2s ease box-shadow, 0.2s ease border-color, 0.1s ease transform;
   -webkit-tap-highlight-color: transparent; }
 
-a.card:hover, a.flashMessage:hover, a.loginCard:hover {
+a.card:hover, a.flashMessage:hover,
+a.toast:hover, a.loginCard:hover {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
   text-decoration: none; }
 
-a.card:active, a.flashMessage:active, a.loginCard:active {
+a.card:active, a.flashMessage:active,
+a.toast:active, a.loginCard:active {
   transform: scale(0.98); }
 
-.card dd, .flashMessage dd, .loginCard dd {
+.card dd, .flashMessage dd,
+.toast dd, .loginCard dd {
   text-align: right; }
 
-.card.card--invoice .grid-cell:last-child, .card--invoice.flashMessage .grid-cell:last-child, .card--invoice.loginCard .grid-cell:last-child,
-.card.card--bankAccounts .grid-cell:last-child, .card--bankAccounts.flashMessage .grid-cell:last-child, .card--bankAccounts.loginCard .grid-cell:last-child {
+.card.card--invoice .grid-cell:last-child, .card--invoice.flashMessage .grid-cell:last-child,
+.card--invoice.toast .grid-cell:last-child, .card--invoice.loginCard .grid-cell:last-child,
+.card.card--bankAccounts .grid-cell:last-child, .card--bankAccounts.flashMessage .grid-cell:last-child,
+.card--bankAccounts.toast .grid-cell:last-child, .card--bankAccounts.loginCard .grid-cell:last-child {
   text-align: right; }
 
-.card.card--invoice .grid, .card--invoice.flashMessage .grid, .card--invoice.loginCard .grid,
-.card.card--bankAccounts .grid, .card--bankAccounts.flashMessage .grid, .card--bankAccounts.loginCard .grid {
+.card.card--invoice .grid, .card--invoice.flashMessage .grid,
+.card--invoice.toast .grid, .card--invoice.loginCard .grid,
+.card.card--bankAccounts .grid, .card--bankAccounts.flashMessage .grid,
+.card--bankAccounts.toast .grid, .card--bankAccounts.loginCard .grid {
   align-items: center; }
 
 .SingleDatePicker {
@@ -4576,17 +4585,17 @@ a.card:active, a.flashMessage:active, a.loginCard:active {
 .icon--size3 {
   font-size: 1.5625rem; }
 
-.flashMessageContainer {
+.flashMessageContainer,
+.toastContainer {
   position: fixed;
-  height: 100%;
   width: 300px;
   right: 1.5rem;
-  top: 104px;
-  bottom: 1.4375rem; }
+  top: 104px; }
 
-.flashMessage {
+.flashMessage,
+.toast {
   margin-bottom: 0.71875rem;
-  box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   z-index: 4;
   cursor: default; }
 
