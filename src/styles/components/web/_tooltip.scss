@@ -43,7 +43,7 @@
 
 .tooltip.tooltip--fromTop {
 	top: auto;
-	bottom: 100%;
+	bottom: calc(100% + #{$baseline/2});
 	margin: 0 0 $baseline/2 0;
 	&:after {
 		top: auto;
@@ -86,8 +86,7 @@
 
 .tooltip.tooltip--fromLeft {
 	left: auto;
-	right: 100%;
-	margin: 0 $gutter 0 0;
+	right: calc(100% + #{$gutter});
 	&:before {
 		left: auto;
 		right: -($dropdown-triangleSize * 2);
@@ -101,9 +100,8 @@
 }
 
 .tooltip.tooltip--fromRight {
-	left: 100%;
+	left: calc(100% + #{$gutter});
 	right: auto;
-	margin: 0 0 0 $gutter;
 	&:before {
 		left: -($dropdown-triangleSize * 2);
 		right: auto;

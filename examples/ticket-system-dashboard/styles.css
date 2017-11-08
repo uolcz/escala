@@ -4668,7 +4668,7 @@ a.toast:active, a.loginCard:active {
 
 .tooltip.tooltip--fromTop, .tooltip {
   top: auto;
-  bottom: 100%;
+  bottom: calc(100% + 0.71875rem);
   margin: 0 0 0.71875rem 0; }
   .tooltip.tooltip--fromTop:after, .tooltip:after {
     top: auto;
@@ -4704,8 +4704,7 @@ a.toast:active, a.loginCard:active {
 
 .tooltip.tooltip--fromLeft {
   left: auto;
-  right: 100%;
-  margin: 0 0.75rem 0 0; }
+  right: calc(100% + 0.75rem); }
   .tooltip.tooltip--fromLeft:before {
     left: auto;
     right: -16px;
@@ -4716,9 +4715,8 @@ a.toast:active, a.loginCard:active {
     border-color: transparent transparent transparent rgba(1, 1, 1, 0.85); }
 
 .tooltip.tooltip--fromRight {
-  left: 100%;
-  right: auto;
-  margin: 0 0 0 0.75rem; }
+  left: calc(100% + 0.75rem);
+  right: auto; }
   .tooltip.tooltip--fromRight:before {
     left: -16px;
     right: auto;
