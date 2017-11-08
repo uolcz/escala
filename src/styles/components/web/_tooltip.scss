@@ -2,9 +2,10 @@
 	@extend .dropdown;
 	@extend .tooltip--fromTop;
 	@extend .tooltip--alignMiddle;
+
 	top: auto;
-	bottom: 100%;
-	margin: 0 0 $baseline/2 0; 
+	bottom: calc(100% + $baseline/2);
+	color: $tooltip-color;
 	font-size: $fontSize-default;
 	white-space: nowrap;
 }
@@ -12,7 +13,9 @@
 .tooltip.tooltip--alignLeft {
 	left: auto;
 	right: -$gutter;
-	&:after, &:before {
+
+	&:after,
+	&:before {
 		left: auto;
 		right: $gutter;
 	}
@@ -29,7 +32,9 @@
 .tooltip.tooltip--alignRight {
 	left: -$gutter;
 	right: auto;
-	&:after, &:before {
+
+	&:after,
+	&:before {
 		left: $gutter;
 		right: auto;
 	}
@@ -42,23 +47,23 @@
 	&:after {
 		top: auto;
 		bottom: -(($dropdown-triangleSize * 2) - 1);
-		border-color: $white transparent transparent transparent;
+		border-color: $tooltip-bgColor transparent transparent transparent;
 	}
 	&:before {
 		top: auto;
 		bottom: -($dropdown-triangleSize * 2);
 		border-color: $color-border transparent transparent transparent;
 	}
-} 
+}
 
 .tooltip.tooltip--fromBottom {
-	top: 100%;
+	top: calc(100% + $baseline/2);
 	bottom: auto;
 	margin: $baseline/2 0 0 0;
 	&:after {
 		top: -(($dropdown-triangleSize * 2) - 1);
 		bottom: auto;
-		border-color: transparent transparent $white transparent;
+		border-color: transparent transparent $tooltip-bgColor transparent;
 	}
 	&:before {
 		top: -($dropdown-triangleSize * 2);
@@ -90,7 +95,7 @@
 	&:after {
 		left: auto;
 		right: -(($dropdown-triangleSize * 2) - 1);
-		border-color: transparent transparent transparent $white;
+		border-color: transparent transparent transparent $tooltip-bgColor;
 	}
 }
 
@@ -106,7 +111,7 @@
 	&:after {
 		left: -(($dropdown-triangleSize * 2) - 1);
 		right: auto;
-		border-color: transparent $white transparent transparent;
+		border-color: transparent $tooltip-bgColor transparent transparent;
 	}
 }
 
