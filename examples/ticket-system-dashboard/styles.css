@@ -58,6 +58,9 @@
 /**
  * Sidebar nav
  */
+/**
+ * Tooltips
+ */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -4594,10 +4597,13 @@ a.toast:active, a.loginCard:active {
 
 .flashMessage,
 .toast {
-  margin-bottom: 0.71875rem;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   z-index: 4;
   cursor: default; }
+
+.flashMessage:not(:last-child),
+.toast:not(:last-child) {
+  margin-bottom: 0.71875rem; }
 
 .alert {
   padding: 0.71875rem 0.75rem;
@@ -4631,8 +4637,9 @@ a.toast:active, a.loginCard:active {
 
 .tooltip {
   top: auto;
-  bottom: 100%;
-  margin: 0 0 0.71875rem 0;
+  bottom: calc(100% + 0.71875rem);
+  background: rgba(1, 1, 1, 0.85);
+  color: #fff;
   font-size: 0.8125rem;
   white-space: nowrap; }
 
@@ -4666,20 +4673,20 @@ a.toast:active, a.loginCard:active {
   .tooltip.tooltip--fromTop:after, .tooltip:after {
     top: auto;
     bottom: -15px;
-    border-color: #fff transparent transparent transparent; }
+    border-color: rgba(1, 1, 1, 0.85) transparent transparent transparent; }
   .tooltip.tooltip--fromTop:before, .tooltip:before {
     top: auto;
     bottom: -16px;
     border-color: #e0e0e0 transparent transparent transparent; }
 
 .tooltip.tooltip--fromBottom {
-  top: 100%;
+  top: calc(100% + 0.71875rem);
   bottom: auto;
   margin: 0.71875rem 0 0 0; }
   .tooltip.tooltip--fromBottom:after {
     top: -15px;
     bottom: auto;
-    border-color: transparent transparent #fff transparent; }
+    border-color: transparent transparent rgba(1, 1, 1, 0.85) transparent; }
   .tooltip.tooltip--fromBottom:before {
     top: -16px;
     bottom: auto;
@@ -4706,7 +4713,7 @@ a.toast:active, a.loginCard:active {
   .tooltip.tooltip--fromLeft:after {
     left: auto;
     right: -15px;
-    border-color: transparent transparent transparent #fff; }
+    border-color: transparent transparent transparent rgba(1, 1, 1, 0.85); }
 
 .tooltip.tooltip--fromRight {
   left: 100%;
@@ -4719,7 +4726,7 @@ a.toast:active, a.loginCard:active {
   .tooltip.tooltip--fromRight:after {
     left: -15px;
     right: auto;
-    border-color: transparent #fff transparent transparent; }
+    border-color: transparent rgba(1, 1, 1, 0.85) transparent transparent; }
 
 .tooptip--wrap {
   white-space: normal; }

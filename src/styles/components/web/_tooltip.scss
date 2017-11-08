@@ -4,7 +4,8 @@
 	@extend .tooltip--alignMiddle;
 
 	top: auto;
-	bottom: calc(100% + $baseline/2);
+	bottom: calc(100% + #{$baseline/2});
+	background: $tooltip-bgColor;
 	color: $tooltip-color;
 	font-size: $fontSize-default;
 	white-space: nowrap;
@@ -57,7 +58,7 @@
 }
 
 .tooltip.tooltip--fromBottom {
-	top: calc(100% + $baseline/2);
+	top: calc(100% + #{$baseline/2});
 	bottom: auto;
 	margin: $baseline/2 0 0 0;
 	&:after {
