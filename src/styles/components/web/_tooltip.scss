@@ -1,73 +1,99 @@
+@function getCalcOffset($offset) {
+	@return calc(100% + #{$offset});
+}
+
 .tooltip {
-	@extend .dropdown;
 	@extend .tooltip--fromTop;
 	@extend .tooltip--alignMiddle;
 
+	position: absolute;
 	top: auto;
-	bottom: calc(100% + #{$baseline/2});
+	bottom: getCalcOffset($baseline/2);
 	background: $tooltip-bgColor;
 	color: $tooltip-color;
 	font-size: $fontSize-default;
 	white-space: nowrap;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.07);
+	border-radius: 3px;
+	z-index: $tooltip-zIndex;
+
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		right: $gutter;
+		display: block;
+		width: 0;
+		height: 0;
+		border: $tooltip-triangleSize solid transparent;
+	}
 }
 
 .tooltip.tooltip--alignLeft {
-	left: auto;
-	right: -$gutter;
+	left: 0;
+	right: auto;
+	transform: none;
 
-	&:after,
-	&:before {
-		left: auto;
-		right: $gutter;
+	&::after,
+	&::before {
+		left: $gutter/2;
+		right: auto;
+		transform: none;
 	}
 }
 
 .tooltip.tooltip--alignMiddle,
-.tooltip.tooltip--alignMiddle:after,
-.tooltip.tooltip--alignMiddle:before {
+.tooltip.tooltip--alignMiddle::after,
+.tooltip.tooltip--alignMiddle::before {
 	left: 50%;
 	right: auto;
 	transform: translateX(-50%);
 }
 
 .tooltip.tooltip--alignRight {
-	left: -$gutter;
-	right: auto;
+	left: auto;
+	right: 0;
+	transform: none;
 
-	&:after,
-	&:before {
-		left: $gutter;
-		right: auto;
+	&::after,
+	&::before {
+		left: auto;
+		right: $gutter/2;
+		transform: none;
 	}
 }
 
 .tooltip.tooltip--fromTop {
 	top: auto;
-	bottom: calc(100% + #{$baseline/2});
+	bottom: getCalcOffset($baseline/2);
 	margin: 0 0 $baseline/2 0;
-	&:after {
+
+	&::after {
 		top: auto;
-		bottom: -(($dropdown-triangleSize * 2) - 1);
+		bottom: -(($tooltip-triangleSize * 2) - 1);
 		border-color: $tooltip-bgColor transparent transparent transparent;
 	}
-	&:before {
+
+	&::before {
 		top: auto;
-		bottom: -($dropdown-triangleSize * 2);
+		bottom: -($tooltip-triangleSize * 2);
 		border-color: $color-border transparent transparent transparent;
 	}
 }
 
 .tooltip.tooltip--fromBottom {
-	top: calc(100% + #{$baseline/2});
+	top: getCalcOffset($baseline/2);
 	bottom: auto;
 	margin: $baseline/2 0 0 0;
-	&:after {
-		top: -(($dropdown-triangleSize * 2) - 1);
+
+	&::after {
+		top: -(($tooltip-triangleSize * 2) - 1);
 		bottom: auto;
 		border-color: transparent transparent $tooltip-bgColor transparent;
 	}
-	&:before {
-		top: -($dropdown-triangleSize * 2);
+
+	&::before {
+		top: -($tooltip-triangleSize * 2);
 		bottom: auto;
 		border-color: transparent transparent $color-border transparent;
 	}
@@ -75,10 +101,10 @@
 
 .tooltip.tooltip--fromLeft,
 .tooltip.tooltip--fromRight,
-.tooltip.tooltip--fromLeft:before,
-.tooltip.tooltip--fromLeft:after,
-.tooltip.tooltip--fromRight:before,
-.tooltip.tooltip--fromRight:after {
+.tooltip.tooltip--fromLeft::before,
+.tooltip.tooltip--fromLeft::after,
+.tooltip.tooltip--fromRight::before,
+.tooltip.tooltip--fromRight::after {
 	top: 50%;
 	bottom: auto;
 	transform: translateY(-50%);
@@ -86,29 +112,33 @@
 
 .tooltip.tooltip--fromLeft {
 	left: auto;
-	right: calc(100% + #{$gutter});
-	&:before {
+	right: getCalcOffset($gutter);
+
+	&::before {
 		left: auto;
-		right: -($dropdown-triangleSize * 2);
+		right: -($tooltip-triangleSize * 2);
 		border-color: transparent transparent transparent $color-border;
 	}
-	&:after {
+
+	&::after {
 		left: auto;
-		right: -(($dropdown-triangleSize * 2) - 1);
+		right: -(($tooltip-triangleSize * 2) - 1);
 		border-color: transparent transparent transparent $tooltip-bgColor;
 	}
 }
 
 .tooltip.tooltip--fromRight {
-	left: calc(100% + #{$gutter});
+	left: getCalcOffset($gutter);
 	right: auto;
-	&:before {
-		left: -($dropdown-triangleSize * 2);
+
+	&::before {
+		left: -($tooltip-triangleSize * 2);
 		right: auto;
 		border-color: transparent $color-border transparent transparent;
 	}
-	&:after {
-		left: -(($dropdown-triangleSize * 2) - 1);
+
+	&::after {
+		left: -(($tooltip-triangleSize * 2) - 1);
 		right: auto;
 		border-color: transparent $tooltip-bgColor transparent transparent;
 	}

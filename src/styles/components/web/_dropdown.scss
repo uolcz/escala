@@ -10,73 +10,71 @@
 	z-index: 3;
 }
 
-.dropdown:after,
-.dropdown:before {
+.dropdown::after,
+.dropdown::before {
 	content: "";
 	position: absolute;
 	right: $gutter;
 	display: block;
 	width: 0;
 	height: 0;
-	border-style: solid;
+	border: $dropdown-triangleSize solid transparent;
 }
 
-.dropdown:after {
+.dropdown::after {
 	top: -(($dropdown-triangleSize * 2) - 1);
 	border-color: transparent transparent $white transparent;
-	border-width: $dropdown-triangleSize;
 }
 
-.dropdown:before {
+.dropdown::before {
 	top: -($dropdown-triangleSize * 2);
 	border-color: transparent transparent $color-border transparent;
-	border-width: $dropdown-triangleSize;
 }
 
-.dropdown.dropdown--fromTop:after {
+.dropdown.dropdown--fromTop::after {
 	top: auto;
 	bottom: -(($dropdown-triangleSize * 2) - 1);
 	border-color: $white transparent transparent transparent;
 }
 
-.dropdown.dropdown--fromTop:before {
+.dropdown.dropdown--fromTop::before {
 	top: auto;
 	bottom: -($dropdown-triangleSize * 2);
 	border-color: $color-border transparent transparent transparent;
 }
 
-.dropdown.dropdown--fromBottom:after {
+.dropdown.dropdown--fromBottom::after {
 	top: -(($dropdown-triangleSize * 2) - 1);
 	bottom: auto;
 	border-color: transparent transparent $white transparent;
 }
 
-.dropdown.dropdown--fromBottom:before {
+.dropdown.dropdown--fromBottom::before {
 	top: -($dropdown-triangleSize * 2);
 	bottom: auto;
 	border-color: transparent transparent $color-border transparent;
 }
 
 .dropdown.dropdown--alignMiddle,
-.dropdown.dropdown--alignMiddle:after,
-.dropdown.dropdown--alignMiddle:before {
+.dropdown.dropdown--alignMiddle::after,
+.dropdown.dropdown--alignMiddle::before {
 	left: 50%;
 	right: auto;
 	transform: translateX(-50%);
 }
 
+// TODO: remove; project specific
 .dropdown.dropdown--withDatePicker { width: 350px; }
 .dropdown.dropdown--withUserMenu { width: 250px; }
 .dropdown.dropdown--withQuickAdd { width: 170px; }
 .dropdown.dropdown--withSubNav { width: 200px; }
 .dropdown.dropdown--withDocumentViews { width: 300px; }
 
-
 .dropdown-padding {
 	padding: $baseline $gutter*2;
 }
 
-
+// TODO: deprecate in favour of "u-positionRelativeContainer"
 .dropdownContainer {
 	position: relative;
 }

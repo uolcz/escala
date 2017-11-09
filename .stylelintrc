@@ -2,7 +2,8 @@
 	"extends": "stylelint-config-standard",
 	"rules": {
 		"indentation": "tab",
-		"no-missing-end-of-source-newline": null
+		"no-missing-end-of-source-newline": null,
+		"function-name-case": null,
 	},
-	"ignoreFiles": "src/styles/vendor/**/*"
+	"ignoreFiles": "src/styles/vendor/**/*",
 }
