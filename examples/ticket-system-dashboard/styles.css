@@ -4001,25 +4001,6 @@ tbody .table-row.table-row--clickable:hover td {
 .table-data.table-data--max300 {
   max-width: 300px; }
 
-.paginator {
-  text-align: center;
-  padding: 1.4375rem 0; }
-
-.paginator-list,
-.paginator-list > li,
-.paginator-item {
-  display: inline-block; }
-
-.paginator-list {
-  padding: 0 0.75rem; }
-
-.paginator-item {
-  color: inherit;
-  padding: 0 0.1875rem; }
-
-.paginator-item.is-active {
-  color: #1dd633; }
-
 .formControl, .SingleDatePickerInput {
   display: block;
   width: 100%;
@@ -4325,11 +4306,11 @@ textarea.formControl, textarea.SingleDatePickerInput {
   padding: 1.4375rem 1.5rem;
   border: 1px solid transparent;
   border-radius: 2px;
-  transition: .2s ease box-shadow, .2s ease border-color, .1s ease transform;
+  transition: 0.2s ease box-shadow, 0.2s ease border-color, 0.1s ease transform;
   text-decoration: none; }
 
 .clickBox:hover {
-  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
   border-color: rgba(0, 0, 0, 0.1);
   text-decoration: none; }
 
@@ -4577,10 +4558,10 @@ a.toast:active, a.loginCard:active {
 .link:hover {
   text-decoration: underline; }
 
-.icon--size2 {
+.icon.icon--size2 {
   font-size: 0.9375rem; }
 
-.icon--size3 {
+.icon.icon--size3 {
   font-size: 1.5625rem; }
 
 .flashMessageContainer,
@@ -4769,6 +4750,12 @@ a.toast:active, a.loginCard:active {
     animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
   .loader-ball:nth-child(3) {
     animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+
+.loader.loader--primary .loader-ball {
+  background: #1dd633; }
+
+.loader.loader--secondary .loader-ball {
+  background: #ccc; }
 
 .separator {
   margin: 1.4375rem 0;

@@ -6,13 +6,13 @@
 	padding: $baseline $gutter*2;
 	border: 1px solid transparent;
 	border-radius: $borderRadius;
-	transition: .2s ease box-shadow, .2s ease border-color, .1s ease transform;
+	transition: 0.2s ease box-shadow, 0.2s ease border-color, 0.1s ease transform;
 	text-decoration: none;
 }
 
 .clickBox:hover {
-	box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.07);
-	border-color: rgba(0,0,0,.1);
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+	border-color: rgba(0, 0, 0, 0.1);
 	text-decoration: none;
 }
 
@@ -35,6 +35,6 @@
 
 @media (max-width: 800px) {
 	.clickBox {
-		border-color: $color-border;	
+		border-color: $color-border;
 	}
 }
