@@ -1,0 +1,42 @@
+.areaButton {
+	height: 90px;
+	padding: 0 $gutter;
+	background: $body-background;
+	border: 1px solid $color-border;
+	border-radius: $borderRadius;
+	font-size: rem(11px);
+	cursor: pointer;
+}
+
+.areaButton.areaButton--inline {
+	height: auto;
+	padding-top: $baseline/2;
+	padding-bottom: $baseline/2;
+}
+
+.areaButton.is-selected {
+	border: 3px solid $color-primary;
+}
+
+.radioCheck .fa {
+	transform: scale(0);
+	opacity: 0;
+}
+
+.radioCheck.is-selected .fa {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.radioCheck {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: rem(18px);
+	height: rem(18px);
+	color: $color-primary;
+	font-size: rem(12px);
+	border: 1px solid $color-border;
+	border-radius: 999px;
+	vertical-align: middle;
+}
