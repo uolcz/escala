@@ -1,7 +1,29 @@
 @charset "UTF-8";
 
+@import "abstracts/web/all";
+
+// test
+
+$color-primary: #bef8ff;
+
+$button-global-border-radius: 7px;
+$button-global-font-size: rem(11px);
+
+$button-primary-bg: $color-primary;
+$button-primary-color: #000;
+$button-primary-hover-background: darken($color-primary, 10%);
+
+$button-secondary-color: white;
+$button-secondary-bg: #000;
+$button-secondary-hover-bg: lighten(#000, 10%);
+
+.button {
+	font-weight: 600;
+}
+
+// end of test
+
 @import
-	"abstracts/web/all",
 	"vendor/web/all",
 	"base/web/all",
 	"components/web/all",

@@ -19,17 +19,6 @@ a.button:not(.button--asLink):hover {
 	text-decoration: none;
 }
 
-// remove
-%button--hasDropdown {
-	> .fa:last-of-type { margin-left: $gutter/2; }
-}
-
-// remove
-.button.button--dropdown,
-.button.button--hasDropdown {
-	@extend %button--hasDropdown;
-}
-
 %button--unstyled {
 	height: auto;
 	border: 0;
@@ -40,79 +29,66 @@ a.button:not(.button--asLink):hover {
 	font-size: $fontSize-default;
 }
 
-/**
- * Button modifier: primary
- */
+@mixin createBasicButtonMofidier($name, $config) {
+	$nameWithModifierName: ".button.button--#{$name}";
 
-.button.button--primary {
-	color: $button-primary-color;
-	background: $button-primary-background;
+	#{$nameWithModifierName} {
+		background: map-get($config, "bg");
+		color: map-get($config, "color");
+	}
+
+	#{$nameWithModifierName}:disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+	}
+
+	#{$nameWithModifierName}:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
+		background: map-get($config, "hover-bg");
+	}
+
+	#{$nameWithModifierName}.button--outlined {
+		background: transparent;
+		border: 1px solid map-get($config, "outlined-border-color");
+		color: map-get($config, "outlined-color");
+	}
+
+	#{$nameWithModifierName}.button--outlined:not(:disabled):hover {
+		border-color: map-get($config, "outlined-hover-border-color");
+		color: map-get($config, "outlined-hover-color");
+	}
+
+	#{$nameWithModifierName}.button--borderLess {
+		color: map-get($config, "borderLess-color");
+	}
+
+	#{$nameWithModifierName}.button--borderLess:not(:disabled):hover {
+		color: map-get($config, "borderLess-hover-color");
+	}
 }
 
-.button.button--primary:disabled {
-	opacity: 0.5;
-	cursor: not-allowed;
-}
+@include createBasicButtonMofidier("primary", (
+	bg: $button-primary-bg,
+	color: $button-primary-color,
+	hover-bg: $button-primary-hover-bg,
+	outlined-color: $button-primary-outlined-color,
+	outlined-border-color: $button-primary-outlined-border-color,
+	outlined-hover-color: $button-primary-outlined-hover-color,
+	outlined-hover-border-color: $button-primary-outlined-hover-border-color,
+	borderLess-color: $button-primary-outlined-color,
+	borderLess-hover-color: $button-primary-outlined-hover-color,
+));
 
-.button.button--primary:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
-	background: lighten($color-primary, 10%);
-}
-
-.button.button--primary.button--outlined {
-	background: transparent;
-	border: 1px solid $color-primary;
-	color: $color-primary;
-}
-
-.button.button--primary.button--outlined:not(:disabled):hover {
-	color: darken($color-primary, 5%);
-	border-color: darken($color-primary, 5%);
-}
-
-.button.button--primary.button--borderLess {
-	color: $color-primary;
-}
-
-.button.button--primary:not(.button--outlined).button--circular {
-	border: 0;
-}
-
-/**
- * Button modifier: secondary
- */
-
-.button.button--secondary {
-	background: $color-border;
-	color: lighten($color-text, 10%);
-}
-
-.button.button--secondary:disabled {
-	opacity: 0.4;
-	cursor: not-allowed;
-}
-
-.button.button--secondary:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
-	background: lighten($color-border, 2%);
-}
-
-.button.button--secondary.button--outlined {
-	background: transparent;
-	border: 1px solid $color-border;
-	color: darken($color-border, 20%);
-}
-
-.button.button--secondary.button--outlined:not(:disabled):hover {
-	border-color: darken($color-border, 10%);
-	color: darken($color-border, 30%);
-}
-
-.button.button--secondary.button--borderLess {
-	color: lighten($color-text, 25%);
-}
-
-.button.button--secondary.button--borderLess:not(:disabled):hover {
-	color: lighten($color-text, 15%);
-}
+@include createBasicButtonMofidier("secondary", (
+	bg: $button-secondary-bg,
+	color: $button-secondary-color,
+	hover-bg: $button-secondary-hover-bg,
+	outlined-color: $button-secondary-outlined-color,
+	outlined-border-color: $button-secondary-outlined-border-color,
+	outlined-hover-color: $button-secondary-outlined-hover-color,
+	outlined-hover-border-color: $button-secondary-outlined-hover-border-color,
+	borderLess-color: lighten($color-text, 25%),
+	borderLess-hover-color: lighten($color-text, 15%),
+));
 
 /**
  * Button modifier: danger
@@ -231,6 +207,7 @@ a.button:not(.button--asLink):hover {
 
 .button--lightIcon {
 	@extend %button--unstyled;
+
 	color: $color-lightIcon;
 	font-size: rem(17px);
 }
@@ -242,7 +219,6 @@ a.button:not(.button--asLink):hover {
 .button.button--circular {
 	width: rem(40px);
 	height: rem(40px);
-	border: 1px solid $color-border; // remove
 	padding: 0;
 }
 

@@ -193,9 +193,20 @@ $button-global-border-radius: 999px !default;
 $button-global-transition: $global-transition-type $global-transition-duration background !default;
 
 $button-primary-color: $white !default;
-$button-primary-background: $color-primary !default;
+$button-primary-bg: $color-primary !default;
+$button-primary-hover-bg: lighten($button-primary-bg, 10%) !default;
+$button-primary-outlined-color: $color-primary !default;
+$button-primary-outlined-border-color: $color-primary !default;
+$button-primary-outlined-hover-border-color: darken($color-primary, 5%) !default;
+$button-primary-outlined-hover-color: darken($color-primary, 5%) !default;
 
-$button-secondary-background: #ccc !default;
+$button-secondary-color: lighten($color-text, 10%) !default;
+$button-secondary-bg: #e7e7e7 !default;
+$button-secondary-hover-bg: lighten($button-secondary-bg, 2%) !default;
+$button-secondary-outlined-color: darken($color-border, 20%) !default;
+$button-secondary-outlined-border-color: $color-border !default;
+$button-secondary-outlined-hover-border-color: darken($color-border, 10%) !default;
+$button-secondary-outlined-hover-color: darken($color-border, 30%) !default;
 
 $button-success-background: $color-success !default;
 

@@ -61,6 +61,9 @@
 /**
  * Tooltips
  */
+.button, .userNav {
+  font-weight: 600; }
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -2856,7 +2859,7 @@ textarea {
   font-family: inherit; }
 
 a {
-  color: #f80;
+  color: #bef8ff;
   text-decoration: none;
   transition: 0.1s ease color; }
 
@@ -2888,7 +2891,7 @@ body {
   font-size: 1rem; }
 
 .textHighlight {
-  background: #ffe7cc;
+  background: white;
   padding: 0 0.375rem;
   border-radius: 2px; }
 
@@ -3449,7 +3452,7 @@ a.u-textMuted,
   color: #d33226; }
 
 .u-colorPrimary {
-  color: #f80; }
+  color: #bef8ff; }
 
 .u-colorSuccess {
   color: green; }
@@ -3461,7 +3464,7 @@ a.u-textMuted,
   background: #d33226; }
 
 .u-bgColorPrimary {
-  background: #f80; }
+  background: #bef8ff; }
 
 .u-bgColorSuccess {
   background: green; }
@@ -3601,7 +3604,7 @@ button.userNav {
   margin-bottom: 0.71875rem; }
 
 .userMenu-item:hover {
-  color: #f80; }
+  color: #bef8ff; }
 
 .userMenu-separator {
   border-bottom: 1px solid #e0e0e0;
@@ -3622,7 +3625,7 @@ button.userNav {
   text-decoration: none; }
 
 .nav-item.is-active {
-  background: #f80;
+  background: #bef8ff;
   color: #fff; }
 
 .nav-item .fa {
@@ -3651,12 +3654,12 @@ button.userNav {
 
 .button, .userNav {
   display: inline-block;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   height: 2.5rem;
   line-height: 2.5rem;
   padding: 0 1.125rem;
   border: 0;
-  border-radius: 999px;
+  border-radius: 7px;
   cursor: pointer;
   box-shadow: none;
   outline: 0;
@@ -3668,10 +3671,6 @@ button.userNav {
 a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   text-decoration: none; }
 
-.userNav > .fa:last-of-type, .button.button--dropdown > .fa:last-of-type,
-.button.button--hasDropdown > .fa:last-of-type {
-  margin-left: 0.375rem; }
-
 .userNav, .button--lightIcon, .button.button--unstyled, .button--unstyled.userNav {
   height: auto;
   border: 0;
@@ -3681,15 +3680,12 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   color: #3e3e3e;
   font-size: 0.8125rem; }
 
-/**
- * Button modifier: primary
- */
 .button.button--primary, .button--primary.userNav {
-  color: #fff;
-  background: #f80; }
+  background: #bef8ff;
+  color: #000; }
 
 .button.button--primary:disabled, .button--primary.userNav:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed; }
 
 .button.button--primary:not(:disabled):not(.button--outlined):not(.button--borderLess):hover, .button--primary.userNav:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
@@ -3701,28 +3697,25 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   color: #f80; }
 
 .button.button--primary.button--outlined:not(:disabled):hover, .button--primary.button--outlined.userNav:not(:disabled):hover {
-  color: #e67a00;
-  border-color: #e67a00; }
+  border-color: #e67a00;
+  color: #e67a00; }
 
 .button.button--primary.button--borderLess, .button--primary.button--borderLess.userNav {
   color: #f80; }
 
-.button.button--primary:not(.button--outlined).button--circular, .button--primary.userNav:not(.button--outlined).button--circular {
-  border: 0; }
+.button.button--primary.button--borderLess:not(:disabled):hover, .button--primary.button--borderLess.userNav:not(:disabled):hover {
+  color: #e67a00; }
 
-/**
- * Button modifier: secondary
- */
 .button.button--secondary, .button--secondary.userNav {
-  background: #e0e0e0;
-  color: #585858; }
+  background: #000;
+  color: white; }
 
 .button.button--secondary:disabled, .button--secondary.userNav:disabled {
   opacity: 0.4;
   cursor: not-allowed; }
 
 .button.button--secondary:not(:disabled):not(.button--outlined):not(.button--borderLess):hover, .button--secondary.userNav:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
-  background: #e5e5e5; }
+  background: #1a1a1a; }
 
 .button.button--secondary.button--outlined, .button--secondary.button--outlined.userNav {
   background: transparent;
@@ -3839,7 +3832,6 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 .button.button--circular, .button--circular.userNav {
   width: 2.5rem;
   height: 2.5rem;
-  border: 1px solid #e0e0e0;
   padding: 0; }
 
 .button.button--symmetricalIcon, .button--symmetricalIcon.userNav {
@@ -3894,9 +3886,9 @@ tbody .table-row.table-row--clickable {
   cursor: pointer; }
 
 tbody .table-row.table-row--clickable:hover td {
-  border-top: 1px solid #ffb866;
-  border-bottom: 1px solid #ffb866;
-  background: #fff3e6; }
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background: white; }
 
 .table th,
 .table td {
@@ -3914,7 +3906,7 @@ tbody .table-row.table-row--clickable:hover td {
   font-weight: 600; }
 
 .table th.is-active {
-  color: #f80; }
+  color: #bef8ff; }
 
 /**
  * Modifiers
@@ -4024,7 +4016,7 @@ tbody .table-row.table-row--clickable:hover td {
   border-color: #cecece; }
 
 .formControl:focus, .SingleDatePickerInput:focus {
-  border-color: #f80; }
+  border-color: #bef8ff; }
 
 select.formControl, select.SingleDatePickerInput {
   cursor: pointer; }
@@ -4222,7 +4214,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   justify-content: center;
   width: 1.125rem;
   height: 1.125rem;
-  color: #f80;
+  color: #bef8ff;
   font-size: 0.75rem;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
@@ -4260,8 +4252,8 @@ textarea.formControl, textarea.SingleDatePickerInput {
   text-align: center; }
 
 .tag.tag--primary {
-  background: #ffe7cc;
-  color: #f80; }
+  background: white;
+  color: #bef8ff; }
 
 .tag.tag--small {
   font-size: 0.625rem;
@@ -4534,13 +4526,13 @@ a.toast:active, a.loginCard:active {
 
 .selectable-item.is-highlighted {
   color: #fff;
-  background: #f80; }
+  background: #bef8ff; }
 
 .selectable-item.is-highlighted .u-textMuted {
   color: #fff; }
 
 .selectable-item.is-highlighted .selectable-tag {
-  color: #ffc480; }
+  color: white; }
 
 .selectable-tag {
   color: #bebebe;
@@ -4752,10 +4744,10 @@ a.toast:active, a.loginCard:active {
     animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
 
 .loader.loader--primary .loader-ball {
-  background: #f80; }
+  background: #bef8ff; }
 
 .loader.loader--secondary .loader-ball {
-  background: #ccc; }
+  background: #000; }
 
 .separator {
   margin: 1.4375rem 0;
@@ -4790,7 +4782,7 @@ a.toast:active, a.loginCard:active {
   padding-bottom: 0.71875rem; }
 
 .areaButton.is-selected {
-  border: 3px solid #f80; }
+  border: 3px solid #bef8ff; }
 
 .radioCheck .fa {
   transform: scale(0);
@@ -4806,7 +4798,7 @@ a.toast:active, a.loginCard:active {
   justify-content: center;
   width: 1.125rem;
   height: 1.125rem;
-  color: #f80;
+  color: #bef8ff;
   font-size: 0.75rem;
   border: 1px solid #e0e0e0;
   border-radius: 999px;
