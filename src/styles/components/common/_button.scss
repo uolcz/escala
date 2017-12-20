@@ -19,17 +19,6 @@ a.button:not(.button--asLink):hover {
 	text-decoration: none;
 }
 
-// remove
-%button--hasDropdown {
-	> .fa:last-of-type { margin-left: $gutter/2; }
-}
-
-// remove
-.button.button--dropdown,
-.button.button--hasDropdown {
-	@extend %button--hasDropdown;
-}
-
 %button--unstyled {
 	height: auto;
 	border: 0;
@@ -148,6 +137,25 @@ a.button:not(.button--asLink):hover {
 	color: $button-success-background;
 }
 
+.button.button--warning {
+	background: $button-warning-background;
+	color: $white;
+}
+
+.button.button--warning.button--outlined {
+	background: transparent;
+	color: $button-warning-background;
+	border: 1px solid $button-warning-background;
+}
+
+.button.button--warning.button--outlined:hover {
+	color: darken($button-warning-background, 5%);
+	border-color: darken($button-warning-background, 5%);
+}
+
+.button.button--warning.button--borderLess {
+	color: $button-warning-background;
+}
 
 .button.button--borderLess {
 	background: transparent;
@@ -172,7 +180,6 @@ a.button:not(.button--asLink):hover {
 .button.button--circular {
 	width: rem(40px);
 	height: rem(40px);
-	border: 1px solid $color-border; // remove
 	padding: 0;
 }
 

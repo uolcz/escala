@@ -3377,7 +3377,7 @@ a.u-textMuted,
  * Text colors
  */
 .u-colorDanger {
-  color: #d33226; }
+  color: #ff0962; }
 
 .u-colorPrimary {
   color: #1dd633; }
@@ -3389,7 +3389,7 @@ a.u-textMuted,
   color: #f0ad4e; }
 
 .u-bgColorDanger {
-  background: #d33226; }
+  background: #ff0962; }
 
 .u-bgColorPrimary {
   background: #1dd633; }
@@ -3599,10 +3599,6 @@ button.userNav {
 a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   text-decoration: none; }
 
-.userNav > .fa:last-of-type, .button.button--dropdown > .fa:last-of-type,
-.button.button--hasDropdown > .fa:last-of-type {
-  margin-left: 0.375rem; }
-
 .userNav, .button--lightIcon, .button.button--unstyled, .button--unstyled.userNav {
   height: auto;
   border: 0;
@@ -3665,20 +3661,20 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   color: #646464; }
 
 .button.button--danger, .button--danger.userNav {
-  background: #d33226;
+  background: #ff0962;
   color: #fff; }
 
 .button.button--danger.button--outlined, .button--danger.button--outlined.userNav {
   background: transparent;
-  color: #d33226;
-  border: 1px solid #d33226; }
+  color: #ff0962;
+  border: 1px solid #ff0962; }
 
 .button.button--danger.button--outlined:hover, .button--danger.button--outlined.userNav:hover {
-  color: #bd2d22;
-  border-color: #bd2d22; }
+  color: #ef0056;
+  border-color: #ef0056; }
 
 .button.button--danger.button--borderLess, .button--danger.button--borderLess.userNav {
-  color: #d33226; }
+  color: #ff0962; }
 
 .button.button--success, .button--success.userNav {
   background: green;
@@ -3695,6 +3691,22 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 
 .button.button--success.button--borderLess, .button--success.button--borderLess.userNav {
   color: green; }
+
+.button.button--warning, .button--warning.userNav {
+  background: #f0ad4e;
+  color: #fff; }
+
+.button.button--warning.button--outlined, .button--warning.button--outlined.userNav {
+  background: transparent;
+  color: #f0ad4e;
+  border: 1px solid #f0ad4e; }
+
+.button.button--warning.button--outlined:hover, .button--warning.button--outlined.userNav:hover {
+  color: #eea236;
+  border-color: #eea236; }
+
+.button.button--warning.button--borderLess, .button--warning.button--borderLess.userNav {
+  color: #f0ad4e; }
 
 .button.button--borderLess, .button--borderLess.userNav {
   background: transparent;
@@ -3714,7 +3726,6 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 .button.button--circular, .button--circular.userNav {
   width: 2.5rem;
   height: 2.5rem;
-  border: 1px solid #e0e0e0;
   padding: 0; }
 
 .button.button--primary:not(.button--outlined).button--circular, .button--primary.userNav:not(.button--outlined).button--circular {
@@ -3940,10 +3951,10 @@ textarea.formControl, textarea.SingleDatePickerInput {
 .is-danger .formControl, .is-danger .SingleDatePickerInput,
 .is-danger .formControl:not(:focus):hover,
 .is-danger .SingleDatePickerInput:not(:focus):hover {
-  border-color: #d33226; }
+  border-color: #ff0962; }
 
 .is-danger .formControlFeedback {
-  color: #d33226; }
+  color: #ff0962; }
 
 .is-success .formControl, .is-success .SingleDatePickerInput,
 .is-success .formControl:not(:focus):hover,
@@ -4153,7 +4164,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   cursor: pointer; }
 
 .tag.tag--removable:hover .fa {
-  color: #d33226; }
+  color: #ff0962; }
 
 .tag.tag--yesNo {
   width: 3.25rem;
@@ -4491,7 +4502,7 @@ a.card:active, a.flashMessage:active, a.loginCard:active {
 
 .alert.alert--danger {
   background: #f2dede;
-  color: #d33226;
+  color: #ff0962;
   border-color: #ebcccc; }
 
 .alert.alert--warning {
