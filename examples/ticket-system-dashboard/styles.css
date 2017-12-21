@@ -2912,15 +2912,16 @@ body {
   padding: 0;
   min-height: 1px; }
 
-.grid.grid--alignCenter {
+.grid-cell {
+  flex: 1;
+  min-width: 0; }
+
+.grid.grid--alignItemsCenter {
   align-items: center; }
 
-.grid-cell {
-  flex: 1; }
-
-.grid-cell.grid-cell--notFluid {
-  flex: 0 0 auto; }
-
+/**
+ * Sass loops and stuff
+ */
 .grid.grid--gutters0 {
   margin: 0 0; }
 
@@ -2962,6 +2963,154 @@ body {
 
 .grid.grid--gutters5 > .grid-cell {
   padding: 0 2.25rem; }
+
+.grid.grid--wrapDefault {
+  flex-wrap: wrap; }
+
+.grid.grid--wrapReverse {
+  flex-wrap: wrap-reverse; }
+
+.grid.grid--noWrap {
+  flex-wrap: nowrap; }
+
+.grid.grid--alignCenter {
+  align-items: center; }
+
+.grid.grid--alignStart {
+  align-items: flex-start; }
+
+.grid.grid--alignEnd {
+  align-items: flex-start; }
+
+.grid.grid--alignBaseline {
+  align-items: baseline; }
+
+.grid.grid--alignStretch {
+  align-items: stretch; }
+
+.grid-cell--fluid {
+  flex: 1;
+  max-width: inherit; }
+
+.grid-cell--notFluid {
+  flex: 0 0 auto;
+  max-width: inherit; }
+
+.grid-cell--1 {
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%; }
+
+.grid-cell--offsetBy1 {
+  margin-left: 8.33333%; }
+
+.grid-cell--2 {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%; }
+
+.grid-cell--offsetBy2 {
+  margin-left: 16.66667%; }
+
+.grid-cell--3 {
+  flex: 0 0 25%;
+  max-width: 25%; }
+
+.grid-cell--offsetBy3 {
+  margin-left: 25%; }
+
+.grid-cell--4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%; }
+
+.grid-cell--offsetBy4 {
+  margin-left: 33.33333%; }
+
+.grid-cell--5 {
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%; }
+
+.grid-cell--offsetBy5 {
+  margin-left: 41.66667%; }
+
+.grid-cell--6 {
+  flex: 0 0 50%;
+  max-width: 50%; }
+
+.grid-cell--offsetBy6 {
+  margin-left: 50%; }
+
+.grid-cell--7 {
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%; }
+
+.grid-cell--offsetBy7 {
+  margin-left: 58.33333%; }
+
+.grid-cell--8 {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%; }
+
+.grid-cell--offsetBy8 {
+  margin-left: 66.66667%; }
+
+.grid-cell--9 {
+  flex: 0 0 75%;
+  max-width: 75%; }
+
+.grid-cell--offsetBy9 {
+  margin-left: 75%; }
+
+.grid-cell--10 {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%; }
+
+.grid-cell--offsetBy10 {
+  margin-left: 83.33333%; }
+
+.grid-cell--11 {
+  flex: 0 0 91.66667%;
+  max-width: 91.66667%; }
+
+.grid-cell--offsetBy11 {
+  margin-left: 91.66667%; }
+
+.grid-cell--12 {
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+.grid-cell--offsetBy12 {
+  margin-left: 100%; }
+
+.grid.grid--xs-wrapDefault {
+  flex-wrap: wrap; }
+
+.grid.grid--xs-wrapReverse {
+  flex-wrap: wrap-reverse; }
+
+.grid.grid--xs-noWrap {
+  flex-wrap: nowrap; }
+
+.grid.grid--xs-alignCenter {
+  align-items: center; }
+
+.grid.grid--xs-alignStart {
+  align-items: flex-start; }
+
+.grid.grid--xs-alignEnd {
+  align-items: flex-start; }
+
+.grid.grid--xs-alignBaseline {
+  align-items: baseline; }
+
+.grid.grid--xs-alignStretch {
+  align-items: stretch; }
+
+.grid-cell--xs-fluid {
+  flex: 1;
+  max-width: inherit; }
+
+.grid-cell--xs-notFluid {
+  flex: 0 0 auto;
+  max-width: inherit; }
 
 .grid-cell--xs-1 {
   flex: 0 0 8.33333%;
@@ -3048,6 +3197,28 @@ body {
   margin-left: 100%; }
 
 @media (min-width: 576px) {
+  .grid.grid--sm-wrapDefault {
+    flex-wrap: wrap; }
+  .grid.grid--sm-wrapReverse {
+    flex-wrap: wrap-reverse; }
+  .grid.grid--sm-noWrap {
+    flex-wrap: nowrap; }
+  .grid.grid--sm-alignCenter {
+    align-items: center; }
+  .grid.grid--sm-alignStart {
+    align-items: flex-start; }
+  .grid.grid--sm-alignEnd {
+    align-items: flex-start; }
+  .grid.grid--sm-alignBaseline {
+    align-items: baseline; }
+  .grid.grid--sm-alignStretch {
+    align-items: stretch; }
+  .grid-cell--sm-fluid {
+    flex: 1;
+    max-width: inherit; }
+  .grid-cell--sm-notFluid {
+    flex: 0 0 auto;
+    max-width: inherit; }
   .grid-cell--sm-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
@@ -3110,6 +3281,28 @@ body {
     margin-left: 100%; } }
 
 @media (min-width: 768px) {
+  .grid.grid--md-wrapDefault {
+    flex-wrap: wrap; }
+  .grid.grid--md-wrapReverse {
+    flex-wrap: wrap-reverse; }
+  .grid.grid--md-noWrap {
+    flex-wrap: nowrap; }
+  .grid.grid--md-alignCenter {
+    align-items: center; }
+  .grid.grid--md-alignStart {
+    align-items: flex-start; }
+  .grid.grid--md-alignEnd {
+    align-items: flex-start; }
+  .grid.grid--md-alignBaseline {
+    align-items: baseline; }
+  .grid.grid--md-alignStretch {
+    align-items: stretch; }
+  .grid-cell--md-fluid {
+    flex: 1;
+    max-width: inherit; }
+  .grid-cell--md-notFluid {
+    flex: 0 0 auto;
+    max-width: inherit; }
   .grid-cell--md-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
@@ -3172,6 +3365,28 @@ body {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
+  .grid.grid--lg-wrapDefault {
+    flex-wrap: wrap; }
+  .grid.grid--lg-wrapReverse {
+    flex-wrap: wrap-reverse; }
+  .grid.grid--lg-noWrap {
+    flex-wrap: nowrap; }
+  .grid.grid--lg-alignCenter {
+    align-items: center; }
+  .grid.grid--lg-alignStart {
+    align-items: flex-start; }
+  .grid.grid--lg-alignEnd {
+    align-items: flex-start; }
+  .grid.grid--lg-alignBaseline {
+    align-items: baseline; }
+  .grid.grid--lg-alignStretch {
+    align-items: stretch; }
+  .grid-cell--lg-fluid {
+    flex: 1;
+    max-width: inherit; }
+  .grid-cell--lg-notFluid {
+    flex: 0 0 auto;
+    max-width: inherit; }
   .grid-cell--lg-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
@@ -3234,6 +3449,28 @@ body {
     margin-left: 100%; } }
 
 @media (min-width: 1200px) {
+  .grid.grid--xl-wrapDefault {
+    flex-wrap: wrap; }
+  .grid.grid--xl-wrapReverse {
+    flex-wrap: wrap-reverse; }
+  .grid.grid--xl-noWrap {
+    flex-wrap: nowrap; }
+  .grid.grid--xl-alignCenter {
+    align-items: center; }
+  .grid.grid--xl-alignStart {
+    align-items: flex-start; }
+  .grid.grid--xl-alignEnd {
+    align-items: flex-start; }
+  .grid.grid--xl-alignBaseline {
+    align-items: baseline; }
+  .grid.grid--xl-alignStretch {
+    align-items: stretch; }
+  .grid-cell--xl-fluid {
+    flex: 1;
+    max-width: inherit; }
+  .grid-cell--xl-notFluid {
+    flex: 0 0 auto;
+    max-width: inherit; }
   .grid-cell--xl-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
