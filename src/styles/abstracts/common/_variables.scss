@@ -1,16 +1,18 @@
 /**
  * Colors
  */
+ 
 $white: #fff !default;
 
-$color-primary  : #f80 !default;
-$color-border   : #e0e0e0 !default;
+$color-primary: #f80 !default;
+$color-border: #e0e0e0 !default;
 $color-lightIcon: #ccc !default;
-$color-text     : #3e3e3e !default;
+$color-text: #3e3e3e !default;
 
 $color-info: #31708f !default;
 $color-success: green !default;
 $color-warning: #f0ad4e !default;
-$color-danger:  #d33226 !default;
+$color-danger: #ff0962 !default;
 
-$wkhtmltopdf-grid-fix: false !default;
+$esc-renderResponsiveGrid: true !default;
+$esc-wkhtmltopdfGridFix: false !default;

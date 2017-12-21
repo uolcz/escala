@@ -1,26 +1,29 @@
 .grid {
+	@extend .grid--gutters;
+
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
 	padding: 0;
 	min-height: 1px; // Prevent collapsing
-
-	@extend .grid--gutters;
 }
-
-.grid.grid--alignCenter { align-items: center; }
 
 .grid-cell {
 	flex: 1;
+	min-width: 0; // https://css-tricks.com/flexbox-truncated-text/
 }
 
-// TODO: remove this rule
-.grid-cell.grid-cell--notFluid {
-	flex: 0 0 auto;
-}
+// TODO: Bonobo specific modifier
+// now is renamed from "alignItemsCenter" to "alignCenter"
+// deal with compability issue
+.grid.grid--alignItemsCenter { align-items: center; }
+
+/**
+ * Sass loops and stuff
+ */
 
 @mixin makeGridGutters($gutter, $index) {
-	@if $index == 3 {
+	@if ($index == 3) {
 		@include makeGridGutters($gutter, "");
 	}
 
@@ -39,35 +42,43 @@
 	// wkhtmltopdf 0.12.3.2 seems NOT to support "flexbox-basis"
 	// As as result grid width is same as its children.
 	// Explicitly setting "width" fixes it.  
-	@if ($wkhtmltopdf-grid-fix == true) {
+	@if ($esc-wkhtmltopdfGridFix) {
 		@media print { width: $width; }
 	}
 }
 
-@mixin makeGridCells($sreenSize: "xs") {
-	// Define screen sized dependent modifiers
-	.grid.grid--#{$sreenSize}-wrapDefault { flex-wrap: wrap; }
-	.grid.grid--#{$sreenSize}-wrapReverse { flex-wrap: wrap-reverse; }
-	.grid.grid--#{$sreenSize}-alignItemsCenter { align-items: center; }
-	.grid-cell.grid-cell--#{$sreenSize}-fluid { flex: 1; }
+@mixin makeGridCells($sreenSize: null) {
+	$screenSizeName: if($sreenSize, "#{$sreenSize}-", "");
 
-	.grid-cell.grid-cell--#{$sreenSize}-notFluid {
-		flex: 0 0 auto;
+	// Flexbox wrap
+	.grid.grid--#{$screenSizeName}wrapDefault { flex-wrap: wrap; }
+	.grid.grid--#{$screenSizeName}wrapReverse { flex-wrap: wrap-reverse; }
+	.grid.grid--#{$screenSizeName}noWrap { flex-wrap: nowrap; }
+
+	// Flexbox align
+	.grid.grid--#{$screenSizeName}alignCenter { align-items: center; }
+	.grid.grid--#{$screenSizeName}alignStart { align-items: flex-start; }
+	.grid.grid--#{$screenSizeName}alignEnd { align-items: flex-start; }
+	.grid.grid--#{$screenSizeName}alignBaseline { align-items: baseline; }
+	.grid.grid--#{$screenSizeName}alignStretch { align-items: stretch; }
+
+	.grid-cell--#{$screenSizeName}fluid {
+		flex: 1;
 		max-width: inherit;
-
-		@if ($wkhtmltopdf-grid-fix == true) {
-			@media print { width: auto; }
-		}
 	}
 
-	@for $i from 1 through $grid-columns-count {
+	.grid-cell--#{$screenSizeName}notFluid {
+		flex: 0 0 auto;
+		max-width: inherit;
+	}
 
-		$gridCellClassName: ".grid-cell--#{$sreenSize}-#{$i}";
+	// Make columns (pray for better css grid support)
+	@for ($i from 1 through $grid-columns-count) {
+		$gridCellClassName: ".grid-cell--#{$screenSizeName}#{$i}";
 		$gridCellWidth: 100% / $grid-columns-count * $i;
+		$gridCellOffsetClassName: ".grid-cell--#{$screenSizeName}offsetBy#{$i}";
 
-		$gridCellOffsetClassName: ".grid-cell--#{$sreenSize}-offsetBy#{$i}";
-
-		// Grid cell
+		// Cell
 		#{$gridCellClassName} {
 			@include makeGridCell($gridCellWidth);
 		}
@@ -79,14 +90,18 @@
 	}
 }
 
-@each $screenSize, $breakpoint in $screen-breakpoints {
-	@if $breakpoint == 0 {
-		@include makeGridCells($screenSize);
-	}
+@include makeGridCells();
 
-	@else {
-		@media (min-width: $breakpoint) {
+@if ($esc-renderResponsiveGrid) {
+	@each ($screenSize, $breakpoint in $screen-breakpoints) {
+		@if ($breakpoint == 0) {
 			@include makeGridCells($screenSize);
+		}
+
+		@else {
+			@media (min-width: $breakpoint) {
+				@include makeGridCells($screenSize);
+			}
 		}
 	}
 }
