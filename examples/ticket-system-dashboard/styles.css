@@ -2856,7 +2856,7 @@ textarea {
   font-family: inherit; }
 
 a {
-  color: #f80;
+  color: #1dd633;
   text-decoration: none;
   transition: 0.1s ease color; }
 
@@ -2888,7 +2888,7 @@ body {
   font-size: 1rem; }
 
 .textHighlight {
-  background: #ffe7cc;
+  background: #c8f7cd;
   padding: 0 0.375rem;
   border-radius: 2px; }
 
@@ -2905,7 +2905,7 @@ body {
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1220px;
+  max-width: 980px;
   padding: 0 0.75rem; }
 
 .grid {
@@ -3626,7 +3626,7 @@ a.u-textMuted,
   color: #ff0962; }
 
 .u-colorPrimary {
-  color: #f80; }
+  color: #1dd633; }
 
 .u-colorSuccess {
   color: green; }
@@ -3638,7 +3638,7 @@ a.u-textMuted,
   background: #ff0962; }
 
 .u-bgColorPrimary {
-  background: #f80; }
+  background: #1dd633; }
 
 .u-bgColorSuccess {
   background: green; }
@@ -3717,11 +3717,11 @@ a.u-textMuted,
 
 .header .logo img {
   display: block;
-  width: 75px; }
+  width: 95px; }
 
 .header .inputGroup {
   display: inline-flex;
-  margin-left: 75px; }
+  margin-left: 55px; }
 
 .header .formControl, .header .SingleDatePickerInput {
   width: 18.75rem; }
@@ -3778,7 +3778,7 @@ button.userNav {
   margin-bottom: 0.71875rem; }
 
 .userMenu-item:hover {
-  color: #f80; }
+  color: #1dd633; }
 
 .userMenu-separator {
   border-bottom: 1px solid #e0e0e0;
@@ -3799,7 +3799,7 @@ button.userNav {
   text-decoration: none; }
 
 .nav-item.is-active {
-  background: #f80;
+  background: #1dd633;
   color: #fff; }
 
 .nav-item .fa {
@@ -3859,26 +3859,26 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
  */
 .button.button--primary, .button--primary.userNav {
   color: #fff;
-  background: #f80; }
+  background: #1dd633; }
 
 .button.button--primary:disabled, .button--primary.userNav:disabled {
   opacity: 0.5;
   cursor: not-allowed; }
 
 .button.button--primary:not(:disabled):not(.button--outlined):not(.button--borderLess):hover, .button--primary.userNav:not(:disabled):not(.button--outlined):not(.button--borderLess):hover {
-  background: #ffa033; }
+  background: #41e554; }
 
 .button.button--primary.button--outlined, .button--primary.button--outlined.userNav {
   background: transparent;
-  border: 1px solid #f80;
-  color: #f80; }
+  border: 1px solid #1dd633;
+  color: #1dd633; }
 
 .button.button--primary.button--outlined:not(:disabled):hover, .button--primary.button--outlined.userNav:not(:disabled):hover {
-  color: #e67a00;
-  border-color: #e67a00; }
+  color: #1ac02e;
+  border-color: #1ac02e; }
 
 .button.button--primary.button--borderLess, .button--primary.button--borderLess.userNav {
-  color: #f80; }
+  color: #1dd633; }
 
 .button.button--primary:not(.button--outlined).button--circular, .button--primary.userNav:not(.button--outlined).button--circular {
   border: 0; }
@@ -4044,9 +4044,9 @@ tbody .table-row.table-row--clickable {
   cursor: pointer; }
 
 tbody .table-row.table-row--clickable:hover td {
-  border-top: 1px solid #ffb866;
-  border-bottom: 1px solid #ffb866;
-  background: #fff3e6; }
+  border-top: 1px solid #6eeb7d;
+  border-bottom: 1px solid #6eeb7d;
+  background: #defbe1; }
 
 .table th,
 .table td {
@@ -4064,7 +4064,7 @@ tbody .table-row.table-row--clickable:hover td {
   font-weight: 600; }
 
 .table th.is-active {
-  color: #f80; }
+  color: #1dd633; }
 
 /**
  * Modifiers
@@ -4174,7 +4174,7 @@ tbody .table-row.table-row--clickable:hover td {
   border-color: #cecece; }
 
 .formControl:focus, .SingleDatePickerInput:focus {
-  border-color: #f80; }
+  border-color: #1dd633; }
 
 select.formControl, select.SingleDatePickerInput {
   cursor: pointer; }
@@ -4372,7 +4372,7 @@ textarea.formControl, textarea.SingleDatePickerInput {
   justify-content: center;
   width: 1.125rem;
   height: 1.125rem;
-  color: #f80;
+  color: #1dd633;
   font-size: 0.75rem;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
@@ -4410,8 +4410,8 @@ textarea.formControl, textarea.SingleDatePickerInput {
   text-align: center; }
 
 .tag.tag--primary {
-  background: #ffe7cc;
-  color: #f80; }
+  background: #c8f7cd;
+  color: #1dd633; }
 
 .tag.tag--small {
   font-size: 0.625rem;
@@ -4684,13 +4684,13 @@ a.toast:active, a.loginCard:active {
 
 .selectable-item.is-highlighted {
   color: #fff;
-  background: #f80; }
+  background: #1dd633; }
 
 .selectable-item.is-highlighted .u-textMuted {
   color: #fff; }
 
 .selectable-item.is-highlighted .selectable-tag {
-  color: #ffc480; }
+  color: #84ee91; }
 
 .selectable-tag {
   color: #bebebe;
@@ -4902,7 +4902,7 @@ a.toast:active, a.loginCard:active {
     animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
 
 .loader.loader--primary .loader-ball {
-  background: #f80; }
+  background: #1dd633; }
 
 .loader.loader--secondary .loader-ball {
   background: #ccc; }
@@ -4940,7 +4940,7 @@ a.toast:active, a.loginCard:active {
   padding-bottom: 0.71875rem; }
 
 .areaButton.is-selected {
-  border: 3px solid #f80; }
+  border: 3px solid #1dd633; }
 
 .radioCheck .fa {
   transform: scale(0);
@@ -4956,7 +4956,7 @@ a.toast:active, a.loginCard:active {
   justify-content: center;
   width: 1.125rem;
   height: 1.125rem;
-  color: #f80;
+  color: #1dd633;
   font-size: 0.75rem;
   border: 1px solid #e0e0e0;
   border-radius: 999px;

@@ -73,7 +73,7 @@
 	}
 
 	// Make columns (pray for better css grid support)
-	@for ($i from 1 through $grid-columns-count) {
+	@for $i from 1 through $grid-columns-count {
 		$gridCellClassName: ".grid-cell--#{$screenSizeName}#{$i}";
 		$gridCellWidth: 100% / $grid-columns-count * $i;
 		$gridCellOffsetClassName: ".grid-cell--#{$screenSizeName}offsetBy#{$i}";
@@ -93,7 +93,7 @@
 @include makeGridCells();
 
 @if ($esc-renderResponsiveGrid) {
-	@each ($screenSize, $breakpoint in $screen-breakpoints) {
+	@each $screenSize, $breakpoint in $screen-breakpoints {
 		@if ($breakpoint == 0) {
 			@include makeGridCells($screenSize);
 		}
