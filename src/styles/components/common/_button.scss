@@ -1,18 +1,18 @@
 .button {
-	display: inline-block;
-	font-size: $button-global-font-size;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	height: $button-global-height;
-	line-height: $button-global-height;
 	padding: $button-global-padding;
+	font-size: $button-global-font-size;
 	border: 0;
 	border-radius: $button-global-border-radius;
-	cursor: pointer;
 	box-shadow: none;
-	outline: 0;
 	vertical-align: middle;
 	transition: $button-global-transition;
 	text-align: center;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 a.button:not(.button--asLink):hover {
@@ -24,7 +24,6 @@ a.button:not(.button--asLink):hover {
 	border: 0;
 	padding: 0;
 	background: transparent;
-	line-height: inherit;
 	color: $color-text;
 	font-size: $fontSize-default;
 }
@@ -223,7 +222,6 @@ a.button:not(.button--asLink):hover {
 
 .button.button--asLink {
 	height: auto;
-	line-height: inherit;
 	background: transparent;
 	padding: 0;
 }

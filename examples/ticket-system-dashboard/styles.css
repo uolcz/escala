@@ -3840,20 +3840,20 @@ button.userNav {
   cursor: default; }
 
 .button, .userNav {
-  display: inline-block;
-  font-size: 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 2.5rem;
-  line-height: 2.5rem;
   padding: 0 1.125rem;
+  font-size: 0.8125rem;
   border: 0;
   border-radius: 999px;
-  cursor: pointer;
   box-shadow: none;
-  outline: 0;
   vertical-align: middle;
   transition: ease 0.2s background;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   text-decoration: none; }
@@ -3863,7 +3863,6 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
   border: 0;
   padding: 0;
   background: transparent;
-  line-height: inherit;
   color: #3e3e3e;
   font-size: 0.8125rem; }
 
@@ -4019,7 +4018,6 @@ a.button:not(.button--asLink):hover, a.userNav:not(.button--asLink):hover {
 
 .button.button--asLink, .button--asLink.userNav {
   height: auto;
-  line-height: inherit;
   background: transparent;
   padding: 0; }
 
